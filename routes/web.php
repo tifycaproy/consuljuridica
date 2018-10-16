@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+// 
+
+Route::get('/', 'Frontend\homeController@index')->name('/');
+
+Route::get('servicios', 'Frontend\homeController@servicios')->name('servicios');
