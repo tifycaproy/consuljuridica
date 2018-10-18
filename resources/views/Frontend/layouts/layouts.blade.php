@@ -8,11 +8,11 @@
 <html lang="zxx">
 
 <head>
-	<title>Accrue Corporate Category Bootstrap responsive Web Template | Home :: w3layouts</title>
+	<title>Inicio | Consultoría Jurídica Miramar</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
 	<meta name="keywords" content="Accrue a Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola 	web design" />
 	<script>
 		addEventListener("load", function () {
 			setTimeout(hideURLbar, 0);
@@ -22,6 +22,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			window.scrollTo(0, 1);
 		}
 	</script>
+	<link rel="shortcut icon" href="{{asset('images/favicon.png')}} " type="image/x-icon">
 	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 	<link rel="stylesheet" href="css/owl.carousel.css" type="text/css" media="all">
 	<link rel="stylesheet" href="css/owl.theme.css" type="text/css" media="all">
@@ -40,10 +41,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<header>
 			<nav class="navbar navbar-expand-lg navbar-light bg-light top-header">
 				<h1 class="logo">
-					<a class="navbar-brand" href="index.html">
-						<i class="fab fa-accusoft"></i>
-						<span>Accrue</span>
-					</a>
+					<img src="{{asset('images/logoconsul1.png')}}">
 				</h1>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
 				    aria-expanded="false" aria-label="Toggle navigation">
@@ -58,25 +56,34 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<span class="sr-only">(current)</span>
 							</a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="about.html">About</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="projects.html">Projects</a>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+							    aria-expanded="false">
+								Servicios
+							</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<a class="dropdown-item text-center" href="blog.html">Servicio 1</a>
+								<a class="dropdown-item text-center" href="blog1.html">Servicio 2</a>
+								<a class="dropdown-item text-center" href="single.html">Servicio 3</a>
+							</div>
 						</li>
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
 							    aria-expanded="false">
-								Blog
+								Centro Empresarial
 							</a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<a class="dropdown-item text-center" href="blog.html">Blog Right side bar</a>
-								<a class="dropdown-item text-center" href="blog1.html">Blog left side bar</a>
-								<a class="dropdown-item text-center" href="single.html">Blog Single</a>
+								<a class="dropdown-item text-center" href="blog.html">Servicio 1</a>
+								<a class="dropdown-item text-center" href="blog1.html">Servicio 2</a>
+								<a class="dropdown-item text-center" href="single.html">Servicio 3</a>
 							</div>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="contact.html">Contact</a>
+							<a class="nav-link" href="projects.html">Projects</a>
+						</li>
+						
+						<li class="nav-item">
+							<a class="nav-link" href="contact.html">Contacto</a>
 						</li>
 						<li class="search">
 							<a class="play-icon popup-with-zoom-anim" href="#small-dialog">
@@ -108,26 +115,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- //header -->
 	<!-- banner-text -->
 	<div class="slider-content">
-		<div class="wrapper-slider text-left">
+		<div class="tittle text-center">
 			<!-- Slideshow 1 -->
 			<div class="rslides_container">
 				<ul class="rslides" id="slider1">
 					<li>
 						<div class="banner-info">
-							<h3>Open your account</h3>
-							<p>Connect with over 5 millions investors in the world’s leading social investment network</p>
+							<h3>Con nosotros lo difícil será fácil</h3>
+							<p>Le aseguramos su gestión consular, documentación de viajes o el desarrollo de sus negocios.</p>
 						</div>
 					</li>
 					<li>
 						<div class="banner-info">
-							<h3>Manage your accounts</h3>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sedc dnmo eiusmod. </p>
+							<h3>Estamos muy cerca de Cuba</h3>
+							<p>Sus necesidades son nuestro compromiso, esa es la clave de nuestros servicios </p>
 						</div>
 					</li>
 				</ul>
 			</div>
 		</div>
-		<div class="ban-form text-left">
+		<!-- <div class="ban-form text-left">
 			<h5>Account Open Now</h5>
 			<form action="#" class="mt-4" method="post">
 				<input class="form-control" type="text" name="Name" placeholder="Name" required="" />
@@ -135,7 +142,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<input class="form-control" type="text" name="Number" placeholder="Phone Number" required="" />
 				<input class="form-control text-uppercase" type="submit" value="Create Account">
 			</form>
-		</div>
+		</div>-->
 		<div class="clearfix"></div>
 	</div>
 </div>
@@ -151,13 +158,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="col-lg-6 about-info text-left">
 					<div class="ab-info-text">
 						<h3 class="tittle-wthree text-left">
-							<span>Some Info</span>About Us</h3>
+							<span>Some Info</span>Asesoría de Negocios</h3>
 						<div class="service-in text-left mt-5">
 							<div class="card">
 								<div class="card-body">
 									<i class="far fa-clock"></i>
-									<h5 class="card-title">On Time Service @yield('content')</h5>
-									<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore.
+									<h5 class="card-title">1.- Asesoramiento y apoyo en la gestión </h5>
+									<p class="card-text">
+										El personal de la <strong>Consultoría Jurídica Miramar S.L. </strong>en destino, un equipo humano con amplia experiencia en el mercado cubano, ofrece el asesoramiento necesario para el desarrollo del proyecto en el país, así como la asistencia legal y el apoyo necesario para superar las barreras que surgen en el acceso a un nuevo mercado.
 									</p>
 								</div>
 							</div>
@@ -166,8 +174,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="card">
 								<div class="card-body">
 									<i class="fas fa-users"></i>
-									<h5 class="card-title">Experienced Team</h5>
-									<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore.
+									<h5 class="card-title">2.- Infraestructura tecnológica</h5>
+									<p class="card-text">Los Centros Empresariales de la <strong>Consultoría Jurídica Miramar S.L. </strong>cuentan con estructuras y puestos de trabajo totalmente equipados con todos los medios tecnológicos e instrumentos necesarios para que la empresa pueda desarrollar, desde un principio su proyecto rápida y eficazmente.
 									</p>
 								</div>
 							</div>

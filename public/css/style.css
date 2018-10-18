@@ -24,7 +24,7 @@ body a {
 }
 
 body img {
-	width: 100%;
+	width:  70%;
 }
 
 a:hover {
@@ -73,7 +73,7 @@ ul {
 .top-bar_sub .btn-primary {
 	color: #000;
 	background-color: #00bce400;
-	border: 2px solid #00bce4;
+	border: 2px olid #00bce4;
 	font-size: 15px;
 	letter-spacing: 1px;
 }
@@ -104,7 +104,7 @@ span.sub {
 }
 
 .top-header {
-	background: none !important;
+    background-color: #00204a;
 }
 
 h1.logo a.navbar-brand {
@@ -136,7 +136,7 @@ h1.logo span {
 }
 
 nav.navbar.navbar-expand-lg.navbar-light {
-	padding: 2em 3em;
+	
 }
 
 .navbar-light .navbar-nav .nav-link,
@@ -368,7 +368,7 @@ nav.navbar.navbar-expand-lg.navbar-light {
 }
 
 .banner {
-	background: url(../images/banner1.jpg) no-repeat 0px 0px;
+	background: url(../images/libros.png) no-repeat 0px 0px;
 	background-size: cover;
 	-webkit-background-size: cover;
 	-o-background-size: cover;
@@ -683,7 +683,7 @@ ul.social-icons li a i {
 }
 
 .about-img {
-	background: url(../images/1.jpg) no-repeat 0px 0px;
+	background: url(../images/analisis.jpg) no-repeat 0px 0px;
 	background-size: cover;
 	-webkit-background-size: cover;
 	-o-background-size: cover;
@@ -1571,11 +1571,11 @@ h5#exampleModalLongTitle {
 		font-size: 2.2em;
 	}
 	.banner-info h3 {
-		font-size: 4em;
+		font-size: 5em;
 	}
 	.banner-info p {
 		letter-spacing: 2px;
-		font-size: 1.2em;
+		font-size: 1.7em;
 	}
 	.ab-info-text {
 		padding: 5em 3em;
