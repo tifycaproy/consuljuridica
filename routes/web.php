@@ -19,3 +19,5 @@
 Route::get('/', 'Frontend\homeController@index')->name('/');
 
 Route::get('servicios', 'Frontend\homeController@servicios')->name('servicios');
+
+Route::get('contacto', 'Frontend\homeController@contacto')->name('contacto');

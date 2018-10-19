@@ -62,9 +62,9 @@
 								Servicios
 							</a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<a class="dropdown-item text-center" href="blog.html">Servicio 1</a>
-								<a class="dropdown-item text-center" href="blog1.html">Servicio 2</a>
-								<a class="dropdown-item text-center" href="single.html">Servicio 3</a>
+								<a class="dropdown-item text-center" href="blog.html">Servicios Consulares para ciudadanos cubanos</a>
+								<a class="dropdown-item text-center" href="blog1.html">Solicitud de documentos a Cuba</a>
+								<a class="dropdown-item text-center" href="single.html">Tramites legales y extranjeria</a>
 							</div>
 						</li>
 						<li class="nav-item dropdown">
@@ -79,11 +79,11 @@
 							</div>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="projects.html">Projects</a>
+							<a class="nav-link" href="projects.html">Noticias</a>
 						</li>
 						
 						<li class="nav-item">
-							<a class="nav-link" href="contact.html">Contacto</a>
+							<a class="nav-link" href="contacto.blade.php">Contacto</a>
 						</li>
 						<li class="search">
 							<a class="play-icon popup-with-zoom-anim" href="#small-dialog">
@@ -149,6 +149,112 @@
 	<!-- //banner -->
 	<!--/bottom-banner-w3layouts-->
 
+	<section class="bottom-banner-w3layouts bg-light py-md-5 py-3">
+		<div class="container">
+			<div class="row choose-main py-md-5 py-3">
+				<div class="col-lg-6 feature text-right">
+					<h3>
+						<span></span>Asesoramiento y apoyo en la gestión</h3>
+					<p>El personal de la <strong>Consultoría Jurídica Miramar S.L. </strong>en destino, un equipo humano con amplia experiencia en el mercado cubano, ofrece el asesoramiento necesario para el desarrollo del proyecto en el país, así como la asistencia legal y el apoyo necesario para superar las barreras que surgen en el acceso a un nuevo mercado. </p>
+					<div class="read inner mt-4">
+						<a href="single.html" class="btn btn-sm animated-button victoria-two">Leer más</a>
+					</div>
+				</div>
+				<div class="col-lg-6 feature fea-slider text-right">
+					<img src="images/2.jpg" class="img-fluid rounded" alt="">
+				</div>
+
+				<div class="col-lg-6 feature fea-slider text-right">
+					<img src="images/3.jpg" class="img-fluid rounded" alt="">
+				</div>
+				<div class="col-lg-6 feature text-left mt-5">
+					<h3>
+						<span>Some Info</span>Infraestructura tecnológica</h3>
+					<p>Los Centros Empresariales de la <strong>Consultoría Jurídica Miramar S.L. </strong>cuentan con estructuras y puestos de trabajo totalmente equipados con todos los medios tecnológicos e instrumentos necesarios para que la empresa pueda desarrollar, desde un principio su proyecto rápida y eficazmente.</p>
+						<div class="read inner mt-4">
+							<a href="single.html" class="btn btn-sm animated-button victoria-two">Leer más</a>
+						</div>
+				</div>
+			</div>
+
+			<!--/<div class="row choose-main py-md-5 py-3">
+				<div class="col-lg-6 feature text-right">
+					<h3>
+						<span>Some Info</span>Espacios destinados al encuentro empresarial</h3>
+					<p>Salas de Reuniones y dinámicas rondas de negocios que permitan convocar a importadores, representantes y socios o bien intercambiar experiencias con el resto de las empresas presentes en el Centro Empresarial.</p>
+					<div class="read inner mt-4">
+						<a href="single.html" class="btn btn-sm animated-button victoria-two">Leer más</a>
+					</div>
+				</div>
+				<div class="col-lg-6 feature fea-slider text-right">
+					<img src="images/2.jpg" class="img-fluid rounded" alt="">
+				</div>
+
+				<div class="col-lg-6 feature fea-slider text-right">
+					<img src="images/3.jpg" class="img-fluid rounded" alt="">
+				</div>
+				<div class="col-lg-6 feature text-left mt-5">
+					<h3>
+						<span>Some Info</span>Consultoria Jurídica Miramar S.L. le brinda la posibilidad de:</h3>
+					<p><li>Abreviar la ejecución de las tareas complejas y urgentes</li>
+						<li>Disponer de personal altamente calificado y con evaluaciones y recomendaciones altamente confiables</li>
+						<li>Analizar con criterios independientes y modernos la práctica establecida; y profundizar en el conocimiento del mercado cubano</li>
+						<li>Asesoría de negocios (para empresas extranjeras no radicadas en Cuba)</li>
+					</p>
+						<div class="read inner mt-4">
+							<a href="single.html" class="btn btn-sm animated-button victoria-two">Leer más</a>
+						</div>
+				</div>-->
+			</div>
+		</div>
+	</section>
+
+		<!--/services-->
+	<section class="bottom-banner-w3layouts services">
+		<div class="container">
+			<h3 class="tittle-wthree cen text-center">
+				<span>Some Info</span>Servicios</h3>
+			<div class="row inner-sec-w3ls-agileinfo">
+				<div class="col-lg-4 service-in text-center">
+					<div class="card">
+						<div class="card-body">
+							<i class="fab fa-react"></i>
+							<h5 class="card-title">Servicios Consulares para ciudadanos cubanos</h5>
+							<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore.
+							</p>
+
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 service-in text-center">
+					<div class="card">
+						<div class="card-body">
+							<i class="fab fa-strava"></i>
+							<h5 class="card-title">Solicitud de documentos a Cuba</h5>
+							<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore.
+							</p>
+
+
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 service-in text-center">
+					<div class="card">
+						<div class="card-body">
+							<i class="far fa-hand-spock"></i>
+							<h5 class="card-title">Tramites legales y extranjeria</h5>
+							<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore.
+							</p>
+
+						</div>
+					</div>
+				</div>
+				
+
+			</div>
+		</div>
+	</section>
+	<!--//services-->
 
 	<section class="bottom-banner">
 		<div class="container-fluid">
@@ -186,97 +292,10 @@
 			</div>
 		</div>
 	</section>
-	<!--//bottom-banner-w3layouts-->
-	<!--/choose-->
-	<section class="bottom-banner-w3layouts bg-light py-md-5 py-3">
-		<div class="container">
-			<div class="row choose-main py-md-5 py-3">
-				<div class="col-lg-6 feature text-right">
-					<h3>
-						<span>Some Info</span>Why choose us</h3>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut consectetur adipisicing
-						elit sedc labore et dolore magna aliqua uta enim ad minim ven iam quis nostrud exercitation ullamco. Sed semper leo
-						metus, a lacinia eros semper at. </p>
-					<div class="read inner mt-4">
-						<a href="single.html" class="btn btn-sm animated-button victoria-two">Read More</a>
-					</div>
-				</div>
-				<div class="col-lg-6 feature fea-slider text-right">
-					<img src="images/2.jpg" class="img-fluid rounded" alt="">
-				</div>
 
-				<div class="col-lg-6 feature fea-slider text-right">
-					<img src="images/3.jpg" class="img-fluid rounded" alt="">
-				</div>
-				<div class="col-lg-6 feature text-left mt-5">
-					<h3>
-						<span>Some Info</span>What we offer</h3>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut consectetur adipisicing
-						elit sedc labore et dolore magna aliqua uta enim ad minim ven iam quis nostrud exercitation ullamco. Sed semper leo
-						metus, a lacinia eros semper at. </p>
-						<div class="read inner mt-4">
-							<a href="single.html" class="btn btn-sm animated-button victoria-two">Read More</a>
-						</div>
-				</div>
-			</div>
-		</div>
-	</section>
 	<!--//choose-->
-	<!--/services-->
-	<section class="bottom-banner-w3layouts services">
-		<div class="container">
-			<h3 class="tittle-wthree cen text-center">
-				<span>Some Info</span>Many ways to invest, one place to do it.</h3>
-			<div class="row inner-sec-w3ls-agileinfo">
-				<div class="col-lg-3 service-in text-center">
-					<div class="card">
-						<div class="card-body">
-							<i class="fab fa-react"></i>
-							<h5 class="card-title">Fundamental Analysis</h5>
-							<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore.
-							</p>
+	
 
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 service-in text-center">
-					<div class="card">
-						<div class="card-body">
-							<i class="fab fa-strava"></i>
-							<h5 class="card-title">Full Suite of Products</h5>
-							<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore.
-							</p>
-
-
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 service-in text-center">
-					<div class="card">
-						<div class="card-body">
-							<i class="far fa-hand-spock"></i>
-							<h5 class="card-title">Powerfull Trading Tools</h5>
-							<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore.
-							</p>
-
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 service-in text-center">
-					<div class="card">
-						<div class="card-body">
-							<i class="far fa-hand-spock"></i>
-							<h5 class="card-title">Work with an Advisor</h5>
-							<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore.
-							</p>
-
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--//services-->
 
 	<!--/bottom-banner-w3layouts-->
 	<section class="bottom-banner-w3layouts product">
@@ -298,7 +317,7 @@
 	</section>
 	<!--//-->
 	<!--/process-->
-	<section class="bottom-banner-w3layouts" id="process">
+	<!--/<section class="bottom-banner-w3layouts" id="process">
 		<div class="container">
 			<h3 class="tittle-wthree text-center">
 				<span>Some Info</span>A relationship on your terms.</h3>
@@ -378,14 +397,90 @@
 				</div>
 			</div>
 		</div>
+	</section>-->
+
+	<section class="bottom-banner-w3layouts contact">
+		<h3 class="tittle-wthree text-center"> Contacto </h3>
+		<div class="inner-sec-w3ls-agileinfo">
+			<div class="map">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423286.27404345275!2d-118.69191921441556!3d34.02016130939095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos+Angeles%2C+CA%2C+USA!5e0!3m2!1sen!2sin!4v1522474296007" allowfullscreen=""></iframe>
+				<div class="main_grid_contact">
+					<div class="form">
+						<h4 class="mb-4 text-center">contacta con nosotros</h4>
+						<form action="#" method="post">
+							<div class="form-group">
+								<label class="my-2">Nombre</label>
+								<input class="form-control" type="text" name="Name" placeholder="" required="">
+							</div>
+							<div class="form-group">
+								<label>Correo Electrónico</label>
+								<input class="form-control" type="email" name="Email" placeholder="" required="">
+							</div>
+							<div class="form-group">
+								<label>Mensaje</label>
+								<textarea id="textarea" placeholder=""></textarea>
+							</div>
+							<div class="input-group1">
+								<input class="form-control" type="submit" value="Enviar">
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="address row">
+					<div class="col-lg-4 address-grid">
+						<div class="row address-info">
+							<div class="col-md-3 address-left text-center">
+								<i class="far fa-map"></i>
+							</div>
+							<div class="col-md-9 address-right text-left">
+								<h6 class="ad-info text-uppercase mb-2">Dirección</h6>
+								<p> Cuba
+
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 address-grid">
+						<div class="row address-info">
+							<div class="col-md-3 address-left text-center">
+								<i class="far fa-envelope"></i>
+							</div>
+							<div class="col-md-9 address-right text-left">
+								<h6 class="ad-info text-uppercase mb-2">Correo</h6>
+								<p>Correo :
+									<a href="mailto:example@email.com"> mail@example.com</a>
+								</p>
+							</div>
+
+						</div>
+					</div>
+					<div class="col-lg-4 address-grid">
+						<div class="row address-info">
+							<div class="col-md-3 address-left text-center">
+								<i class="fas fa-mobile-alt"></i>
+							</div>
+							<div class="col-md-9 address-right text-left">
+								<h6 class="ad-info text-uppercase mb-2">Teléfono</h6>
+								<p>+1 234 567 8901</p>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</section>
-	<!--//preocess-->
+
+	<!--//
+	
 	<section class="testimonials bottom-banner-w3layouts">
 		<div class="container">
 			<h3 class="tittle-wthree cen text-center">Find out more about what we do</h3>
 		</div>
 	</section>
-	<!--/features-->
+	/features
 	<section class="bottom-banner-w3layouts">
 		<div class="container">
 			<h3 class="tittle-wthree text-center">
@@ -476,8 +571,8 @@
 					</div>
 				</div>
 			</div>
-			<!-- //end row -->
-			<div class="row justify-content-center">
+			 //end row -->
+			<!-- //<div class="row justify-content-center">
 				<div class="col-sm-4">
 					<div class="team-grid text-center">
 						<div class="team-img">
@@ -535,14 +630,14 @@
 					</div>
 				</div>
 			</div>
-			<!-- //end row -->
+			 //end row 
 		</div>
 
 
-	</section>
+	</section> -->
 	<!--//features-->
 	<!--gallery  -->
-	<section class="bottom-banner-w3layouts proj">
+	<!--//<section class="bottom-banner-w3layouts proj">
 		<div class="container-fluid text-center">
 			<h3 class="tittle-wthree text-center">
 				<span>Some Info</span>Our Projects</h3>
@@ -730,14 +825,16 @@
 					</div>
 				</li>
 			</ul>
-			<!--end portfolio-area -->
+		</div>	
+		
 
-		</div>
-		<!-- //gallery container -->
-	</section>
+
+		
+		gallery container 
+	</section>-->
 	<!-- //gallery -->
 	<!--/testimonials-->
-	<section class="testimonials bottom-banner-w3layouts">
+	<!--//<section class="testimonials bottom-banner-w3layouts">
 		<div class="container">
 			<h3 class="tittle-wthree cen text-center">What our clients say</h3>
 			<div class="inner-sec-w3ls-agileinfo">
@@ -804,11 +901,11 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 	<!--//testimonials-->
 	<!--footer -->
 	<footer>
-		<div class="container">
+		<!-- //<div class="container">
 			<div class="row footer-top">
 				<div class="col-lg-3 footer-grid-w3ls">
 					<div class="footer-title">
@@ -886,10 +983,9 @@
 						</form>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<div class="copyright mt-4">
-				<p class="copy-right text-center ">&copy; 2018 Accrue. All Rights Reserved | Design by
-					<a href="http://w3layouts.com/"> W3layouts </a>
+				<p class="copy-right text-center ">&copy; 2018 Consultoría Jurídica. Todos los Derechos Reservados | Diseñado por TIFYCA </a>
 				</p>
 			</div>
 		</div>
