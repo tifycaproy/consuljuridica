@@ -16,4 +16,9 @@ class homeController extends Controller
 
     	return view('Frontend.servicios');
     }
+
+     public function contacto(){
+
+    	return view('Frontend.contacto');
+    }
 }

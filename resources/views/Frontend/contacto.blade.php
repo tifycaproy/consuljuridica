@@ -2,12 +2,6 @@
 
 @section('content')
 
-@endsection
-
-@push('scripts')
-
-@endpush
-
 <section class="bottom-banner-w3layouts contact">
 		<h3 class="tittle-wthree text-center"> Get In Touch </h3>
 		<div class="inner-sec-w3ls-agileinfo">
@@ -81,3 +75,10 @@
 			</div>
 		</div>
 	</section>
+
+@endsection
+
+@push('scripts')
+
+@endpush
+
