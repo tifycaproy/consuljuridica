@@ -39,24 +39,6 @@
 				<li class="nav-item">
 					<a class="nav-link" href="contact.html">Contact</a>
 				</li>
-				<li class="search">
-					<a class="play-icon popup-with-zoom-anim" href="#small-dialog">
-						<i class="fas fa-search"></i>
-					</a>
-					<div id="small-dialog" class="mfp-hide">
-						<div class="search-top">
-							<div class="search-inn">
-								<form action="#" method="post" class="disply-flex">
-									<input class="form-control" type="search" name="search" value="Type something..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">
-									<button class="btn2">
-										<i class="fas fa-search"></i>
-									</button>
-								</form>
-							</div>
-							<p>Accrue</p>
-						</div>
-					</div>
-				</li>
 			</ul>
 		</div>
 		<!-- <form class="form-inline my-2 my-lg-0">

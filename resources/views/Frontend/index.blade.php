@@ -2,6 +2,7 @@
 
 @section('content')
 
+<link href="css/blog.css" rel='stylesheet' type='text/css' />
 
 <body>
 	
@@ -41,11 +42,8 @@
 					<h3>
 						<span></span>Asesoramiento y apoyo en la gestión</h3>
 					<p>El personal de la <strong>Consultoría Jurídica Miramar S.L. </strong>en destino, un equipo humano con amplia experiencia en el mercado cubano, ofrece el asesoramiento necesario para el desarrollo del proyecto en el país, así como la asistencia legal y el apoyo necesario para superar las barreras que surgen en el acceso a un nuevo mercado. </p>
-					<div class="read inner mt-4">
-						<a href="single.html" class="btn btn-sm animated-button victoria-two">Leer más</a>
-					</div>
 				</div>
-				<div class="col-lg-6 feature fea-slider text-right">
+				<div class="col-lg-6 feature fea-slider text-left">
 					<img src="images/2.jpg" class="img-fluid rounded" alt="">
 				</div>
 
@@ -54,51 +52,20 @@
 				</div>
 				<div class="col-lg-6 feature text-left mt-5">
 					<h3>
-						<span>Some Info</span>Infraestructura tecnológica</h3>
+						Infraestructura tecnológica</h3>
 					<p>Los Centros Empresariales de la <strong>Consultoría Jurídica Miramar S.L. </strong>cuentan con estructuras y puestos de trabajo totalmente equipados con todos los medios tecnológicos e instrumentos necesarios para que la empresa pueda desarrollar, desde un principio su proyecto rápida y eficazmente.</p>
-						<div class="read inner mt-4">
-							<a href="single.html" class="btn btn-sm animated-button victoria-two">Leer más</a>
-						</div>
 				</div>
 			</div>
 
-			<!--/<div class="row choose-main py-md-5 py-3">
-				<div class="col-lg-6 feature text-right">
-					<h3>
-						<span>Some Info</span>Espacios destinados al encuentro empresarial</h3>
-					<p>Salas de Reuniones y dinámicas rondas de negocios que permitan convocar a importadores, representantes y socios o bien intercambiar experiencias con el resto de las empresas presentes en el Centro Empresarial.</p>
-					<div class="read inner mt-4">
-						<a href="single.html" class="btn btn-sm animated-button victoria-two">Leer más</a>
-					</div>
-				</div>
-				<div class="col-lg-6 feature fea-slider text-right">
-					<img src="images/2.jpg" class="img-fluid rounded" alt="">
-				</div>
-
-				<div class="col-lg-6 feature fea-slider text-right">
-					<img src="images/3.jpg" class="img-fluid rounded" alt="">
-				</div>
-				<div class="col-lg-6 feature text-left mt-5">
-					<h3>
-						<span>Some Info</span>Consultoria Jurídica Miramar S.L. le brinda la posibilidad de:</h3>
-					<p><li>Abreviar la ejecución de las tareas complejas y urgentes</li>
-						<li>Disponer de personal altamente calificado y con evaluaciones y recomendaciones altamente confiables</li>
-						<li>Analizar con criterios independientes y modernos la práctica establecida; y profundizar en el conocimiento del mercado cubano</li>
-						<li>Asesoría de negocios (para empresas extranjeras no radicadas en Cuba)</li>
-					</p>
-						<div class="read inner mt-4">
-							<a href="single.html" class="btn btn-sm animated-button victoria-two">Leer más</a>
-						</div>
-				</div>-->
+			
 			</div>
 		</div>
 	</section>
 
-		<!--/services-->
+<!-----------/servicios-------------->
 	<section class="bottom-banner-w3layouts services">
 		<div class="container">
-			<h3 class="tittle-wthree cen text-center">
-				<span>Some Info</span>Servicios</h3>
+			<h3 class="tittle-wthree cen text-center">Servicios</h3>
 			<div class="row inner-sec-w3ls-agileinfo">
 				<div class="col-lg-4 service-in text-center">
 					<div class="card">
@@ -139,150 +106,212 @@
 			</div>
 		</div>
 	</section>
-	<!--//services-->
+<!---------------//servicios--------------->
 
-	<section class="bottom-banner">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-lg-6 about-img">
-				</div>
-				<div class="col-lg-6 about-info text-left">
-					<div class="ab-info-text">
-						<h3 class="tittle-wthree text-left">
-							<span>Some Info</span>Asesoría de Negocios</h3>
-						<div class="service-in text-left mt-5">
-							<div class="card">
-								<div class="card-body">
-									<i class="far fa-clock"></i>
-									<h5 class="card-title">1.- Asesoramiento y apoyo en la gestión </h5>
-									<p class="card-text">
-										El personal de la <strong>Consultoría Jurídica Miramar S.L. </strong>en destino, un equipo humano con amplia experiencia en el mercado cubano, ofrece el asesoramiento necesario para el desarrollo del proyecto en el país, así como la asistencia legal y el apoyo necesario para superar las barreras que surgen en el acceso a un nuevo mercado.
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="service-in text-left mt-4">
-							<div class="card">
-								<div class="card-body">
-									<i class="fas fa-users"></i>
-									<h5 class="card-title">2.- Infraestructura tecnológica</h5>
-									<p class="card-text">Los Centros Empresariales de la <strong>Consultoría Jurídica Miramar S.L. </strong>cuentan con estructuras y puestos de trabajo totalmente equipados con todos los medios tecnológicos e instrumentos necesarios para que la empresa pueda desarrollar, desde un principio su proyecto rápida y eficazmente.
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!--//choose-->
+<!---------------/Blog--------------->
 	
-
-
-	<!--/bottom-banner-w3layouts-->
-	<section class="bottom-banner-w3layouts product">
+	<section class="bottom-banner-w3layouts">
 		<div class="container">
-			<h3 class="tittle-wthree text-center">
-				<span>Some Info</span>Take on the market with our powerful platforms.</h3>
+			<!---728x90--->
+
+			<h3 class="tittle-wthree text-center">Blog</h3>
+			<!---728x90--->
+
 			<div class="row inner-sec-w3ls-agileinfo">
-				<div class="mid-para text-center px-lg-5 px-md-4 px-2">
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut consectetur adipisicing
-						elit sedc labore et dolore magna aliqua uta enim ad minim ven iam quis nostrud exercitation ullamco. Sed semper leo
-						metus, a lacinia eros semper at. Etiam sodales orci sit amet vehicula pellentesque,Lorem ipsum dolor sit amet consectetur
-						adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore.</p>
-						<div class="read inner mt-4">
-							<a href="single.html" class="btn btn-sm animated-button victoria-two">Read More</a>
+				<!--left-->
+				<div class="col-lg-12 left-blog-info text-left">
+					<div class="row mb-4">
+						<div class="col-md-4 card">
+							<a href="single.html">
+								<img src="images/4.jpg" class="card-img-top img-fluid rounded" alt="">
+							</a>
+							<div class="card-body">
+								<ul class="blog-icons my-4">
+									<li>
+										<a href="#">
+											<i class="far fa-calendar-alt"></i> Feb 20 .2018</a>
+									</li>
+									
+									<li>
+										<a href="#">
+											<i class="fas fa-eye"></i> 2000</a>
+									</li>
+
+								</ul>
+								<h5 class="card-title ">
+									<a href="single.html">Blog Post Title</a>
+								</h5>
+								<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt.. </p>
+								<div class="read inner mt-4">
+									<a href="single.html" class="btn btn-sm animated-button victoria-two">Leer más</a>
+								</div>
+
+							</div>
 						</div>
+						<div class="col-md-4 card">
+							<a href="single.html">
+								<img src="images/5.jpg" class="card-img-top img-fluid rounded" alt="">
+							</a>
+							<div class="card-body">
+								<ul class="blog-icons my-4">
+									<li>
+										<a href="#">
+											<i class="far fa-calendar-alt"></i> Feb 22 .2018</a>
+									</li>
+									
+									<li>
+										<a href="#">
+											<i class="fas fa-eye"></i> 2000</a>
+									</li>
+
+								</ul>
+								<h5 class="card-title ">
+									<a href="single.html">Blog Post Title</a>
+								</h5>
+								<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt.. </p>
+								<div class="read inner mt-4">
+									<a href="single.html" class="btn btn-sm animated-button victoria-two">Leer más</a>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="col-md-4 card">
+							<a href="single.html">
+								<img src="images/6.jpg" class="card-img-top img-fluid rounded" alt="">
+							</a>
+							<div class="card-body">
+								<ul class="blog-icons my-4">
+									<li>
+										<a href="#">
+											<i class="far fa-calendar-alt"></i> Feb 23 .2018</a>
+									</li>
+									
+									<li>
+										<a href="#">
+											<i class="fas fa-eye"></i> 2000</a>
+									</li>
+
+								</ul>
+								<h5 class="card-title ">
+									<a href="single.html">Blog Post Title</a>
+								</h5>
+								<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt.. </p>
+								<div class="read inner mt-4">
+									<a href="single.html" class="btn btn-sm animated-button victoria-two">Leer más</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="row mb-4">
+						<div class="col-md-4 card">
+							<a href="single.html">
+								<img src="images/7.jpg" class="card-img-top img-fluid rounded" alt="">
+							</a>
+							<div class="card-body">
+								<ul class="blog-icons my-4">
+									<li>
+										<a href="#">
+											<i class="far fa-calendar-alt"></i> Mar 20 .2018</a>
+									</li>
+									
+									<li>
+										<a href="#">
+											<i class="fas fa-eye"></i> 2000</a>
+									</li>
+
+								</ul>
+								<h5 class="card-title ">
+									<a href="single.html">Blog Post Title</a>
+								</h5>
+								<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt.. </p>
+								<div class="read inner mt-4">
+									<a href="single.html" class="btn btn-sm animated-button victoria-two">Leer más</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 card">
+							<a href="single.html">
+								<img src="images/5.jpg" class="card-img-top img-fluid rounded" alt="">
+							</a>
+							<div class="card-body">
+								<ul class="blog-icons my-4">
+									<li>
+										<a href="#">
+											<i class="far fa-calendar-alt"></i> Mar 25 .2018</a>
+									</li>
+									
+									<li>
+										<a href="#">
+											<i class="fas fa-eye"></i> 2000</a>
+									</li>
+
+								</ul>
+								<h5 class="card-title ">
+									<a href="single.html">Blog Post Title</a>
+								</h5>
+								<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt.. </p>
+								<div class="read inner mt-4">
+									<a href="single.html" class="btn btn-sm animated-button victoria-two">Leer más</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 card">
+							<a href="single.html">
+								<img src="images/4.jpg" class="card-img-top img-fluid rounded" alt="">
+							</a>
+							<div class="card-body">
+								<ul class="blog-icons my-4">
+									<li>
+										<a href="#">
+											<i class="far fa-calendar-alt"></i> Feb 30 .2018</a>
+									</li>
+									
+									<li>
+										<a href="#">
+											<i class="fas fa-eye"></i> 2000</a>
+									</li>
+
+								</ul>
+								<h5 class="card-title ">
+									<a href="single.html">Blog Post Title</a>
+								</h5>
+								<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt.. </p>
+								<div class="read inner mt-4">
+									<a href="single.html" class="btn btn-sm animated-button victoria-two">Leer más</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<nav aria-label="Page navigation example">
+						<ul class="pagination justify-content-left mt-4">
+							<li class="page-item disabled">
+								<a class="page-link" href="#" tabindex="-1">Previous</a>
+							</li>
+							<li class="page-item">
+								<a class="page-link" href="#">1</a>
+							</li>
+							<li class="page-item">
+								<a class="page-link" href="#">2</a>
+							</li>
+							<li class="page-item">
+								<a class="page-link" href="#">3</a>
+							</li>
+							<li class="page-item">
+								<a class="page-link" href="#">Next</a>
+							</li>
+						</ul>
+					</nav>
 				</div>
+				<!--//left-->
+				
 			</div>
 		</div>
+
 	</section>
-	<!--//-->
-	<!--/process-->
-	<!--/<section class="bottom-banner-w3layouts" id="process">
-		<div class="container">
-			<h3 class="tittle-wthree text-center">
-				<span>Some Info</span>A relationship on your terms.</h3>
-			<div class="row inner-sec-w3ls-agileinfo">
-				<div class="col-lg-4 terms-main text-left">
-					<div class="terms-in text-left rounded">
-						<div class="card">
-							<div class="card-body">
-								<i class="fab fa-react"></i>
-								<h5 class="card-title">Investing</h5>
-								<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore.
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 terms-main text-left">
-					<div class="terms-in one text-left rounded">
-						<div class="card">
-							<div class="card-body">
-								<i class="fab fa-strava"></i>
-								<h5 class="card-title">Trading</h5>
-								<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore.
-								</p>
+<!---------------//Blog--------------->
 
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 terms-main text-left">
-					<div class="terms-in two text-left rounded">
-						<div class="card">
-							<div class="card-body">
-								<i class="far fa-money-bill-alt"></i>
-								<h5 class="card-title">Wealth Management</h5>
-								<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore.
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 terms-main text-left mt-4">
-					<div class="terms-in thd text-left rounded">
-						<div class="card">
-							<div class="card-body">
-								<i class="fas fa-exclamation"></i>
-								<h5 class="card-title">Risk Analysis</h5>
-								<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore.
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 terms-main text-left mt-4">
-					<div class="terms-in fourth text-left rounded">
-						<div class="card">
-							<div class="card-body">
-								<i class="fas fa-street-view"></i>
-								<h5 class="card-title">Stock Market</h5>
-								<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore.
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 terms-main text-left mt-4">
-					<div class="terms-in fifth text-left rounded">
-						<div class="card">
-							<div class="card-body">
-								<i class="fas fa-umbrella"></i>
-								<h5 class="card-title">Venture Capitals</h5>
-								<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore.
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>-->
 
 	<section class="bottom-banner-w3layouts contact">
 		<h3 class="tittle-wthree text-center"> Contacto </h3>
@@ -358,439 +387,7 @@
 		</div>
 	</section>
 
-	<!--//
 	
-	<section class="testimonials bottom-banner-w3layouts">
-		<div class="container">
-			<h3 class="tittle-wthree cen text-center">Find out more about what we do</h3>
-		</div>
-	</section>
-	/features
-	<section class="bottom-banner-w3layouts">
-		<div class="container">
-			<h3 class="tittle-wthree text-center">
-				<span>Some Info</span>Financial Experts</h3>
-			<div class="row inner-sec-w3ls-agileinfo ">
-				<div class="col-sm-4">
-					<div class="team-grid text-center">
-						<div class="team-img">
-							<img class="img-fluid rounded" src="images/team1.jpg" alt="">
-						</div>
-						<div class="team-info">
-							<h4>Expert 1</h4>
-							<span>Chief Executive </span>
-							<ul class="d-flex justify-content-center py-3 social-icons">
-								<li>
-									<a href="#">
-										<i class="fab fa-facebook-f"></i>
-									</a>
-								</li>
-								<li class="mx-3">
-									<a href="#">
-										<i class="fab fa-twitter"></i>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<i class="fab fa-google-plus-g"></i>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-4">
-					<div class="team-grid text-center">
-						<div class="team-img">
-							<img class="img-fluid rounded" src="images/team2.jpg" alt="">
-						</div>
-						<div class="team-info">
-							<h4>Expert 2</h4>
-							<span>Senior Engineer</span>
-							<ul class="d-flex justify-content-center py-3 social-icons">
-								<li>
-									<a href="#">
-										<i class="fab fa-facebook-f"></i>
-									</a>
-								</li>
-								<li class="mx-3">
-									<a href="#">
-										<i class="fab fa-twitter"></i>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<i class="fab fa-google-plus-g"></i>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-4">
-					<div class="team-grid text-center">
-						<div class="team-img">
-							<img class="img-fluid rounded" src="images/team3.jpg" alt="">
-						</div>
-						<div class="team-info">
-							<h4>Expert 3</h4>
-							<span>HR Manager</span>
-							<ul class="d-flex justify-content-center py-3 social-icons">
-								<li>
-									<a href="#">
-										<i class="fab fa-facebook-f"></i>
-									</a>
-								</li>
-								<li class="mx-3">
-									<a href="#">
-										<i class="fab fa-twitter"></i>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<i class="fab fa-google-plus-g"></i>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			 //end row -->
-			<!-- //<div class="row justify-content-center">
-				<div class="col-sm-4">
-					<div class="team-grid text-center">
-						<div class="team-img">
-							<img class="img-fluid rounded" src="images/team4.jpg" alt="">
-						</div>
-						<div class="team-info">
-							<h4>Expert 4</h4>
-							<span>Accounts Manager</span>
-							<ul class="d-flex justify-content-center py-3 social-icons">
-								<li>
-									<a href="#">
-										<i class="fab fa-facebook-f"></i>
-									</a>
-								</li>
-								<li class="mx-3">
-									<a href="#">
-										<i class="fab fa-twitter"></i>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<i class="fab fa-google-plus-g"></i>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-4">
-					<div class="team-grid text-center">
-						<div class="team-img">
-							<img class="img-fluid rounded" src="images/team1.jpg" alt="">
-						</div>
-						<div class="team-info">
-							<h4>Expert 5</h4>
-							<span>Marketing Head</span>
-							<ul class="d-flex justify-content-center py-3 social-icons">
-								<li>
-									<a href="#">
-										<i class="fab fa-facebook-f"></i>
-									</a>
-								</li>
-								<li class="mx-3">
-									<a href="#">
-										<i class="fab fa-twitter"></i>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<i class="fab fa-google-plus-g"></i>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			 //end row 
-		</div>
-
-
-	</section> -->
-	<!--//features-->
-	<!--gallery  -->
-	<!--//<section class="bottom-banner-w3layouts proj">
-		<div class="container-fluid text-center">
-			<h3 class="tittle-wthree text-center">
-				<span>Some Info</span>Our Projects</h3>
-			<ul class="portfolio-categ filter pt-4 mb-5 text-center">
-				<li class="port-filter all active">
-					<a href="#">All</a>
-				</li>
-				<li class="cat-item-1">
-					<a href="#" title="Category 1">Accounting</a>
-				</li>
-				<li class="cat-item-2">
-					<a href="#" title="Category 2">Employee</a>
-				</li>
-				<li class="cat-item-3">
-					<a href="#" title="Category 3">Banking</a>
-				</li>
-				<li class="cat-item-4">
-					<a href="#" title="Category 4">Finacial</a>
-				</li>
-			</ul>
-			<ul class="portfolio-area clearfix">
-				<li class="portfolio-item2" data-id="id-0" data-type="cat-item-4">
-					<div>
-						<span class="image-block img-hover">
-							<a class="image-zoom rounded" href="images/4.jpg" data-gal="prettyPhoto[gallery]">
-
-								<img src="images/4.jpg" class="img-fluid rounded" alt="">
-
-							</a>
-						</span>
-					</div>
-				</li>
-				<li class="portfolio-item2" data-id="id-1" data-type="cat-item-2">
-					<div>
-						<span class="image-block">
-							<a class="image-zoom" href="images/5.jpg" data-gal="prettyPhoto[gallery]">
-
-								<img src="images/5.jpg" class="img-fluid rounded" alt="">
-
-							</a>
-						</span>
-					</div>
-				</li>
-				<li class="portfolio-item2" data-id="id-2" data-type="cat-item-1">
-					<div>
-						<span class="image-block">
-							<a class="image-zoom" href="images/6.jpg" data-gal="prettyPhoto[gallery]">
-
-								<img src="images/6.jpg" class="img-fluid rounded" alt="">
-
-							</a>
-						</span>
-					</div>
-				</li>
-				<li class="portfolio-item2" data-id="id-3" data-type="cat-item-4">
-					<div>
-						<span class="image-block">
-							<a class="image-zoom" href="images/7.jpg" data-gal="prettyPhoto[gallery]">
-
-								<img src="images/7.jpg" class="img-fluid rounded" alt="">
-
-							</a>
-						</span>
-					</div>
-				</li>
-				<li class="portfolio-item2" data-id="id-4" data-type="cat-item-3">
-					<div>
-						<span class="image-block">
-							<a class="image-zoom" href="images/8.jpg" data-gal="prettyPhoto[gallery]">
-
-								<img src="images/8.jpg" class="img-fluid rounded" alt="">
-
-							</a>
-						</span>
-					</div>
-				</li>
-				<li class="portfolio-item2" data-id="id-5" data-type="cat-item-2">
-					<div>
-						<span class="image-block">
-							<a class="image-zoom" href="images/9.jpg" data-gal="prettyPhoto[gallery]">
-
-								<img src="images/9.jpg" class="img-fluid rounded" alt="">
-
-							</a>
-						</span>
-					</div>
-				</li>
-				<li class="portfolio-item2" data-id="id-6" data-type="cat-item-1">
-					<div>
-						<span class="image-block">
-							<a class="image-zoom" href="images/10.jpg" data-gal="prettyPhoto[gallery]">
-
-								<img src="images/10.jpg" class="img-fluid rounded" alt="">
-
-							</a>
-						</span>
-					</div>
-				</li>
-				<li class="portfolio-item2" data-id="id-7" data-type="cat-item-1">
-					<div>
-						<span class="image-block">
-							<a class="image-zoom" href="images/11.jpg" data-gal="prettyPhoto[gallery]">
-
-								<img src="images/11.jpg" class="img-fluid rounded" alt="">
-
-							</a>
-						</span>
-					</div>
-				</li>
-				<li class="portfolio-item2" data-id="id-9" data-type="cat-item-4">
-					<div>
-						<span class="image-block">
-							<a class="image-zoom" href="images/12.jpg" data-gal="prettyPhoto[gallery]">
-
-								<img src="images/12.jpg" class="img-fluid rounded" alt="">
-
-							</a>
-						</span>
-					</div>
-				</li>
-				<li class="portfolio-item2" data-id="id-9" data-type="cat-item-3">
-					<div>
-						<span class="image-block">
-							<a class="image-zoom" href="images/13.jpg" data-gal="prettyPhoto[gallery]">
-
-								<img src="images/13.jpg" class="img-fluid rounded" alt="">
-
-							</a>
-						</span>
-					</div>
-				</li>
-				<li class="portfolio-item2" data-id="id-10" data-type="cat-item-2">
-					<div>
-						<span class="image-block">
-							<a class="image-zoom" href="images/4.jpg" data-gal="prettyPhoto[gallery]">
-
-								<img src="images/4.jpg" class="img-fluid rounded" alt="">
-
-							</a>
-						</span>
-					</div>
-				</li>
-				<li class="portfolio-item2" data-id="id-8" data-type="cat-item-1">
-					<div>
-						<span class="image-block">
-							<a class="image-zoom" href="images/9.jpg" data-gal="prettyPhoto[gallery]">
-
-								<img src="images/9.jpg" class="img-fluid rounded" alt="">
-
-							</a>
-						</span>
-					</div>
-				</li>
-				<li class="portfolio-item2" data-id="id-9" data-type="cat-item-3">
-					<div>
-						<span class="image-block">
-							<a class="image-zoom" href="images/5.jpg" data-gal="prettyPhoto[gallery]">
-
-								<img src="images/5.jpg" class="img-fluid rounded" alt="">
-
-							</a>
-						</span>
-					</div>
-				</li>
-				<li class="portfolio-item2" data-id="id-10" data-type="cat-item-2">
-					<div>
-						<span class="image-block">
-							<a class="image-zoom" href="images/8.jpg" data-gal="prettyPhoto[gallery]">
-
-								<img src="images/8.jpg" class="img-fluid rounded" alt="">
-
-							</a>
-						</span>
-					</div>
-				</li>
-				<li class="portfolio-item2" data-id="id-8" data-type="cat-item-1">
-					<div>
-						<span class="image-block">
-							<a class="image-zoom" href="images/6.jpg" data-gal="prettyPhoto[gallery]">
-
-								<img src="images/6.jpg" class="img-fluid rounded" alt="">
-
-							</a>
-						</span>
-					</div>
-				</li>
-			</ul>
-		</div>	
-		
-
-
-		
-		gallery container 
-	</section>-->
-	<!-- //gallery -->
-	<!--/testimonials-->
-	<!--//<section class="testimonials bottom-banner-w3layouts">
-		<div class="container">
-			<h3 class="tittle-wthree cen text-center">What our clients say</h3>
-			<div class="inner-sec-w3ls-agileinfo">
-				<div class="owl-carousel owl-theme">
-					<div class="item">
-						<div class="feedback-info text-left">
-							<div class="feedback-top rounded">
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore et dolore magna
-									Sed semper leo metus, a lacinia eros semper at.</p>
-							</div>
-							<div class="feedback-grids">
-								<div class="feedback-img">
-									<img src="images/t1.jpg" class="img-fluid rounded-circle" alt="" />
-								</div>
-								<div class="feedback-img-info">
-									<h5>Mary Jane</h5>
-									<p>United States
-										<span>(Company)</span>
-									</p>
-								</div>
-								<div class="clearfix"> </div>
-							</div>
-						</div>
-					</div>
-					<div class="item">
-						<div class="feedback-info text-left">
-							<div class="feedback-top rounded">
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore et dolore magna
-									Sed semper leo metus, a lacinia eros semper at.</p>
-							</div>
-							<div class="feedback-grids">
-								<div class="feedback-img">
-									<img src="images/t3.jpg" class="img-fluid rounded-circle" alt="" />
-								</div>
-								<div class="feedback-img-info">
-									<h5>Steven Wilson</h5>
-									<p>United States
-										<span>(Company)</span>
-									</p>
-								</div>
-								<div class="clearfix"> </div>
-							</div>
-						</div>
-					</div>
-					<div class="item">
-						<div class="feedback-info text-left">
-							<div class="feedback-top rounded">
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore et dolore magna
-									Sed semper leo metus, a lacinia eros semper at.</p>
-							</div>
-							<div class="feedback-grids">
-								<div class="feedback-img">
-									<img src="images/t3.jpg" class="img-fluid rounded-circle" alt="" />
-								</div>
-								<div class="feedback-img-info">
-									<h5>Peter guptill</h5>
-									<p>Vestibulum</p>
-								</div>
-								<div class="clearfix"> </div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</div>
-	</section> -->
-	<!--//testimonials-->
-	
-	
-
 @endsection
 
 

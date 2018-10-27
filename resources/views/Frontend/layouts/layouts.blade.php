@@ -35,10 +35,8 @@
 </head>
 
 <body>
-
-<!--/banner-->
 	
-		<!-- header -->
+<!-------------------- header ------------------->
 		<header>
 			<nav class="navbar navbar-expand-lg navbar-light bg-light top-header">
 				<h1 class="logo">
@@ -57,71 +55,41 @@
 								<span class="sr-only">(current)</span>
 							</a>
 						</li>
+						<li class="nav-item ">
+							<a class="nav-link" href="{{route('blog')}}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+							    aria-expanded="false">
+								Blog
+							</a>
+							
+						</li>
 						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+							<a class="nav-link dropdown-toggle" href="{{route('servicios')}}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
 							    aria-expanded="false">
 								Servicios
 							</a>
-							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<a class="dropdown-item text-center" href="blog.html">Servicios Consulares para ciudadanos cubanos</a>
-								<a class="dropdown-item text-center" href="blog1.html">Solicitud de documentos a Cuba</a>
-								<a class="dropdown-item text-center" href="single.html">Tramites legales y extranjeria</a>
-							</div>
-						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-							    aria-expanded="false">
-								Centro Empresarial
-							</a>
-							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<a class="dropdown-item text-center" href="blog.html">Servicio 1</a>
-								<a class="dropdown-item text-center" href="blog1.html">Servicio 2</a>
-								<a class="dropdown-item text-center" href="single.html">Servicio 3</a>
-							</div>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="projects.html">Noticias</a>
-						</li>
-						
+							
+						</li>						
 						<li class="nav-item">
 							<a class="nav-link" href="{{route('contacto')}} ">Contacto</a>
 						</li>
-						<li class="search">
-							<a class="play-icon popup-with-zoom-anim" href="#small-dialog">
-								<i class="fas fa-search"></i>
-							</a>
-							<div id="small-dialog" class="mfp-hide">
-								<div class="search-top">
-									<div class="search-inn">
-										<form action="#" method="post" class="disply-flex">
-											<input class="form-control" type="search" name="search" value="Type something..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">
-											<button class="btn2">
-												<i class="fas fa-search"></i>
-											</button>
-										</form>
-									</div>
-									<p>Accrue</p>
-								</div>
-							</div>
-						</li>
+						
 					</ul>
 				</div>
 			</nav>
 		</header>
 
-	<!-- //header -->
+<!------------------- //header --------------------------->
 @yield('content')
-<!--footer -->
+<!--------------------footer------------------------- -->
 	<footer>
 		<div class="container">
 			<div class="row footer-top">
 				<div class="col-lg-3 footer-grid-w3ls">
 					<div class="footer-title">
-						<h3>About Us</h3>
+						<h3>Sobre nosotros</h3>
 					</div>
 					<div class="footer-text">
-						<p>Curabitur non nulla sit amet nislinit tempus convallis quis ac lectus. lac inia eget consectetur sed, convallis at
-							tellus. Nulla porttitor accumsana tincidunt.</p>
+						<p>Especialistas en asuntos legales y empresariales en España, Cuba y Caribe.</p>
 						<div class="social-icon footer text-left mt-4">
 							<div class="icon-social">
 								<a href="#" class="button-footr">
@@ -140,13 +108,13 @@
 				</div>
 				<div class="col-lg-3 footer-grid-w3ls">
 					<div class="footer-title">
-						<h3>Get in touch</h3>
+						<h3>Contáctanos</h3>
 					</div>
 					<div class="contact-info">
-						<h4>Location :</h4>
+						<h4>Dirección :</h4>
 						<p>0926k 4th block building, king Avenue, New York City.</p>
 						<div class="phone">
-							<h4>Contact :</h4>
+							<h4>Contacto :</h4>
 							<p>Phone : +121 098 8907 9987</p>
 							<p>Email :
 								<a href="mailto:info@example.com">info@example.com</a>
@@ -156,34 +124,31 @@
 				</div>
 				<div class="col-lg-3 footer-grid-w3ls">
 					<div class="footer-title">
-						<h3>Useful Links</h3>
+						<h3>Enlaces útiles</h3>
 					</div>
 					<ul class="links">
 						<li>
-							<a href="index.html">Home</a>
+							<a href="{{route('/')}}">Home</a>
 						</li>
 						<li>
-							<a href="about.html">About</a>
+							<a href="{{route('blog')}}">Blog</a>
 						</li>
 						<li>
-							<a href="blog.html">Blog</a>
+							<a href="{{route('servicios')}}">Servicios</a>
 						</li>
 						<li>
-							<a href="projects.html">Projects</a>
-						</li>
-						<li>
-							<a href="contact.html">Contact Us</a>
+							<a href="{{route('contacto')}}">Contacto</a>
 						</li>
 					</ul>
 				</div>
 				<div class="col-lg-3 footer-grid-w3ls">
 					<div class="footer-title">
-						<h3>Subscribe</h3>
+						<h3>Suscríbete</h3>
 					</div>
 					<div class="footer-text">
-						<p>By subscribing to our mailing list you will always get latest news and updates from us.</p>
+						<p>Al suscribirse a nuestra lista de correo, siempre recibirá nuestras últimas noticias y actualizaciones.</p>
 						<form action="#" method="post">
-							<input class="form-control" type="email" name="Email" placeholder="Enter your email..." required="">
+							<input class="form-control" type="email" name="Email" placeholder="Tu correo electrónico..." required="">
 							<button class="btn1">
 								<i class="far fa-envelope" aria-hidden="true"></i>
 							</button>
@@ -198,7 +163,7 @@
 			</div>
 		</div>
 	</footer>
-	<!-- //footer -->	
+	<!-------------------- //footer ----------------------------->	
 
 	<a href="#home" class="scroll" id="toTop" style="display: block;">
 		<span id="toTopHover" style="opacity: 1;"> </span>
