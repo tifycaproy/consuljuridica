@@ -12,8 +12,19 @@ class homeController extends Controller
     	return view('Frontend.index');
     }
 
+     public function blog(){
+
+    	return view('Frontend.blog');
+    }
+
     public function servicios(){
 
     	return view('Frontend.servicios');
     }
+
+     public function contacto(){
+
+    	return view('Frontend.contacto');
+    }
+
 }

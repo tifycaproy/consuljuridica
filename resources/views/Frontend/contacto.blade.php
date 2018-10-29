@@ -2,7 +2,7 @@
 
 @section('content')
 
-	<section class="bottom-banner-w3layouts contact">
+<section class="bottom-banner-w3layouts contact">
 		<h3 class="tittle-wthree text-center"> Contacto </h3>
 		<div class="inner-sec-w3ls-agileinfo">
 			<div class="map">
