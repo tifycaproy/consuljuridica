@@ -1,6 +1,46 @@
-@extends('layouts.app')
+@extends ('Backend.layout.login')
 
 @section('content')
+<div class="col-lg-4 col-md-6 col-sm-6 ml-auto mr-auto">
+  <form class="form" method="" action="">
+    <div class="card card-login card-hidden">
+      <div class="card-header card-header-rose text-center">
+        <h4 class="card-title">Inicie Sesión</h4>
+      </div>
+      <div class="card-body ">
+
+        <a href="../dashboard.html" class="nav-link">
+            <i class="material-icons">person_add</i>
+            O Regístrese
+        </a>
+        <hr class="bg-primary">
+        <span class="bmd-form-group">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text text-white">
+                <i class="material-icons">email</i>
+              </span>
+            </div>
+            <input type="email" class="form-control" placeholder="Correo Electrónico...">
+          </div>
+        </span>
+        <span class="bmd-form-group">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text text-white">
+                <i class="material-icons">lock_outline</i>
+              </span>
+            </div>
+            <input type="password" class="form-control" placeholder="Contraseña...">
+          </div>
+        </span>
+      </div>
+      <div class="card-footer justify-content-center">
+        <a href="#pablo" class="btn btn-rose btn-link btn-lg">Iniciar</a>
+      </div>
+    </div>
+  </form>
+</div>
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">

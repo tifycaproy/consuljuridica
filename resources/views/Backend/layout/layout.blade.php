@@ -107,6 +107,8 @@
   <script src="{{ asset('demo/demo.js') }}"></script>
   <script src="{{ asset('demo/main.js') }}"></script>
 
+  <script src="{{ asset('js/validaciones/panel.js') }}"></script>
+
 </body>
 
 </html>
