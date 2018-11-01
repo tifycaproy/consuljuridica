@@ -29,6 +29,7 @@
 	<link href="css/prettyPhoto.css" rel="stylesheet" type="text/css">
 	<link href="css/style.css" rel='stylesheet' type='text/css' />
 	<link href="css/fontawesome-all.css" rel="stylesheet">
+	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext"
 	    rel="stylesheet">
 	<link href="//fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
@@ -171,11 +172,14 @@
 					</div>
 					<div class="footer-text">
 						<p>Al suscribirse a nuestra lista de correo, siempre recibirá nuestras últimas noticias y actualizaciones.</p>
-						<form action="#" method="post">
-							<input class="form-control" type="email" name="Email" placeholder="Tu correo electrónico..." required="">
-							<button class="btn1">
+						<small class="respuesta"></small>
+						<form action="" class="form-newlester" method="post" onsubmit="return false">
+							<input class="form-control mail-newlester" type="email" name="mail" placeholder="Tu correo electrónico..."  required="">
+
+							<button class="btn1 btn-newlester" type="button">
 								<i class="far fa-envelope" aria-hidden="true"></i>
 							</button>
+
 							<div class="clearfix"> </div>
 						</form>
 					</div>
@@ -259,6 +263,41 @@
 	<script src="js/script.js"></script>
 	<script src="js/jquery.prettyPhoto.js"></script>
 	<!-- //jQuery-Photo-filter-lightbox-Gallery-plugin -->
+
+
+	<script type="text/javascript" charset="utf-8">
+		
+            //ALMACENA LOS DATOS DE NEWLESTER
+            $(".btn-newlester").click(function(){
+
+            var mail = $("input.mail-newlester").val();
+
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                });
+                $.ajax({
+                    type: "post",
+                    url: '{{ route('create_newlester') }}',
+                    dataType: "json",
+                    data: { mail: mail ,_token: '{{csrf_token()}}' },
+                    success: function (data){
+                            
+                        
+                        $('.respuesta').html('Email registrado exitosamente').css('color', 'green');
+                    },
+                     error: function (data) {
+
+                     	var json = data.responseJSON.errors;
+			            var error = json['mail'][0];
+
+			            $('.respuesta').html('Este email ya se encuentra registrado').css('color', 'red');
+			        }
+
+                });
+            });
+	</script>
 
 @stack('scripts')
 
