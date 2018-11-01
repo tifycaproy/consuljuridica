@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 
 class homeController extends Controller
@@ -15,7 +16,8 @@ class homeController extends Controller
 
       switch ($name) {
         case 'slider':
-          return view('Backend.slider');
+          $sliders = DB::select('SELECT  titulo,  IF (publico = \'1\', \'Si\', \'No\') as publico, posicion,  created_at  FROM bd_consuljuridica.sliders');
+          return view('Backend.slider',['sliders' => $sliders]);
           break;
         case 'servicios':
           return view('Backend.servicios');
