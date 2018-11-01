@@ -5,6 +5,10 @@
 <link href="css/blog.css" rel='stylesheet' type='text/css' />
 
 <body>
+
+
+
+
 	
 <!-- banner-text -->
 <div class="banner" id="home">	
@@ -32,7 +36,9 @@
 	</div>
 </div>
 	<!-- //banner -->
+
 	<span><span></span></span>
+
 	<!--/bottom-banner-w3layouts-->
 
 	<section class="bottom-banner-w3layouts bg-light py-md-5 py-3">
