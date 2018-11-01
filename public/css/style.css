@@ -135,8 +135,13 @@ h1.logo span {
 	font-family: 'Raleway', sans-serif;
 }
 
+#btn-redes {
+	bottom: 30px;
+    z-index: 1;
+}
+
 nav.navbar.navbar-expand-lg.navbar-light {
-	
+	flex-flow: wrap !important;
 }
 
 .navbar-light .navbar-nav .nav-link,
