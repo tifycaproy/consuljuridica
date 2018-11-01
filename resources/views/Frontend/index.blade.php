@@ -32,7 +32,7 @@
 	</div>
 </div>
 	<!-- //banner -->
-	<span><br></span>
+	<span><span></span></span>
 	<!--/bottom-banner-w3layouts-->
 
 	<section class="bottom-banner-w3layouts bg-light py-md-5 py-3">
