@@ -350,9 +350,8 @@
 							</div>
 							<div class="col-md-9 address-right text-left">
 								<h6 class="ad-info text-uppercase mb-2">Dirección</h6>
-								<p> Cuba
-
-								</p>
+ 								<p> Calle Garrigues , no. 2 bajo
+									46001 Valencia</p>
 							</div>
 						</div>
 					</div>
@@ -362,9 +361,9 @@
 								<i class="far fa-envelope"></i>
 							</div>
 							<div class="col-md-9 address-right text-left">
-								<h6 class="ad-info text-uppercase mb-2">Correo</h6>
-								<p>Correo :
-									<a href="mailto:example@email.com"> mail@example.com</a>
+								<h6 class="ad-info text-uppercase mb-2">Correo</h6> <br>
+								<p>
+									<a href="info@consuljuridica.com"> info@consuljuridica.com</a>
 								</p>
 							</div>
 
@@ -376,8 +375,8 @@
 								<i class="fas fa-mobile-alt"></i>
 							</div>
 							<div class="col-md-9 address-right text-left">
-								<h6 class="ad-info text-uppercase mb-2">Teléfono</h6>
-								<p>+1 234 567 8901</p>
+								<h6 class="ad-info text-uppercase mb-2">Teléfono</h6><br>
+								<p>+34 963 12 26 16</p>
 
 							</div>
 						</div>
