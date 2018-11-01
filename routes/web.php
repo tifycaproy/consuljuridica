@@ -25,6 +25,11 @@ Route::get('servicios', 'Frontend\homeController@servicios')->name('servicios');
 
 Route::get('contacto', 'Frontend\homeController@contacto')->name('contacto');
 
+//AJAX
+
+//CREAR NEWLESTER
+Route::post('create_newlester', 'Ajax\AjaxNewlester@create')->name('create_newlester');
+////
 
 
 
