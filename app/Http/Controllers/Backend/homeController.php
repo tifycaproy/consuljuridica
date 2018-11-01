@@ -23,7 +23,8 @@ class homeController extends Controller
           return view('Backend.servicios');
           break;
         case 'noticias':
-          return view('Backend.noticias');
+        $noticias = DB::select('SELECT  titulo,  IF (publico = \'1\', \'Si\', \'No\') as publico, posicion,  created_at  FROM bd_consuljuridica.noticias');
+          return view('Backend.noticias',['noticias' => $noticias]);
           break;
 
         default:
