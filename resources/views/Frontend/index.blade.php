@@ -36,7 +36,7 @@
 	</div>
 </div>
 	<!-- //banner -->
-	<span><br></span>
+	<span><div></div></span>
 	<!--/bottom-banner-w3layouts-->
 
 	<section class="bottom-banner-w3layouts bg-light py-md-5 py-3">
