@@ -17,5 +17,6 @@ class DatabaseSeeder extends Seeder
       // $this->call(UserTableSeeder::class);
       //Control de los Sliders
       $this->call(SliderSeeder::class);
+      $this->call(NoticiaSeeder::class);
     }
 }
