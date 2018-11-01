@@ -1,9 +1,26 @@
 <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item active  ">
-            <a class="nav-link" href="javascript:void(0)">
-              <i class="material-icons">dashboard</i>
-              <p>Dashboard</p>
+          <li id="slider" class="nav-item">
+            <a class="nav-link" href="<?php echo route('ingresarmodulo', ['modulo' => 'slider'])?>">
+              <i class="material-icons">view_carousel</i>
+              <p>Slider</p>
+            </a>
+          </li>
+          <li id="servicios" class="nav-item">
+            <a class="nav-link disabled" href="
+            <?php
+            // echo route('ingresarmodulo', ['modulo' => 'servicios'])
+            echo "#";
+            ?>
+            ">
+              <i class="material-icons">iso</i>
+              <p>Servicios</p>
+            </a>
+          </li>
+          <li id="noticias" class="nav-item">
+            <a class="nav-link" href="<?php echo route('ingresarmodulo', ['modulo' => 'noticias'])?>">
+              <i class="material-icons">vertical_split</i>
+              <p>Noticias</p>
             </a>
           </li>
           <!-- your sidebar here -->

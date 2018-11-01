@@ -14,7 +14,7 @@
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-// 
+//
 // FRONTEND
 
 Route::get('/', 'Frontend\homeController@index')->name('/');
@@ -34,3 +34,14 @@ Route::get('contacto', 'Frontend\homeController@contacto')->name('contacto');
 // BACKEND
 
 Route::get('admin', 'Backend\homeController@admin')->name('admin');
+// Route::get('admin/{id}', 'Backend\homeController@slider');
+// Route::patch('admin/{id}',[
+//     'as' => 'modulo',
+//     'uses' => 'Backend\homeController@modulos'
+// ]);
+Route::get('/admin/{modulo}',['as' => 'ingresarmodulo', 'uses' => 'Backend\homeController@modulos']);
+// Route::get('admin/slider', 'Backend\homeController@admin')->name('slider');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
