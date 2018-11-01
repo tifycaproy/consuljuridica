@@ -5,6 +5,10 @@
 <link href="css/blog.css" rel='stylesheet' type='text/css' />
 
 <body>
+
+
+
+
 	
 <!-- banner-text -->
 <div class="banner" id="home">	
