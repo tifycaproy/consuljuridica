@@ -114,7 +114,7 @@
 		<div class="container">
 			<!---728x90--->
 
-			<h3 class="tittle-wthree text-center">Blog</h3>
+			<h3 class="tittle-wthree text-center">Noticias</h3>
 			<!---728x90--->
 
 			<div class="row inner-sec-w3ls-agileinfo">
@@ -311,6 +311,78 @@
 
 	</section>
 <!---------------//Blog--------------->
+
+<!--/testimonials-->
+	<section class="testimonials bottom-banner-w3layouts">
+		<div class="container">
+			<h3 class="tittle-wthree cen text-center">Lo que dicen nuestros clientes</h3>
+			<div class="inner-sec-w3ls-agileinfo">
+				<div class="owl-carousel owl-theme">
+					<div class="item">
+						<div class="feedback-info text-left">
+							<div class="feedback-top rounded">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore et dolore magna
+									Sed semper leo metus, a lacinia eros semper at.</p>
+							</div>
+							<div class="feedback-grids">
+								<div class="feedback-img">
+									<img src="{{asset('images/t1.jpg')}}" class="img-fluid rounded-circle" alt="" />
+								</div>
+								<div class="feedback-img-info">
+									<h5>Mary Jane</h5>
+									<p>United States
+										<span>(Company)</span>
+									</p>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="feedback-info text-left">
+							<div class="feedback-top rounded">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore et dolore magna
+									Sed semper leo metus, a lacinia eros semper at.</p>
+							</div>
+							<div class="feedback-grids">
+								<div class="feedback-img">
+									<img src="{{asset('images/t3.jpg')}}" class="img-fluid rounded-circle" alt="" />
+								</div>
+								<div class="feedback-img-info">
+									<h5>Steven Wilson</h5>
+									<p>United States
+										<span>(Company)</span>
+									</p>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="feedback-info text-left">
+							<div class="feedback-top rounded">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore et dolore magna
+									Sed semper leo metus, a lacinia eros semper at.</p>
+							</div>
+							<div class="feedback-grids">
+								<div class="feedback-img">
+									<img src="{{asset('images/t3.jpg')}}" class="img-fluid rounded-circle" alt="" />
+								</div>
+								<div class="feedback-img-info">
+									<h5>Peter guptill</h5>
+									<p>Vestibulum</p>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--//testimonials-->
+
 
 
 	<section class="bottom-banner-w3layouts contact">

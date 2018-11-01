@@ -38,6 +38,30 @@
 	
 <!-------------------- header ------------------->
 		<header>
+
+			<div id="btn-redes" class="col-1  position-fixed d-md-block d-none">
+        		<div class="row d-flex justify-content-right align-items-center">
+		            <div class="col pt-1 ">
+		                <a target="blank_" href="https://www.instagram.com/phonealo_app/" title="Instagram">
+		                    <img src="https://www.phonealo.com/assets/ig_circle.svg" alt="" class="w-25">
+		                </a>
+		            </div>
+
+		            <div class="w-100">
+		            	
+		            </div>
+		            
+		            <div class="col pt-1 ">
+		                <a target="blank_" href="https://www.facebook.com/Phonealo-642900916095975/?modal=admin_todo_tour" title="Facebook">
+		                     <img src="https://www.phonealo.com/assets/fb_circle.svg" alt="" class="w-25">
+		                 </a>
+		            </div>
+		         
+
+		        </div>
+        	</div> 
+    
+
 			<nav class="navbar navbar-expand-lg navbar-light bg-light top-header">
 				<h1 class="logo">
 					<img src="{{asset('images/logoconsul1.png')}}">
@@ -51,14 +75,14 @@
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item active">
-							<a class="nav-link ml-lg-0" href="{{route('/')}}">Home
+							<a class="nav-link ml-lg-0" href="{{route('/')}}">Inicio
 								<span class="sr-only">(current)</span>
 							</a>
 						</li>
 						<li class="nav-item ">
 							<a class="nav-link" href="{{route('blog')}}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
 							    aria-expanded="false">
-								Blog
+								Noticias
 							</a>
 							
 						</li>
@@ -90,17 +114,16 @@
 					</div>
 					<div class="footer-text">
 						<p>Especialistas en asuntos legales y empresariales en España, Cuba y Caribe.</p>
+						<a href="https://www.phonealo.com/privacity" title="Políticas de Privacidad" style=" color: #99d9f3">Políticas de Privacidad</a>
 						<div class="social-icon footer text-left mt-4">
 							<div class="icon-social">
 								<a href="#" class="button-footr">
 									<i class="fab fa-facebook-f"></i>
 								</a>
 								<a href="#" class="button-footr">
-									<i class="fab fa-twitter"></i>
+									<i class="fab fa-instagram"></i>
 								</a>
-								<a href="#" class="button-footr">
-									<i class="fab fa-dribbble"></i>
-								</a>
+								
 
 							</div>
 						</div>
@@ -112,12 +135,13 @@
 					</div>
 					<div class="contact-info">
 						<h4>Dirección :</h4>
-						<p>0926k 4th block building, king Avenue, New York City.</p>
+						<p>Calle Garrigues , no. 2 bajo
+									46001 Valencia.</p>
 						<div class="phone">
 							<h4>Contacto :</h4>
-							<p>Phone : +121 098 8907 9987</p>
-							<p>Email :
-								<a href="mailto:info@example.com">info@example.com</a>
+							<p>Teléfono : +34 963 12 26 16</p>
+							<p>Correo : info@consuljuridica.com
+								<a href="info@consuljuridica.com"></a>
 							</p>
 						</div>
 					</div>
@@ -131,7 +155,7 @@
 							<a href="{{route('/')}}">Home</a>
 						</li>
 						<li>
-							<a href="{{route('blog')}}">Blog</a>
+							<a href="{{route('blog')}}">Noticias</a>
 						</li>
 						<li>
 							<a href="{{route('servicios')}}">Servicios</a>
@@ -158,7 +182,7 @@
 				</div>
 			</div> 
 			<div class="copyright mt-4">
-				<p class="copy-right text-center ">&copy; 2018 Consultoría Jurídica. Todos los Derechos Reservados | Diseñado por TIFYCA </a>
+				<p class="copy-right text-center ">&copy; 2018 Consultoría Jurídica. Todos los Derechos Reservados | Desarrollado por TIFYCA </a>
 				</p>
 			</div>
 		</div>
