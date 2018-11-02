@@ -35,6 +35,10 @@ Route::get('detalle', 'Frontend\homeController@detalle')->name('detalle');
 Route::post('create_newlester', 'Ajax\AjaxNewlester@create')->name('create_newlester');
 ////
 
+//ENVIAR MENSAJE DE CONTACTO
+Route::post('send_mail', 'Ajax\AjaxMail@contacto')->name('send_mail');
+////
+
 
 
 

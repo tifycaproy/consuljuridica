@@ -422,21 +422,21 @@
 				<div class="main_grid_contact">
 					<div class="form">
 						<h4 class="mb-4 text-center">contacta con nosotros</h4>
-						<form action="#" method="post">
+						<form action="" method="post" id="form-contacto" onsubmit="return false">
 							<div class="form-group">
 								<label class="my-2">Nombre</label>
-								<input class="form-control" type="text" name="Name" placeholder="" required="">
+								<input class="form-control" type="text" id="name-contacto" name="name-contacto" placeholder="" required="">
 							</div>
 							<div class="form-group">
 								<label>Correo Electrónico</label>
-								<input class="form-control" type="email" name="Email" placeholder="" required="">
+								<input class="form-control" type="email" id="mail-contacto" name="mail-contacto" placeholder="" required="">
 							</div>
 							<div class="form-group">
 								<label>Mensaje</label>
-								<textarea id="textarea" placeholder=""></textarea>
+								<textarea placeholder="" id="mensaje-contacto" name="mensaje-contacto"></textarea>
 							</div>
 							<div class="input-group1">
-								<input class="form-control" type="submit" value="Enviar">
+								<input class="form-control" type="submit" value="Enviar" id="btn-contacto">
 							</div>
 						</form>
 					</div>
@@ -541,7 +541,44 @@
 					}
 				}
 			})
-		})
+		});
+
+
+		$('#form-contacto').submit(function() {
+			
+			var name 	= $('input#name-contacto').val();
+			var mail 	= $('input#mail-contacto').val();
+			var mensaje = $('textarea#mensaje-contacto').val();
+
+			$.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                });
+                $.ajax({
+                    type: "post",
+                    url: '{{ route('send_mail') }}',
+                    dataType: "json",
+                    data: { name: name,mail: mail ,mensaje: mensaje,_token: '{{csrf_token()}}' },
+                    success: function (data){
+                            
+                        console.log(data);
+                        //$('.respuesta').html('Email registrado exitosamente').css('color', 'green');
+                    },
+                     error: function (data) {
+
+                     	console.log('error', data);
+
+                     	var json = data.responseJSON.errors;
+			            //var error = json['mail'][0];
+
+			            //$('.respuesta').html('Este email ya se encuentra registrado').css('color', 'red');
+			        }
+
+                });
+
+			
+		});
 	</script>
 	<!-- //carousel -->
 
