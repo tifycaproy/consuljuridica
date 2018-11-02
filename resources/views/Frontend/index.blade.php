@@ -8,12 +8,52 @@
 
 
 <!-- banner-text -->
-<div class="banner" id="home">	
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+			  <ol class="carousel-indicators">
+			    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+			    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+			    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+			  </ol>
+			  <div class="carousel-inner">
+			    <div class="carousel-item active">
+			      <img class="d-block w-100" src="{{ asset('images/banner2.jpg') }}" alt="First slide">
+			      <div class="carousel-caption d-none d-md-block">
+
+			      	<div class="banner-info" style="padding-top: 7em;" style="display: block; float: left; position: relative; opacity: 1; z-index: 2; transition: opacity 500ms ease-in-out 0s;">
+							<h3>Con nosotros lo difícil será fácil</h3>
+							<p> <b>Le aseguramos su gestión consular, documentación de viajes o el desarrollo de sus negocios.</b></p>
+						</div>
+				  </div>
+			    </div>
+			    <div class="carousel-item">
+			      <img class="d-block w-100" src="{{ asset('images/banner1.jpg') }}" alt="Second slide">
+			      <div class="carousel-caption d-none d-md-block">
+
+			      	<div class="banner-info" style="padding-top: 7em;" style="display: block; float: left; position: relative; opacity: 1; z-index: 2; transition: opacity 500ms ease-in-out 0s;">
+							<h3>Con nosotros lo difícil será fácil</h3>
+							<p> <b>Le aseguramos su gestión consular, documentación de viajes o el desarrollo de sus negocios.</b></p>
+						</div>
+				  </div>
+			    </div>
+			    <div class="carousel-item">
+			      <img class="d-block w-100" src="{{ asset('images/libros.jpg') }}" alt="Third slide">
+			      <div class="carousel-caption d-none d-md-block">
+
+			      	<div class="banner-info" style="padding-top: 7em;" style="display: block; float: left; position: relative; opacity: 1; z-index: 2; transition: opacity 500ms ease-in-out 0s;">
+							<h3>Con nosotros lo difícil será fácil</h3>
+							<p> <b>Le aseguramos su gestión consular, documentación de viajes o el desarrollo de sus negocios.</b></p>
+						</div>
+				  </div>
+			    </div>
+			  </div>
+			</div>
+{{-- <div class="banner" id="home">	
+
 	<div class="slider-content" style="margin-top: 0px; padding-top: 5em">
 		<div class="tittle text-center">
-			<!-- Slideshow 1 -->
+			
 
-<!-- Slideshow 1 -->
 			<div class="rslides_container">
 				<ul class="rslides" id="slider1">
 					<li id="centered-btns1_s0" class="centered-btns1_on">
@@ -32,10 +72,12 @@
 				</ul><ul class="centered-btns_tabs centered-btns1_tabs"><li class="centered-btns1_s1"><a href="#" class="centered-btns1_s1">1</a></li><li class="centered-btns1_s2 centered-btns_here"><a href="#" class="centered-btns1_s2">2</a></li></ul>
 			</div>
 
+			
+
 		</div>
 		<div class="clearfix"></div>
 	</div>
-</div>
+</div> --}}
 	<!-- //banner -->
 
 	<span><span></span></span>
@@ -310,8 +352,94 @@
 
 <section class="testimonials bottom-banner-w3layouts">
 		<div class="container">
-			<h3 class="tittle-wthree cen text-center">Lo que nuestros clientes dicen</h3>
-			<div class="inner-sec-w3ls-agileinfo">
+			<h3 class="tittle-wthree cen text-center mb-5">Lo que nuestros clientes dicen</h3>
+			
+			<div id="carouselExampleIndicators" class="carousel slide mt-5" data-ride="carousel">
+			  {{-- <ol class="carousel-indicators">
+			    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+			    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+			    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+			  </ol> --}}
+			  <div class="carousel-inner">
+			    <div class="carousel-item active">
+			     <div class="owl-item" style="width: 1110px; margin-right: 20px;">
+			     	<div class="item">
+						<div class="feedback-info text-left">
+							<div class="feedback-top rounded">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore et dolore magna
+									Sed semper leo metus, a lacinia eros semper at.</p>
+							</div>
+							<div class="feedback-grids">
+								<div class="feedback-img">
+									<img src="images/t3.jpg" class="img-fluid rounded-circle" alt="">
+								</div>
+								<div class="feedback-img-info">
+									<h5>Steven Wilson</h5>
+									<p>United States
+										<span>(Company)</span>
+									</p>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			    </div>
+			    <div class="carousel-item">
+			      
+					<div class="owl-item" style="width: 1110px; margin-right: 20px;">
+			     	<div class="item">
+						<div class="feedback-info text-left">
+							<div class="feedback-top rounded">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore et dolore magna
+									Sed semper leo metus, a lacinia eros semper at.</p>
+							</div>
+							<div class="feedback-grids">
+								<div class="feedback-img">
+									<img src="images/t2.jpg" class="img-fluid rounded-circle" alt="">
+								</div>
+								<div class="feedback-img-info">
+									<h5>Steven Wilson</h5>
+									<p>United States
+										<span>(Company)</span>
+									</p>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			    </div>
+			    <div class="carousel-item">
+			      
+					<div class="owl-item" style="width: 1110px; margin-right: 20px;">
+			     	<div class="item">
+						<div class="feedback-info text-left">
+							<div class="feedback-top rounded">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore et dolore magna
+									Sed semper leo metus, a lacinia eros semper at.</p>
+							</div>
+							<div class="feedback-grids">
+								<div class="feedback-img">
+									<img src="images/t1.jpg" class="img-fluid rounded-circle" alt="">
+								</div>
+								<div class="feedback-img-info">
+									<h5>Steven Wilson</h5>
+									<p>United States
+										<span>(Company)</span>
+									</p>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			    </div>
+			  </div>
+			</div>
+			{{-- <div class="inner-sec-w3ls-agileinfo">
 				<div class="owl-carousel owl-theme owl-loaded owl-drag">
 					
 					
@@ -373,7 +501,7 @@
 							</div>
 						</div>
 					</div></div></div></div><div class="owl-nav"><button type="button" role="presentation" class="owl-prev disabled"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button></div><div class="owl-dots"><button role="button" class="owl-dot active"><span></span></button><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot"><span></span></button></div></div>
-			</div>
+			</div> --}}
 		</div>
 	</section>
 
@@ -383,7 +511,7 @@
 <div class="text-center d-flex justify-content-center py-5" >
 	<div class="col-lg-6 text-center d-flex justify-content-center ">
 		<div class="comment-top">
-			<h2>Newsletter</h2><br>
+			<h2>¡Suscríbete!</h2><br> 
 			<p>Para estar informado de todas nuestras novedades, noticias y ofertas dese de alta en nuestra Newsletter.</p><br>
 			<div class="comment-bottom mail-newlester">
 				<form  onsubmit="return false" action="#" method="post">
@@ -509,19 +637,25 @@
 <!------------//contacto--------------->
 
 
-<section class="bottom-banner-w3layouts contact">
-	<h3 class="tittle-wthree text-center"> Grupo GTI </h3>
+<section class="bottom-banner-w3layouts contact " style="padding-top: 1em; padding-bottom:0em;">
+	
 		<div class="col-12">
 			<div class=" d-flex justify-content-center">
 				 <div class="row d-flex align-items-center">
-				 	<div class="col-sm-4" style="padding: 80px">
-				 		<img class="col-sm-12 "  src="{{asset('images/logo_valencuba.png')}}">
+				 	<div class="col-sm-4" style="padding: 0px 120px 20px 120px">
+				 		<a href="http://valencuba.com/">
+				 			<img class="col-sm-12 gris opacidad"  src="{{asset('images/logo_valencuba.png')}}">
+				 		</a>
 				 	</div>
-				 	<div class="col-sm-4" style="padding: 80px">
-						<img class="col-sm-12 "  src="{{asset('images/logo_cubaires.png')}}">
+				 	<div class="col-sm-4" style="padding: 0px 120px 20px 120px">
+				 		<a href="http://cubairestravel.com/">
+							<img class="col-sm-12 gris opacidad"  src="{{asset('images/logo_cubaires.png')}}">
+						</a>
 					</div>
-					<div class="col-sm-4" style="padding: 80px">
-						<img class="col-sm-12 "  src="{{asset('images/logo_luxury.png')}}">
+					<div class="col-sm-4" style="padding: 0px 120px 20px 120px">
+						<a href="http://cubairestravel.com/">
+							<img class="col-sm-12 gris opacidad"  src="{{asset('images/logo_luxury.png')}}" > 
+						</a>
 					</div>
 				 </div>
 					
