@@ -511,7 +511,7 @@
 <div class="text-center d-flex justify-content-center py-5" >
 	<div class="col-lg-6 text-center d-flex justify-content-center ">
 		<div class="comment-top">
-			<h2>¡Suscríbete!</h2><br>
+			<h2>¡Suscríbete!</h2><br> 
 			<p>Para estar informado de todas nuestras novedades, noticias y ofertas dese de alta en nuestra Newsletter.</p><br>
 			<div class="comment-bottom mail-newlester">
 				<form  onsubmit="return false" action="#" method="post">
