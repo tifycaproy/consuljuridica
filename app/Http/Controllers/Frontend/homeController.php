@@ -27,4 +27,14 @@ class homeController extends Controller
     	return view('Frontend.contacto');
     }
 
+    public function privacidad(){
+
+            return view('Frontend.privacidad');
+        }
+
+public function detalle(){
+
+            return view('Frontend.detalle');
+        }
+
 }
