@@ -6,27 +6,32 @@
 
 <body>
 
+
 <!-- banner-text -->
 <div class="banner" id="home">	
 	<div class="slider-content" style="margin-top: 0px; padding-top: 5em">
 		<div class="tittle text-center">
 			<!-- Slideshow 1 -->
+
+<!-- Slideshow 1 -->
 			<div class="rslides_container">
 				<ul class="rslides" id="slider1">
-					<li>
-						<div class="banner-info">
+					<li id="centered-btns1_s0" class="centered-btns1_on">
+						<div class="banner-info" style="padding-top: 7em;" style="display: block; float: left; position: relative; opacity: 1; z-index: 2; transition: opacity 500ms ease-in-out 0s;">
 							<h3>Con nosotros lo difícil será fácil</h3>
 							<p>Le aseguramos su gestión consular, documentación de viajes o el desarrollo de sus negocios.</p>
 						</div>
 					</li>
-					<li>
+					<li id="centered-btns1_s1" style="float: none; position: absolute; opacity: 0; z-index: 1; display: list-item; transition: opacity 500ms ease-in-out 0s;">
 						<div class="banner-info">
 							<h3>Estamos muy cerca de Cuba</h3>
 							<p>Sus necesidades son nuestro compromiso, esa es la clave de nuestros servicios </p>
 						</div>
 					</li>
 				</ul>
+				</ul><ul class="centered-btns_tabs centered-btns1_tabs"><li class="centered-btns1_s1"><a href="#" class="centered-btns1_s1">1</a></li><li class="centered-btns1_s2 centered-btns_here"><a href="#" class="centered-btns1_s2">2</a></li></ul>
 			</div>
+
 		</div>
 		<div class="clearfix"></div>
 	</div>
@@ -110,7 +115,26 @@
 	</section>
 <!---------------//servicios--------------->
 
-<!---------------/Blog--------------->
+<!---------------video--------------->
+<section class="testimonials bottom-banner-w3layouts">
+<div class="row-green" id="quees">
+    <div class="container">
+        <div class="row d-flex align-items-center justify-content-center py-2 py-sm-5">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-6  pl-2-xs" style="color: white">
+              <h2>What is Lorem Ipsum?</h2>
+              <h6>Er it and wants to have it, simply because it is pain..."
+				Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h6>
+          </div>
+          <div class="col-12 col-md-6  text-center mt-3 mt-sm-0 ">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/idrNWh4aCC0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+    </div>
+</div>
+</section>
+<!---------------//video--------------->
+
+<!---------------Blog--------------->
 	
 	<section class="bottom-banner-w3layouts" id="section-noticias">
 		<div class="container">
@@ -284,13 +308,16 @@
 	</section>
 <!---------------//Blog--------------->
 
-<!------------/testimonials---------------->
-	<section class="testimonials bottom-banner-w3layouts">
+<section class="testimonials bottom-banner-w3layouts">
 		<div class="container">
-			<h3 class="tittle-wthree cen text-center">Lo que dicen nuestros clientes</h3>
+			<h3 class="tittle-wthree cen text-center">Lo que nuestros clientes dicen</h3>
 			<div class="inner-sec-w3ls-agileinfo">
-				<div class="owl-carousel owl-theme">
-					<div class="item">
+				<div class="owl-carousel owl-theme owl-loaded owl-drag">
+					
+					
+					
+
+				<div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 3390px;"><div class="owl-item active" style="width: 1110px; margin-right: 20px;"><div class="item">
 						<div class="feedback-info text-left">
 							<div class="feedback-top rounded">
 								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore et dolore magna
@@ -298,7 +325,7 @@
 							</div>
 							<div class="feedback-grids">
 								<div class="feedback-img">
-									<img src="{{asset('images/t1.jpg')}}" class="img-fluid rounded-circle" alt="" />
+									<img src="images/t1.jpg" class="img-fluid rounded-circle" alt="">
 								</div>
 								<div class="feedback-img-info">
 									<h5>Mary Jane</h5>
@@ -309,8 +336,7 @@
 								<div class="clearfix"> </div>
 							</div>
 						</div>
-					</div>
-					<div class="item">
+					</div></div><div class="owl-item" style="width: 1110px; margin-right: 20px;"><div class="item">
 						<div class="feedback-info text-left">
 							<div class="feedback-top rounded">
 								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore et dolore magna
@@ -318,7 +344,7 @@
 							</div>
 							<div class="feedback-grids">
 								<div class="feedback-img">
-									<img src="{{asset('images/t3.jpg')}}" class="img-fluid rounded-circle" alt="" />
+									<img src="images/t3.jpg" class="img-fluid rounded-circle" alt="">
 								</div>
 								<div class="feedback-img-info">
 									<h5>Steven Wilson</h5>
@@ -329,8 +355,7 @@
 								<div class="clearfix"> </div>
 							</div>
 						</div>
-					</div>
-					<div class="item">
+					</div></div><div class="owl-item" style="width: 1110px; margin-right: 20px;"><div class="item">
 						<div class="feedback-info text-left">
 							<div class="feedback-top rounded">
 								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore et dolore magna
@@ -338,7 +363,7 @@
 							</div>
 							<div class="feedback-grids">
 								<div class="feedback-img">
-									<img src="{{asset('images/t3.jpg')}}" class="img-fluid rounded-circle" alt="" />
+									<img src="images/t3.jpg" class="img-fluid rounded-circle" alt="">
 								</div>
 								<div class="feedback-img-info">
 									<h5>Peter guptill</h5>
@@ -347,13 +372,10 @@
 								<div class="clearfix"> </div>
 							</div>
 						</div>
-					</div>
-
-				</div>
+					</div></div></div></div><div class="owl-nav"><button type="button" role="presentation" class="owl-prev disabled"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button></div><div class="owl-dots"><button role="button" class="owl-dot active"><span></span></button><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot"><span></span></button></div></div>
 			</div>
 		</div>
 	</section>
-<!------------//testimonials--------------->
 
 <!------------newsletter--------------->
 
@@ -410,7 +432,7 @@
 </div>
 <!------------//preguntas--------------->
 
-
+<!------------contacto--------------->
 
 	<section class="bottom-banner-w3layouts contact" id="section-contacto">
 		<h3 class="tittle-wthree text-center"> Contacto </h3>
@@ -484,7 +506,29 @@
 			</div>
 		</div>
 	</section>
+<!------------//contacto--------------->
 
+
+<section class="bottom-banner-w3layouts contact">
+	<h3 class="tittle-wthree text-center"> Grupo GTI </h3>
+		<div class="col-12">
+			<div class=" d-flex justify-content-center">
+				 <div class="row d-flex align-items-center">
+				 	<div class="col-sm-4" style="padding: 80px">
+				 		<img class="col-sm-12 "  src="{{asset('images/logo_valencuba.png')}}">
+				 	</div>
+				 	<div class="col-sm-4" style="padding: 80px">
+						<img class="col-sm-12 "  src="{{asset('images/logo_cubaires.png')}}">
+					</div>
+					<div class="col-sm-4" style="padding: 80px">
+						<img class="col-sm-12 "  src="{{asset('images/logo_luxury.png')}}">
+					</div>
+				 </div>
+					
+				
+			</div>
+		</div>		
+	</section>
 	
 @endsection
 
@@ -492,23 +536,7 @@
 
 @push('scripts')
 
-<!--slider-->
-	<script src="js/responsiveslides.min.js"></script>
-	<script>
-		$(function () {
 
-			// Slideshow 1
-			$("#slider1").responsiveSlides({
-				auto: false,
-				pager: true,
-				nav: false,
-				speed: 500,
-				namespace: "centered-btns"
-			});
-
-		});
-	</script>
-	<!--//slider-->
 
 <!-- carousel -->
 	<script src="js/owl.carousel.js"></script>
