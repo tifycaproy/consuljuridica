@@ -47,13 +47,26 @@ Route::post('send_mail', 'Ajax\AjaxMail@contacto')->name('send_mail');
 // BACKEND
 App::setLocale("es");
 
-// Route::group(['middleware'=>['web']], function()
-// {
-//   Route::get('admin', function()
-//   {
-//     return view("login");
-//   });
-// });
+Route::resource('sliders','Backend\SliderController');
+Route::resource('noticias','Backend\NoticiasController');
+
+//Listar registros de sliders
+Route::post('/admin/slider', ['as' => 'versliders', 'uses'=>'Backend\SliderController@list']);
+//Agregar registros de Sliders
+Route::post('/admin/nuevoslider', ['as' => 'ingresarslider', 'uses'=>'Backend\SliderController@insert']);
+//Eliminar registros de Sliders
+Route::get('/admin/eliminarslider/{id}', ['as' => 'eliminarslider', 'uses'=>'Backend\SliderController@delete']);
+
+
+//Listar registros de Noticias
+Route::post('/admin/noticias', ['as' => 'vernoticia', 'uses'=>'Backend\homeController@noticias']);
+//Agregar registros de Noticias
+Route::post('/admin/nuevanoticia', ['as' => 'ingresarnoticia', 'uses'=>'Backend\NoticiasController@insert']);
+//Eliminar registros de Noticias
+Route::get('/admin/eliminarnoticia/{id}', ['as' => 'eliminarnoticia', 'uses'=>'Backend\NoticiasController@delete']);
+
+
+
 
 Route::get('admin', 'homeController@index')->name('index');
 // Route::get('login', 'homeController@index')->name('index');

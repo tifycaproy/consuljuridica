@@ -35,12 +35,13 @@ class homeController extends Controller
           return view('Backend.usuarios',['usuarios' => $usuarios]);
           break;
         case 'register':
-        // $usuarios = DB::select('SELECT b.name as usuario,email, a.name as rol, b.created_at FROM bd_consuljuridica.role_user
-        //   JOIN bd_consuljuridica.roles a
-        //   ON a.id=role_id
-        //   JOIN bd_consuljuridica.users b
-        //   ON b.id=user_id');
-          return view('auth.register');
+        return view('auth.register');
+          break;
+        case 'nuevanoticia':
+          return view('Backend.form.formnoticias');
+          break;
+        case 'nuevoslider':
+          return view('Backend.form.formslider');
           break;
 
         default:

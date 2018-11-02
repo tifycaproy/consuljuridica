@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class TblNoticias extends Migration
+class CreateSlidersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class TblNoticias extends Migration
      */
     public function up()
     {
-        Schema::create('noticias', function (Blueprint $table) {
+        Schema::create('sliders', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
             $table->longText('titulo');
-            $table->longText('resumen');
-            $table->longText('descripcion');
+            $table->longText('contenido');
             $table->boolean('publico');
             $table->bigInteger('posicion');
             $table->longText('url_imagen');
@@ -32,6 +31,6 @@ class TblNoticias extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('noticias');
+        Schema::dropIfExists('sliders');
     }
 }

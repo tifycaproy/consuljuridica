@@ -22,6 +22,7 @@ class NoticiaSeeder extends Seeder
                  'posicion'  => $faker->randomDigit,
                  'created_at' => date('Y-m-d H:m:s'),
                  'updated_at' => date('Y-m-d H:m:s'),
+                 'url_multimedia' => $faker->imageUrl($width = 640, $height = 480, 'cats'),
                  'url_imagen' => $faker->imageUrl($width = 640, $height = 480, 'cats')
           ));
         }
