@@ -26,6 +26,22 @@ class homeController extends Controller
         $noticias = DB::select('SELECT  titulo,  IF (publico = \'1\', \'Si\', \'No\') as publico, posicion,  created_at  FROM bd_consuljuridica.noticias');
           return view('Backend.noticias',['noticias' => $noticias]);
           break;
+        case 'usuarios':
+        $usuarios = DB::select('SELECT b.name as usuario,email, a.name as rol, b.created_at FROM bd_consuljuridica.role_user
+          JOIN bd_consuljuridica.roles a
+          ON a.id=role_id
+          JOIN bd_consuljuridica.users b
+          ON b.id=user_id');
+          return view('Backend.usuarios',['usuarios' => $usuarios]);
+          break;
+        case 'register':
+        // $usuarios = DB::select('SELECT b.name as usuario,email, a.name as rol, b.created_at FROM bd_consuljuridica.role_user
+        //   JOIN bd_consuljuridica.roles a
+        //   ON a.id=role_id
+        //   JOIN bd_consuljuridica.users b
+        //   ON b.id=user_id');
+          return view('auth.register');
+          break;
 
         default:
           // code...

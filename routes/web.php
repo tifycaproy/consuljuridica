@@ -35,14 +35,30 @@ Route::get('detalle', 'Frontend\homeController@detalle')->name('detalle');
 Route::post('create_newlester', 'Ajax\AjaxNewlester@create')->name('create_newlester');
 ////
 
+//ENVIAR MENSAJE DE CONTACTO
+Route::post('send_mail', 'Ajax\AjaxMail@contacto')->name('send_mail');
+////
+
 
 
 
 
 
 // BACKEND
+App::setLocale("es");
 
-Route::get('admin', 'Backend\homeController@admin')->name('admin');
+// Route::group(['middleware'=>['web']], function()
+// {
+//   Route::get('admin', function()
+//   {
+//     return view("login");
+//   });
+// });
+
+Route::get('admin', 'homeController@index')->name('index');
+// Route::get('login', 'homeController@index')->name('index');
+// Route::get('admin', 'Backend\homeController@admin')->name('admin');
+
 // Route::get('admin/{id}', 'Backend\homeController@slider');
 // Route::patch('admin/{id}',[
 //     'as' => 'modulo',
@@ -51,6 +67,8 @@ Route::get('admin', 'Backend\homeController@admin')->name('admin');
 Route::get('/admin/{modulo}',['as' => 'ingresarmodulo', 'uses' => 'Backend\homeController@modulos']);
 // Route::get('admin/slider', 'Backend\homeController@admin')->name('slider');
 
+
+
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@redireccion')->name('login');

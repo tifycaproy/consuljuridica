@@ -90,7 +90,7 @@
 					</a>
 				</li>
 				<li class="nav-item ">
-					<a class="nav-link" href="{{route('blog')}}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+					<a class="nav-link" id="btn-noticias" role="button"
 					    aria-expanded="false">
 						Noticias
 					</a>
@@ -104,7 +104,7 @@
 					
 				</li>						
 				<li class="nav-item">
-					<a class="nav-link" href="{{route('contacto')}} ">Contacto</a>
+					<a class="nav-link" id="btn-contacto" href="#">Contacto</a>
 				</li>
 			</ul>
 		</div>
@@ -130,7 +130,7 @@
 						<a href={{route('privacidad')}}" title="Políticas de Privacidad" style=" color: #99d9f3">Políticas de Privacidad</a>
 						<div class="social-icon footer text-left mt-4">
 							<div class="icon-social">
-								<a href="#" class="button-footr">
+								<a href="https://www.facebook.com/consultoriajuridica.miramar/" class="button-footr">
 									<i class="fab fa-facebook-f"></i>
 								</a>
 								<a href="#" class="button-footr">
@@ -301,13 +301,30 @@
 
                      	var json = data.responseJSON.errors;
 			            var error = json['mail'][0];
+			            console.log(error)
+			            if (error = 'The mail field is required.') {
+			            	$('.respuesta').html('El email es requerido').css('color', 'red');
+			            }
+			            if (error = 'The mail has already been taken.') {
+			            	$('.respuesta').html('Este email ya se encuentra registrado').css('color', 'red');
+			            }
 
-			            $('.respuesta').html('Este email ya se encuentra registrado').css('color', 'red');
+			          
 			        }
 
                 });
             });
 
+
+	$('#btn-noticias').bind("click", function () {
+		var destino = $("#section-noticias").offset().top - 1;
+		$("html, body").animate({scrollTop: destino},1000);
+	});
+
+	$('#btn-contacto').bind("click", function () {
+		var destino = $("#section-contacto").offset().top -1;
+		$("html, body").animate({scrollTop: destino},1000);
+	});
 
 	</script>
 	

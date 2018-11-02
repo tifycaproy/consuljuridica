@@ -136,7 +136,7 @@
 
 <!---------------Blog--------------->
 	
-	<section class="bottom-banner-w3layouts">
+	<section class="bottom-banner-w3layouts" id="section-noticias">
 		<div class="container">
 			<!---728x90--->
 
@@ -386,10 +386,10 @@
 			<h2>Newsletter</h2><br>
 			<p>Para estar informado de todas nuestras novedades, noticias y ofertas dese de alta en nuestra Newsletter.</p><br>
 			<div class="comment-bottom mail-newlester">
-				<form  onsubmit="return false action="#" method="post">
-					<input class="form-control mail-newlester" type="email" name="Email" placeholder="Correo" required="">
-					<button type="submit" class="btn btn-primary submit btn-newlester">Enviar</button>
+				<form  onsubmit="return false" action="#" method="post">
 					<small class="respuesta"></small>
+					<input class="form-control mail-newlester" type="email" name="mail" placeholder="Tu correo electrónico..." required="">
+					<button type="button" class="btn btn-primary submit btn-newlester">Enviar</button>
 				</form>
 			</div>
 		</div>
@@ -405,30 +405,28 @@
       <h1 class="c-black text-center py-5 title-h1">Preguntas Frecuentes</h1>
         <div class="row pb-5">
             
-          <div class=" col-12 col-sm-2 col-md-3">
+          <div class=" col-12 col-sm-2 col-md-4">
             <div class="col-12">
-              <h2>¿Puedo llamar a cualquier teléfono?</h2>
-              <p>Sí, puedes llamar a cualquier país del mundo, siempre que no sea a un destino con tarificación especial, como 902.</p>
+              <h2>Lorem</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
             </div>
             
           </div>
-          <div class=" col-12 col-sm-2 col-md-3">
-            <h2>¿El destino al que llamo necesita tener Phonealo?</h2>
-                <p>No, la llamada de Phonealo es una llamada como las demás. Tu contacto no ve ninguna diferencia en la llamada que recibe.</p>
+          <div class=" col-12 col-sm-2 col-md-4">
+            <h2>Lorem</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia unde omnis, laudantium? Maxime, nesciunt aspernatur! Illo necessitatibus kdjdj </p>
           </div>
-          <div class=" col-12 col-sm-2 col-md-3">
-            <h2>¿Cómo se tarifican las llamadas?</h2>
-                <p>En Phonealo pagaras por lo que hablas, tarificado por segundos. No redondeamos el tiempo de llamada, si hablas 3 minutos con 35 segundos pagaras exactamente esto.</p>
+          <div class=" col-12 col-md-4">
+            <h2>Lorem</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia unde omnis, laudantium? Maxime, nesciunt aspernatur! Illo necessitatibus</p>
           </div>
-          <div class=" col-12 col-sm-2 col-md-3">
-           <h2>¿Con Phonealo en el extranjero?</h2>
-                <p>Con Phonealo llamaras desde cualquier parte del mundo sin generar gastos en tu operador. Recuerda es importante este conectado a una red wifi o de lo contrario si consumes datos de tu operador es possible que este te los tarifique. </p>
-          </div>
+        
           
           <div class="col-12 col-sm-9"></div>
-          <div class="col-12 col-sm-3 text-right"><a href="https://www.phonealo.com/questions" title="">Ver más</a></div>
+          <div class="col-12 col-sm-3 text-right"><a href="#" title="">Ver más</a></div>
         </div>
-        <hr class="m-0">
+       
     </div>
 
 </div>
@@ -436,29 +434,29 @@
 
 <!------------contacto--------------->
 
-	<section class="bottom-banner-w3layouts contact">
+	<section class="bottom-banner-w3layouts contact" id="section-contacto">
 		<h3 class="tittle-wthree text-center"> Contacto </h3>
 		<div class="inner-sec-w3ls-agileinfo">
 			<div class="map">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423286.27404345275!2d-118.69191921441556!3d34.02016130939095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos+Angeles%2C+CA%2C+USA!5e0!3m2!1sen!2sin!4v1522474296007" allowfullscreen=""></iframe>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3079.9355109270514!2d-0.3804463846326256!3d39.47078557948625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd604f4c731d5149%3A0x8e41269162b4f923!2sConsultor%C3%ADa+Jur%C3%ADdica+Miramar!5e0!3m2!1ses!2sve!4v1541173324480" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 				<div class="main_grid_contact">
 					<div class="form">
 						<h4 class="mb-4 text-center">contacta con nosotros</h4>
-						<form action="#" method="post">
+						<form action="" method="post" id="form-contacto" onsubmit="return false">
 							<div class="form-group">
 								<label class="my-2">Nombre</label>
-								<input class="form-control" type="text" name="Name" placeholder="" required="">
+								<input class="form-control" type="text" id="name-contacto" name="name-contacto" placeholder="" required="">
 							</div>
 							<div class="form-group">
 								<label>Correo Electrónico</label>
-								<input class="form-control" type="email" name="Email" placeholder="" required="">
+								<input class="form-control" type="email" id="mail-contacto" name="mail-contacto" placeholder="" required="">
 							</div>
 							<div class="form-group">
 								<label>Mensaje</label>
-								<textarea id="textarea" placeholder=""></textarea>
+								<textarea placeholder="" id="mensaje-contacto" name="mensaje-contacto"></textarea>
 							</div>
 							<div class="input-group1">
-								<input class="form-control" type="submit" value="Enviar">
+								<input class="form-control" type="submit" value="Enviar" id="btn-contacto">
 							</div>
 						</form>
 					</div>
@@ -569,7 +567,44 @@
 					}
 				}
 			})
-		})
+		});
+
+
+		$('#form-contacto').submit(function() {
+			
+			var name 	= $('input#name-contacto').val();
+			var mail 	= $('input#mail-contacto').val();
+			var mensaje = $('textarea#mensaje-contacto').val();
+
+			$.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                });
+                $.ajax({
+                    type: "post",
+                    url: '{{ route('send_mail') }}',
+                    dataType: "json",
+                    data: { name: name,mail: mail ,mensaje: mensaje,_token: '{{csrf_token()}}' },
+                    success: function (data){
+                            
+                        console.log(data);
+                        //$('.respuesta').html('Email registrado exitosamente').css('color', 'green');
+                    },
+                     error: function (data) {
+
+                     	console.log('error', data);
+
+                     	var json = data.responseJSON.errors;
+			            //var error = json['mail'][0];
+
+			            //$('.respuesta').html('Este email ya se encuentra registrado').css('color', 'red');
+			        }
+
+                });
+
+			
+		});
 	</script>
 	<!-- //carousel -->
 
