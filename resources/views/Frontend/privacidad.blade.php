@@ -2,7 +2,7 @@
 
 @section('content')
 
-	<section class="bottom-banner-w3layouts" style="background-color: #f8f9fa !important;">
+	<section class="bottom-banner-w3layouts" >
 		<div class="container">
 			<!---728x90--->
 

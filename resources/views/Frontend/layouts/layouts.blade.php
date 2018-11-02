@@ -28,6 +28,7 @@
 	<link rel="stylesheet" href="css/owl.theme.css" type="text/css" media="all">
 	<link href="css/prettyPhoto.css" rel="stylesheet" type="text/css">
 	<link href="css/style.css" rel='stylesheet' type='text/css' />
+	<link href="css/blog.css" rel='stylesheet' type='text/css' />
 	<link href="css/fontawesome-all.css" rel="stylesheet">
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext"
@@ -306,8 +307,27 @@
 
                 });
             });
-	</script>
 
+
+	</script>
+	
+<!--slider-->
+	<script src="js/responsiveslides.min.js"></script>
+	<script>
+		$(function () {
+
+			// Slideshow 1
+			$("#slider1").responsiveSlides({
+				auto: false,
+				pager: true,
+				nav: false,
+				speed: 500,
+				namespace: "centered-btns"
+			});
+
+		});
+	</script>
+	<!--//slider-->
 @stack('scripts')
 
 </body>
