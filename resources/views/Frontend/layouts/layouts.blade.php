@@ -29,6 +29,7 @@
 	<link href="css/prettyPhoto.css" rel="stylesheet" type="text/css">
 	<link href="css/style.css" rel='stylesheet' type='text/css' />
 	<link href="css/fontawesome-all.css" rel="stylesheet">
+	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext"
 	    rel="stylesheet">
 	<link href="//fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
@@ -37,49 +38,80 @@
 <body>
 	
 <!-------------------- header ------------------->
-		<header>
-			<nav class="navbar navbar-expand-lg navbar-light bg-light top-header">
-				<h1 class="logo">
-					<img src="{{asset('images/logoconsul1.png')}}">
-				</h1>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-				    aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon">
-						<i class="fas fa-bars"></i>
-					</span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul class="navbar-nav ml-auto">
-						<li class="nav-item active">
-							<a class="nav-link ml-lg-0" href="{{route('/')}}">Home
-								<span class="sr-only">(current)</span>
-							</a>
-						</li>
-						<li class="nav-item ">
-							<a class="nav-link" href="{{route('blog')}}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-							    aria-expanded="false">
-								Blog
-							</a>
-							
-						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="{{route('servicios')}}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-							    aria-expanded="false">
-								Servicios
-							</a>
-							
-						</li>						
-						<li class="nav-item">
-							<a class="nav-link" href="{{route('contacto')}} ">Contacto</a>
-						</li>
-						
-					</ul>
-				</div>
-			</nav>
-		</header>
+<header>
+<!-------------------- botones de RRSS ------------------->
+	<div id="btn-redes" class="col-1  position-fixed d-md-block d-none">
+		<div class="row d-flex justify-content-right align-items-center">
+            <div class="col pt-1 ">
+                <a target="blank_" href="" title="Instagram">
+                    <img src="https://www.phonealo.com/assets/ig_circle.svg" alt="" class="w-25">
+                </a>
+            </div>
+
+            <div class="w-100">
+            	
+            </div>
+            
+            <div class="col pt-1 ">
+                <a target="blank_" href="https://www.facebook.com/consultoriajuridica.miramar/" title="Facebook">
+                     <img src="https://www.phonealo.com/assets/fb_circle.svg" alt="" class="w-25">
+                 </a>
+            </div>
+		 </div>
+	</div> 
+
+<!-------------------- //botones de RRSS ------------------->
+
+<!-------------------- menu ------------------->
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-light top-header">
+		<h1 class="logo">
+			<a class="navbar-brand" href="{{route('/')}}">
+				<img  src="{{asset('images/logo_consultoria.png')}}" style="width: 6.5em">
+			</a>
+		</h1>
+			
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+		    aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon">
+				<i class="fas fa-bars"></i>
+			</span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item active">
+					<a class="nav-link ml-lg-0" href="{{route('/')}}">Inicio
+						<span class="sr-only">(current)</span>
+					</a>
+				</li>
+				<li class="nav-item ">
+					<a class="nav-link" href="{{route('blog')}}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+					    aria-expanded="false">
+						Noticias
+					</a>
+					
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="{{route('servicios')}}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+					    aria-expanded="false">
+						Servicios
+					</a>
+					
+				</li>						
+				<li class="nav-item">
+					<a class="nav-link" href="{{route('contacto')}} ">Contacto</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+<!-------------------- //menu ------------------->
+
+</header>
 
 <!------------------- //header --------------------------->
+
 @yield('content')
+
 <!--------------------footer------------------------- -->
 	<footer>
 		<div class="container">
@@ -90,18 +122,15 @@
 					</div>
 					<div class="footer-text">
 						<p>Especialistas en asuntos legales y empresariales en España, Cuba y Caribe.</p>
+						<a href={{route('privacidad')}}" title="Políticas de Privacidad" style=" color: #99d9f3">Políticas de Privacidad</a>
 						<div class="social-icon footer text-left mt-4">
 							<div class="icon-social">
 								<a href="#" class="button-footr">
 									<i class="fab fa-facebook-f"></i>
 								</a>
 								<a href="#" class="button-footr">
-									<i class="fab fa-twitter"></i>
+									<i class="fab fa-instagram"></i>
 								</a>
-								<a href="#" class="button-footr">
-									<i class="fab fa-dribbble"></i>
-								</a>
-
 							</div>
 						</div>
 					</div>
@@ -112,12 +141,13 @@
 					</div>
 					<div class="contact-info">
 						<h4>Dirección :</h4>
-						<p>0926k 4th block building, king Avenue, New York City.</p>
+						<p>Calle Garrigues , no. 2 bajo
+									46001 Valencia.</p>
 						<div class="phone">
 							<h4>Contacto :</h4>
-							<p>Phone : +121 098 8907 9987</p>
-							<p>Email :
-								<a href="mailto:info@example.com">info@example.com</a>
+							<p>Teléfono : +34 963 12 26 16</p>
+							<p>Correo : info@consuljuridica.com
+								<a href="info@consuljuridica.com"></a>
 							</p>
 						</div>
 					</div>
@@ -131,7 +161,7 @@
 							<a href="{{route('/')}}">Home</a>
 						</li>
 						<li>
-							<a href="{{route('blog')}}">Blog</a>
+							<a href="{{route('blog')}}">Noticias</a>
 						</li>
 						<li>
 							<a href="{{route('servicios')}}">Servicios</a>
@@ -147,18 +177,21 @@
 					</div>
 					<div class="footer-text">
 						<p>Al suscribirse a nuestra lista de correo, siempre recibirá nuestras últimas noticias y actualizaciones.</p>
-						<form action="#" method="post">
-							<input class="form-control" type="email" name="Email" placeholder="Tu correo electrónico..." required="">
-							<button class="btn1">
+						<small class="respuesta"></small>
+						<form action="" class="form-newlester" method="post" onsubmit="return false">
+							<input class="form-control mail-newlester" type="email" name="mail" placeholder="Tu correo electrónico..."  required="">
+
+							<button class="btn1 btn-newlester" type="button">
 								<i class="far fa-envelope" aria-hidden="true"></i>
 							</button>
+
 							<div class="clearfix"> </div>
 						</form>
 					</div>
 				</div>
 			</div> 
 			<div class="copyright mt-4">
-				<p class="copy-right text-center ">&copy; 2018 Consultoría Jurídica. Todos los Derechos Reservados | Diseñado por TIFYCA </a>
+				<p class="copy-right text-center ">&copy; 2018 Consultoría Jurídica. Todos los Derechos Reservados | Desarrollado por TIFYCA </a>
 				</p>
 			</div>
 		</div>
@@ -235,6 +268,41 @@
 	<script src="js/script.js"></script>
 	<script src="js/jquery.prettyPhoto.js"></script>
 	<!-- //jQuery-Photo-filter-lightbox-Gallery-plugin -->
+
+
+	<script type="text/javascript" charset="utf-8">
+		
+            //ALMACENA LOS DATOS DE NEWLESTER
+            $(".btn-newlester").click(function(){
+
+            var mail = $("input.mail-newlester").val();
+
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                });
+                $.ajax({
+                    type: "post",
+                    url: '{{ route('create_newlester') }}',
+                    dataType: "json",
+                    data: { mail: mail ,_token: '{{csrf_token()}}' },
+                    success: function (data){
+                            
+                        
+                        $('.respuesta').html('Email registrado exitosamente').css('color', 'green');
+                    },
+                     error: function (data) {
+
+                     	var json = data.responseJSON.errors;
+			            var error = json['mail'][0];
+
+			            $('.respuesta').html('Este email ya se encuentra registrado').css('color', 'red');
+			        }
+
+                });
+            });
+	</script>
 
 @stack('scripts')
 

@@ -14,7 +14,8 @@
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-// 
+//
+// FRONTEND
 
 Route::get('/', 'Frontend\homeController@index')->name('/');
 
@@ -22,4 +23,34 @@ Route::get('blog', 'Frontend\homeController@blog')->name('blog');
 
 Route::get('servicios', 'Frontend\homeController@servicios')->name('servicios');
 
-Route::get('contacto', 'Frontend\homeController@contacto')->name('contacto');
+Route::get('contacto', 'Frontend\homeController@contacto')->name('contacto'); 
+
+Route::get('privacidad', 'Frontend\homeController@privacidad')->name('privacidad');
+
+Route::get('detalle', 'Frontend\homeController@detalle')->name('detalle');
+
+//AJAX
+
+//CREAR NEWLESTER
+Route::post('create_newlester', 'Ajax\AjaxNewlester@create')->name('create_newlester');
+////
+
+
+
+
+
+
+// BACKEND
+
+Route::get('admin', 'Backend\homeController@admin')->name('admin');
+// Route::get('admin/{id}', 'Backend\homeController@slider');
+// Route::patch('admin/{id}',[
+//     'as' => 'modulo',
+//     'uses' => 'Backend\homeController@modulos'
+// ]);
+Route::get('/admin/{modulo}',['as' => 'ingresarmodulo', 'uses' => 'Backend\homeController@modulos']);
+// Route::get('admin/slider', 'Backend\homeController@admin')->name('slider');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

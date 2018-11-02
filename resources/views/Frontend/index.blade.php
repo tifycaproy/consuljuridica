@@ -5,7 +5,7 @@
 <link href="css/blog.css" rel='stylesheet' type='text/css' />
 
 <body>
-	
+
 <!-- banner-text -->
 <div class="banner" id="home">	
 	<div class="slider-content" style="margin-top: 0px; padding-top: 5em">
@@ -32,7 +32,9 @@
 	</div>
 </div>
 	<!-- //banner -->
-	
+
+	<span><span></span></span>
+
 	<!--/bottom-banner-w3layouts-->
 
 	<section class="bottom-banner-w3layouts bg-light py-md-5 py-3">
@@ -114,7 +116,7 @@
 		<div class="container">
 			<!---728x90--->
 
-			<h3 class="tittle-wthree text-center">Blog</h3>
+			<h3 class="tittle-wthree text-center">Noticias</h3>
 			<!---728x90--->
 
 			<div class="row inner-sec-w3ls-agileinfo">
@@ -132,18 +134,13 @@
 											<i class="far fa-calendar-alt"></i> Feb 20 .2018</a>
 									</li>
 									
-									<li>
-										<a href="#">
-											<i class="fas fa-eye"></i> 2000</a>
-									</li>
-
 								</ul>
 								<h5 class="card-title ">
 									<a href="single.html">Blog Post Title</a>
 								</h5>
 								<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt.. </p>
 								<div class="read inner mt-4">
-									<a href="single.html" class="btn btn-sm animated-button victoria-two">Leer más</a>
+									<a href="{{route('detalle')}}" class="btn btn-sm animated-button victoria-two">Leer más</a>
 								</div>
 
 							</div>
@@ -159,18 +156,13 @@
 											<i class="far fa-calendar-alt"></i> Feb 22 .2018</a>
 									</li>
 									
-									<li>
-										<a href="#">
-											<i class="fas fa-eye"></i> 2000</a>
-									</li>
-
 								</ul>
 								<h5 class="card-title ">
 									<a href="single.html">Blog Post Title</a>
 								</h5>
 								<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt.. </p>
 								<div class="read inner mt-4">
-									<a href="single.html" class="btn btn-sm animated-button victoria-two">Leer más</a>
+									<a href="{{route('detalle')}}" class="btn btn-sm animated-button victoria-two">Leer más</a>
 								</div>
 							</div>
 						</div>
@@ -187,18 +179,13 @@
 											<i class="far fa-calendar-alt"></i> Feb 23 .2018</a>
 									</li>
 									
-									<li>
-										<a href="#">
-											<i class="fas fa-eye"></i> 2000</a>
-									</li>
-
 								</ul>
 								<h5 class="card-title ">
 									<a href="single.html">Blog Post Title</a>
 								</h5>
 								<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt.. </p>
 								<div class="read inner mt-4">
-									<a href="single.html" class="btn btn-sm animated-button victoria-two">Leer más</a>
+									<a href="{{route('detalle')}}" class="btn btn-sm animated-button victoria-two">Leer más</a>
 								</div>
 							</div>
 						</div>
@@ -216,18 +203,13 @@
 											<i class="far fa-calendar-alt"></i> Mar 20 .2018</a>
 									</li>
 									
-									<li>
-										<a href="#">
-											<i class="fas fa-eye"></i> 2000</a>
-									</li>
-
 								</ul>
 								<h5 class="card-title ">
 									<a href="single.html">Blog Post Title</a>
 								</h5>
 								<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt.. </p>
 								<div class="read inner mt-4">
-									<a href="single.html" class="btn btn-sm animated-button victoria-two">Leer más</a>
+									<a href="{{route('detalle')}}" class="btn btn-sm animated-button victoria-two">Leer más</a>
 								</div>
 							</div>
 						</div>
@@ -242,18 +224,13 @@
 											<i class="far fa-calendar-alt"></i> Mar 25 .2018</a>
 									</li>
 									
-									<li>
-										<a href="#">
-											<i class="fas fa-eye"></i> 2000</a>
-									</li>
-
 								</ul>
 								<h5 class="card-title ">
 									<a href="single.html">Blog Post Title</a>
 								</h5>
 								<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt.. </p>
 								<div class="read inner mt-4">
-									<a href="single.html" class="btn btn-sm animated-button victoria-two">Leer más</a>
+									<a href="{{route('detalle')}}" class="btn btn-sm animated-button victoria-two">Leer más</a>
 								</div>
 							</div>
 						</div>
@@ -268,18 +245,13 @@
 											<i class="far fa-calendar-alt"></i> Feb 30 .2018</a>
 									</li>
 									
-									<li>
-										<a href="#">
-											<i class="fas fa-eye"></i> 2000</a>
-									</li>
-
 								</ul>
 								<h5 class="card-title ">
 									<a href="single.html">Blog Post Title</a>
 								</h5>
 								<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt.. </p>
 								<div class="read inner mt-4">
-									<a href="single.html" class="btn btn-sm animated-button victoria-two">Leer más</a>
+									<a href="{{route('detalle')}}" class="btn btn-sm animated-button victoria-two">Leer más</a>
 								</div>
 							</div>
 						</div>
@@ -311,6 +283,135 @@
 
 	</section>
 <!---------------//Blog--------------->
+
+<!------------/testimonials---------------->
+	<section class="testimonials bottom-banner-w3layouts">
+		<div class="container">
+			<h3 class="tittle-wthree cen text-center">Lo que dicen nuestros clientes</h3>
+			<div class="inner-sec-w3ls-agileinfo">
+				<div class="owl-carousel owl-theme">
+					<div class="item">
+						<div class="feedback-info text-left">
+							<div class="feedback-top rounded">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore et dolore magna
+									Sed semper leo metus, a lacinia eros semper at.</p>
+							</div>
+							<div class="feedback-grids">
+								<div class="feedback-img">
+									<img src="{{asset('images/t1.jpg')}}" class="img-fluid rounded-circle" alt="" />
+								</div>
+								<div class="feedback-img-info">
+									<h5>Mary Jane</h5>
+									<p>United States
+										<span>(Company)</span>
+									</p>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="feedback-info text-left">
+							<div class="feedback-top rounded">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore et dolore magna
+									Sed semper leo metus, a lacinia eros semper at.</p>
+							</div>
+							<div class="feedback-grids">
+								<div class="feedback-img">
+									<img src="{{asset('images/t3.jpg')}}" class="img-fluid rounded-circle" alt="" />
+								</div>
+								<div class="feedback-img-info">
+									<h5>Steven Wilson</h5>
+									<p>United States
+										<span>(Company)</span>
+									</p>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="feedback-info text-left">
+							<div class="feedback-top rounded">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore et dolore magna
+									Sed semper leo metus, a lacinia eros semper at.</p>
+							</div>
+							<div class="feedback-grids">
+								<div class="feedback-img">
+									<img src="{{asset('images/t3.jpg')}}" class="img-fluid rounded-circle" alt="" />
+								</div>
+								<div class="feedback-img-info">
+									<h5>Peter guptill</h5>
+									<p>Vestibulum</p>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+<!------------//testimonials--------------->
+
+<!------------newsletter--------------->
+
+
+<div class="text-center d-flex justify-content-center py-5" >
+	<div class="col-lg-6 text-center d-flex justify-content-center ">
+		<div class="comment-top">
+			<h2>Newsletter</h2><br>
+			<p>Para estar informado de todas nuestras novedades, noticias y ofertas dese de alta en nuestra Newsletter.</p><br>
+			<div class="comment-bottom mail-newlester">
+				<form  onsubmit="return false action="#" method="post">
+					<input class="form-control mail-newlester" type="email" name="Email" placeholder="Correo" required="">
+					<button type="submit" class="btn btn-primary submit btn-newlester">Enviar</button>
+					<small class="respuesta"></small>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<!------------//newsletter--------------->
+
+<!------------preguntas--------------->
+
+<div class="" style="background: #F6F7FA">
+    <div class="container">
+
+      <h1 class="c-black text-center py-5 title-h1">Preguntas Frecuentes</h1>
+        <div class="row pb-5">
+            
+          <div class=" col-12 col-sm-2 col-md-3">
+            <div class="col-12">
+              <h2>¿Puedo llamar a cualquier teléfono?</h2>
+              <p>Sí, puedes llamar a cualquier país del mundo, siempre que no sea a un destino con tarificación especial, como 902.</p>
+            </div>
+            
+          </div>
+          <div class=" col-12 col-sm-2 col-md-3">
+            <h2>¿El destino al que llamo necesita tener Phonealo?</h2>
+                <p>No, la llamada de Phonealo es una llamada como las demás. Tu contacto no ve ninguna diferencia en la llamada que recibe.</p>
+          </div>
+          <div class=" col-12 col-sm-2 col-md-3">
+            <h2>¿Cómo se tarifican las llamadas?</h2>
+                <p>En Phonealo pagaras por lo que hablas, tarificado por segundos. No redondeamos el tiempo de llamada, si hablas 3 minutos con 35 segundos pagaras exactamente esto.</p>
+          </div>
+          <div class=" col-12 col-sm-2 col-md-3">
+           <h2>¿Con Phonealo en el extranjero?</h2>
+                <p>Con Phonealo llamaras desde cualquier parte del mundo sin generar gastos en tu operador. Recuerda es importante este conectado a una red wifi o de lo contrario si consumes datos de tu operador es possible que este te los tarifique. </p>
+          </div>
+          
+          <div class="col-12 col-sm-9"></div>
+          <div class="col-12 col-sm-3 text-right"><a href="https://www.phonealo.com/questions" title="">Ver más</a></div>
+        </div>
+        <hr class="m-0">
+    </div>
+
+</div>
+<!------------//preguntas--------------->
+
 
 
 	<section class="bottom-banner-w3layouts contact">
@@ -350,9 +451,8 @@
 							</div>
 							<div class="col-md-9 address-right text-left">
 								<h6 class="ad-info text-uppercase mb-2">Dirección</h6>
-								<p> Cuba
-
-								</p>
+ 								<p> Calle Garrigues , no. 2 bajo
+									46001 Valencia</p>
 							</div>
 						</div>
 					</div>
@@ -362,9 +462,9 @@
 								<i class="far fa-envelope"></i>
 							</div>
 							<div class="col-md-9 address-right text-left">
-								<h6 class="ad-info text-uppercase mb-2">Correo</h6>
-								<p>Correo :
-									<a href="mailto:example@email.com"> mail@example.com</a>
+								<h6 class="ad-info text-uppercase mb-2">Correo</h6> <br>
+								<p>
+									<a href="info@consuljuridica.com"> info@consuljuridica.com</a>
 								</p>
 							</div>
 
@@ -376,8 +476,8 @@
 								<i class="fas fa-mobile-alt"></i>
 							</div>
 							<div class="col-md-9 address-right text-left">
-								<h6 class="ad-info text-uppercase mb-2">Teléfono</h6>
-								<p>+1 234 567 8901</p>
+								<h6 class="ad-info text-uppercase mb-2">Teléfono</h6><br>
+								<p>+34 963 12 26 16</p>
 
 							</div>
 						</div>
