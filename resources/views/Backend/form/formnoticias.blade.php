@@ -87,7 +87,7 @@
                       <div class="form-group bmd-form-group {{ $errors->has('url_multimedia') ? ' has-error' : '' }}">
 
                         {!! Form::label('url_multimedia', 'Enlace Multimedia   O') !!}
-                        {!! Form::url('url_multimedia',  null, ['class' => 'form-control',  'url'=>'true']) !!}
+                        <input type="url" id="enlace" name="url_multimedia" class="form-control" required>
                         @if ($errors->has('url_multimedia'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('url_multimedia') }}</strong>
@@ -105,9 +105,9 @@
                             <div class="fileinput-preview fileinput-exists thumbnail" style=""></div>
                             <div>
                               <span class="btn btn-rose btn-round btn-file">
-                                <span class="fileinput-new">Imagen</span>
+                                <span  class="fileinput-new">Imagen</span>
                                 <span class="fileinput-exists">Cambiar</span>
-                                  {!! Form::file('url_imagen', null) !!}
+                                <input id="imagen" name="url_imagen" type="file" required>
                                   @if ($errors->has('url_imagen'))
                                       <span class="help-block">
                                           <strong>{{ $errors->first('url_imagen') }}</strong>
