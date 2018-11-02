@@ -5,26 +5,26 @@
 <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h4 class="card-title ">Noticias</h4>
-                  <a href="<?php echo route('ingresarmodulo', ['modulo' => 'nuevanoticia'])?>" class="card-category">
+                  <h4 class="card-title ">Usuarios Registrados</h4>
+                  <a href="<?php echo route('ingresarmodulo', ['modulo' => 'register'])?>" class="card-category">
                   <button  type="button" rel="tooltip" title="" class="btn btn-white btn-link btn-sm" data-original-title="Agregar">
-                    <i class="material-icons">playlist_add</i>
+                    <i class="material-icons">person_add</i>
                   </button>
-                   Agregar Noticia</a>
-                  <!-- <p class="card-category"> Here is a subtitle for this table</p> -->
+                   Agregar usuario</a>
+
                 </div>
                 <div class="card-body">
                   <div class="table-responsive">
                     <table class="table">
                       <thead class=" text-primary">
                         <tr><th>
-                          Título
+                          Usuario
                         </th>
                         <th>
-                          Público
+                          Correo Electrónico
                         </th>
                         <th>
-                          Posición
+                          Rol
                         </th>
                         <th>
                           Fecha
@@ -34,20 +34,19 @@
 												</th>
                       </tr></thead>
                       <tbody>
-
-                        @foreach($noticias as $noticia)
+                        @foreach($usuarios as $usuario)
                         <tr>
                           <td>
-                              {{ $noticia->titulo }}
+                              {{ $usuario->usuario }}
                           </td>
                           <td>
-                            {{ $noticia->publico }}
+                            {{ $usuario->email }}
                           </td>
                           <td>
-                             {{ $noticia->posicion }}
+                             {{ $usuario->rol }}
                           </td>
                           <td>
-                            {{ $noticia->created_at}}
+                            {{ $usuario->created_at}}
                           </td>
                           <td class="td-actions">
                             <button type="button" rel="tooltip" title="" class="btn btn-white btn-link btn-sm" data-original-title="Editar">
