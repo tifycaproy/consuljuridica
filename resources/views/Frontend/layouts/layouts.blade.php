@@ -28,11 +28,16 @@
 	<link rel="stylesheet" href="css/owl.theme.css" type="text/css" media="all">
 	<link href="css/prettyPhoto.css" rel="stylesheet" type="text/css">
 	<link href="css/style.css" rel='stylesheet' type='text/css' />
+	<link href="css/blog.css" rel='stylesheet' type='text/css' />
 	<link href="css/fontawesome-all.css" rel="stylesheet">
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext"
 	    rel="stylesheet">
 	<link href="//fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+
+</head>
+
+
 </head>
 
 <body>
@@ -85,7 +90,7 @@
 					</a>
 				</li>
 				<li class="nav-item ">
-					<a class="nav-link" href="{{route('blog')}}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+					<a class="nav-link" id="btn-noticias" role="button"
 					    aria-expanded="false">
 						Noticias
 					</a>
@@ -99,7 +104,7 @@
 					
 				</li>						
 				<li class="nav-item">
-					<a class="nav-link" href="{{route('contacto')}} ">Contacto</a>
+					<a class="nav-link" id="btn-contacto" href="#">Contacto</a>
 				</li>
 			</ul>
 		</div>
@@ -125,7 +130,7 @@
 						<a href={{route('privacidad')}}" title="Políticas de Privacidad" style=" color: #99d9f3">Políticas de Privacidad</a>
 						<div class="social-icon footer text-left mt-4">
 							<div class="icon-social">
-								<a href="#" class="button-footr">
+								<a href="https://www.facebook.com/consultoriajuridica.miramar/" class="button-footr">
 									<i class="fab fa-facebook-f"></i>
 								</a>
 								<a href="#" class="button-footr">
@@ -296,14 +301,49 @@
 
                      	var json = data.responseJSON.errors;
 			            var error = json['mail'][0];
+			            console.log(error)
+			            if (error = 'The mail field is required.') {
+			            	$('.respuesta').html('El email es requerido').css('color', 'red');
+			            }
+			            if (error = 'The mail has already been taken.') {
+			            	$('.respuesta').html('Este email ya se encuentra registrado').css('color', 'red');
+			            }
 
-			            $('.respuesta').html('Este email ya se encuentra registrado').css('color', 'red');
+			          
 			        }
 
                 });
             });
-	</script>
 
+	$('#btn-noticias').bind("click", function () {
+		var destino = $("#section-noticias").offset().top - 1;
+		$("html, body").animate({scrollTop: destino},1000);
+	});
+
+	$('#btn-contacto').bind("click", function () {
+		var destino = $("#section-contacto").offset().top -1;
+		$("html, body").animate({scrollTop: destino},1000);
+	});
+
+	</script>
+	
+<!--slider-->
+	<script src="js/responsiveslides.min.js"></script>
+	<script>
+		$(function () {
+
+			// Slideshow 1
+			$("#slider1").responsiveSlides({
+				auto: false,
+				pager: true,
+				nav: false,
+				speed: 500,
+				namespace: "centered-btns"
+			});
+
+		});
+	</script>
+	<!--//slider-->
 @stack('scripts')
 
 </body>
