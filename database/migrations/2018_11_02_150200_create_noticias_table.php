@@ -21,8 +21,8 @@ class CreateNoticiasTable extends Migration
             $table->longText('descripcion')->nullable();
             $table->boolean('publico');
             $table->bigInteger('posicion');
-            $table->longText('url_multimedia');
-            $table->longText('url_imagen');
+            $table->longText('url_multimedia')->nullable();;
+            $table->longText('url_imagen')->nullable();;
         });
     }
 
