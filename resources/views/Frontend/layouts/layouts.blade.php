@@ -291,8 +291,15 @@
 
                      	var json = data.responseJSON.errors;
 			            var error = json['mail'][0];
+			            console.log(error)
+			            if (error = 'The mail field is required.') {
+			            	$('.respuesta').html('El email es requerido').css('color', 'red');
+			            }
+			            if (error = 'The mail has already been taken.') {
+			            	$('.respuesta').html('Este email ya se encuentra registrado').css('color', 'red');
+			            }
 
-			            $('.respuesta').html('Este email ya se encuentra registrado').css('color', 'red');
+			          
 			        }
 
                 });
