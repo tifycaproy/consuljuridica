@@ -33,78 +33,89 @@
 	<link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext"
 	    rel="stylesheet">
 	<link href="//fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+
+</head>
+
+
 </head>
 
 <body>
 	
 <!-------------------- header ------------------->
-		<header>
+<header>
+<!-------------------- botones de RRSS ------------------->
+	<div id="btn-redes" class="col-1  position-fixed d-md-block d-none">
+		<div class="row d-flex justify-content-right align-items-center">
+            <div class="col pt-1 ">
+                <a target="blank_" href="" title="Instagram">
+                    <img src="https://www.phonealo.com/assets/ig_circle.svg" alt="" class="w-25">
+                </a>
+            </div>
 
-			<div id="btn-redes" class="col-1  position-fixed d-md-block d-none">
-        		<div class="row d-flex justify-content-right align-items-center">
-		            <div class="col pt-1 ">
-		                <a target="blank_" href="https://www.instagram.com/phonealo_app/" title="Instagram">
-		                    <img src="https://www.phonealo.com/assets/ig_circle.svg" alt="" class="w-25">
-		                </a>
-		            </div>
+            <div class="w-100">
+            	
+            </div>
+            
+            <div class="col pt-1 ">
+                <a target="blank_" href="https://www.facebook.com/consultoriajuridica.miramar/" title="Facebook">
+                     <img src="https://www.phonealo.com/assets/fb_circle.svg" alt="" class="w-25">
+                 </a>
+            </div>
+		 </div>
+	</div> 
 
-		            <div class="w-100">
-		            	
-		            </div>
-		            
-		            <div class="col pt-1 ">
-		                <a target="blank_" href="https://www.facebook.com/Phonealo-642900916095975/?modal=admin_todo_tour" title="Facebook">
-		                     <img src="https://www.phonealo.com/assets/fb_circle.svg" alt="" class="w-25">
-		                 </a>
-		            </div>
-		         
+<!-------------------- //botones de RRSS ------------------->
 
-		        </div>
-        	</div> 
-    
+<!-------------------- menu ------------------->
 
-			<nav class="navbar navbar-expand-lg navbar-light bg-light top-header">
-				<h1 class="logo">
-					<img src="{{asset('images/logoconsul1.png')}}">
-				</h1>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-				    aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon">
-						<i class="fas fa-bars"></i>
-					</span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul class="navbar-nav ml-auto">
-						<li class="nav-item active">
-							<a class="nav-link ml-lg-0" href="{{route('/')}}">Inicio
-								<span class="sr-only">(current)</span>
-							</a>
-						</li>
-						<li class="nav-item ">
-							<a class="nav-link" href="{{route('blog')}}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-							    aria-expanded="false">
-								Noticias
-							</a>
-							
-						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="{{route('servicios')}}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-							    aria-expanded="false">
-								Servicios
-							</a>
-							
-						</li>						
-						<li class="nav-item">
-							<a class="nav-link" href="{{route('contacto')}} ">Contacto</a>
-						</li>
-						
-					</ul>
-				</div>
-			</nav>
-		</header>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light top-header">
+		<h1 class="logo">
+			<a class="navbar-brand" href="{{route('/')}}">
+				<img  src="{{asset('images/logo_consultoria.png')}}" style="width: 6.5em">
+			</a>
+		</h1>
+			
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+		    aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon">
+				<i class="fas fa-bars"></i>
+			</span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item active">
+					<a class="nav-link ml-lg-0" href="{{route('/')}}">Inicio
+						<span class="sr-only">(current)</span>
+					</a>
+				</li>
+				<li class="nav-item ">
+					<a class="nav-link" href="{{route('blog')}}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+					    aria-expanded="false">
+						Noticias
+					</a>
+					
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="{{route('servicios')}}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+					    aria-expanded="false">
+						Servicios
+					</a>
+					
+				</li>						
+				<li class="nav-item">
+					<a class="nav-link" href="{{route('contacto')}} ">Contacto</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+<!-------------------- //menu ------------------->
+
+</header>
 
 <!------------------- //header --------------------------->
+
 @yield('content')
+
 <!--------------------footer------------------------- -->
 	<footer>
 		<div class="container">
@@ -115,7 +126,7 @@
 					</div>
 					<div class="footer-text">
 						<p>Especialistas en asuntos legales y empresariales en España, Cuba y Caribe.</p>
-						<a href="https://www.phonealo.com/privacity" title="Políticas de Privacidad" style=" color: #99d9f3">Políticas de Privacidad</a>
+						<a href={{route('privacidad')}}" title="Políticas de Privacidad" style=" color: #99d9f3">Políticas de Privacidad</a>
 						<div class="social-icon footer text-left mt-4">
 							<div class="icon-social">
 								<a href="#" class="button-footr">
@@ -124,8 +135,6 @@
 								<a href="#" class="button-footr">
 									<i class="fab fa-instagram"></i>
 								</a>
-								
-
 							</div>
 						</div>
 					</div>
