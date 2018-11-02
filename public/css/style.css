@@ -731,6 +731,26 @@ h3.tittle-wthree,
 	font-weight: 700;
 }
 
+.opacidad{
+	opacity:0.5;
+}
+
+.opacidad:hover{
+	opacity:1;
+}
+
+.gris{
+	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+     transition-duration: 0.2s;
+}
+
+.gris:hover{ 
+	-webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
+     transition-duration: 0.2s;
+}
+
 .feature h3 {
 	font-size: 2.5em;
 }

@@ -637,19 +637,25 @@
 <!------------//contacto--------------->
 
 
-<section class="bottom-banner-w3layouts contact">
-	<h3 class="tittle-wthree text-center"> Grupo GTI </h3>
+<section class="bottom-banner-w3layouts contact " style="padding-top: 1em; padding-bottom:0em;">
+	
 		<div class="col-12">
 			<div class=" d-flex justify-content-center">
 				 <div class="row d-flex align-items-center">
-				 	<div class="col-sm-4" style="padding: 80px">
-				 		<img class="col-sm-12 "  src="{{asset('images/logo_valencuba.png')}}">
+				 	<div class="col-sm-4" style="padding: 0px 120px 20px 120px">
+				 		<a href="http://valencuba.com/">
+				 			<img class="col-sm-12 gris opacidad"  src="{{asset('images/logo_valencuba.png')}}">
+				 		</a>
 				 	</div>
-				 	<div class="col-sm-4" style="padding: 80px">
-						<img class="col-sm-12 "  src="{{asset('images/logo_cubaires.png')}}">
+				 	<div class="col-sm-4" style="padding: 0px 120px 20px 120px">
+				 		<a href="http://cubairestravel.com/">
+							<img class="col-sm-12 gris opacidad"  src="{{asset('images/logo_cubaires.png')}}">
+						</a>
 					</div>
-					<div class="col-sm-4" style="padding: 80px">
-						<img class="col-sm-12 "  src="{{asset('images/logo_luxury.png')}}">
+					<div class="col-sm-4" style="padding: 0px 120px 20px 120px">
+						<a href="http://cubairestravel.com/">
+							<img class="col-sm-12 gris opacidad"  src="{{asset('images/logo_luxury.png')}}" > 
+						</a>
 					</div>
 				 </div>
 					
