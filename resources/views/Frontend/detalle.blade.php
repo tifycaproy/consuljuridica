@@ -82,11 +82,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</div>
 						<div class="tech-btm">
 							<h4>Suscríbase a nuestro newsletter</h4>
-							<p>Pellentesque dui, non felis. Maecenas male </p>
-							<form action="#" method="post">
-								<input class="form-control  mail-newlester" type="email" placeholder="Correo" required="">
-								<input class="form-control btn-newlester" type="submit" value="Subscribir">
+							
+							<form onsubmit="return false" action="#" method="post">
 								<small class="respuesta"></small>
+								<input class="form-control  mail-newlester" type="email" placeholder="Correo" required="">
+								<button type="button" class=" form-control btn btn-primary  btn-newlester">Enviar</button>
 							</form>
 
 						</div>
