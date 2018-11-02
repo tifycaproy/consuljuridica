@@ -315,7 +315,6 @@
                 });
             });
 
-
 	$('#btn-noticias').bind("click", function () {
 		var destino = $("#section-noticias").offset().top - 1;
 		$("html, body").animate({scrollTop: destino},1000);
