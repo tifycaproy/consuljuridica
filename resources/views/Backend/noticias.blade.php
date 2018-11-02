@@ -6,7 +6,7 @@
               <div class="card">
                 <div class="card-header card-header-primary">
                   <h4 class="card-title ">Noticias</h4>
-                  <a href="<?php echo route('ingresarmodulo', ['modulo' => 'nuevanoticia'])?>" class="card-category">
+                  <a href="{{ route('ingresarmodulo', ['modulo' => 'nuevanoticia']) }}" class="card-category">
                   <button  type="button" rel="tooltip" title="" class="btn btn-white btn-link btn-sm" data-original-title="Agregar">
                     <i class="material-icons">playlist_add</i>
                   </button>
@@ -15,6 +15,7 @@
                 </div>
                 <div class="card-body">
                   <div class="table-responsive">
+                    <input id="mostra_vista" value="noticias" hidden disabled>
                     <table class="table">
                       <thead class=" text-primary">
                         <tr><th>
