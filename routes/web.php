@@ -23,12 +23,20 @@ Route::get('blog', 'Frontend\homeController@blog')->name('blog');
 
 Route::get('servicios', 'Frontend\homeController@servicios')->name('servicios');
 
-Route::get('contacto', 'Frontend\homeController@contacto')->name('contacto');
+Route::get('contacto', 'Frontend\homeController@contacto')->name('contacto'); 
+
+Route::get('privacidad', 'Frontend\homeController@privacidad')->name('privacidad');
+
+Route::get('detalle', 'Frontend\homeController@detalle')->name('detalle');
 
 //AJAX
 
 //CREAR NEWLESTER
 Route::post('create_newlester', 'Ajax\AjaxNewlester@create')->name('create_newlester');
+////
+
+//ENVIAR MENSAJE DE CONTACTO
+Route::post('send_mail', 'Ajax\AjaxMail@contacto')->name('send_mail');
 ////
 
 
