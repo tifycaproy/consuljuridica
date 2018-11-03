@@ -1,35 +1,20 @@
-<!--
-	Author: W3layouts
-	Author URL: http://w3layouts.com
-	License: Creative Commons Attribution 3.0 Unported
-	License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="es">
 
 <head>
-	<title>Inicio | Consultoría Jurídica Miramar</title>
+	<title>Consultoría Jurídica Miramar</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset="utf-8">
-	<meta name="keywords" content="Accrue a Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola 	web design" />
-	<script>
-		addEventListener("load", function () {
-			setTimeout(hideURLbar, 0);
-		}, false);
-
-		function hideURLbar() {
-			window.scrollTo(0, 1);
-		}
-	</script>
+	<meta charset="utf-8"> 
+	<meta name="keywords" content="" />
+	
 	<link rel="shortcut icon" href="{{asset('images/favicon.png')}} " type="image/x-icon">
-	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-	<link rel="stylesheet" href="css/owl.carousel.css" type="text/css" media="all">
-	<link rel="stylesheet" href="css/owl.theme.css" type="text/css" media="all">
-	<link href="css/prettyPhoto.css" rel="stylesheet" type="text/css">
-	<link href="css/style.css" rel='stylesheet' type='text/css' />
-	<link href="css/blog.css" rel='stylesheet' type='text/css' />
-	<link href="css/fontawesome-all.css" rel="stylesheet">
+	<link href="{{ asset('css/bootstrap.css') }}" rel='stylesheet' type='text/css' />
+{{-- 	<link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}" type="text/css" media="all">
+	<link rel="stylesheet" href="{{ asset('css/owl.theme.css') }}" type="text/css" media="all"> --}}
+	{{-- <link href="{{ asset('css/prettyPhoto.css') }}" rel="stylesheet" type="text/css"> --}}
+	<link href="{{ asset('css/style.css') }}" rel='stylesheet' type='text/css' />
+	<link href="{{ asset('css/blog.css') }}" rel='stylesheet' type='text/css' />
+	<link href="{{ asset('css/fontawesome-all.css') }}" rel="stylesheet">
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext"
 	    rel="stylesheet">
@@ -69,7 +54,7 @@
 
 <!-------------------- menu ------------------->
 
-	<nav class="navbar navbar-expand-lg navbar-light bg-light top-header">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light top-header" id="menu">
 		<h1 class="logo">
 			<a class="navbar-brand" href="{{route('/')}}">
 				<img  src="{{asset('images/logo_consultoria.png')}}" style="width: 6.5em">
@@ -209,69 +194,17 @@
 
 	<!-- //Custom-JavaScript-File-Links -->
 	<!-- js -->
-	<script  src="js/jquery-2.2.3.min.js"></script>
-	
-	<!--pop-up-box-->
-	<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
-	<script src="js/jquery.magnific-popup.js"></script>
-	<!--//pop-up-box-->
-	<script>
-		$(document).ready(function () {
-			$('.popup-with-zoom-anim').magnificPopup({
-				type: 'inline',
-				fixedContentPos: false,
-				fixedBgPos: true,
-				overflowY: 'auto',
-				closeBtnInside: true,
-				preloader: false,
-				midClick: true,
-				removalDelay: 300,
-				mainClass: 'my-mfp-zoom-in'
-			});
-
-		});
-	</script>
-	<!--//search-bar-->
+	<script  src="{{ asset('js/jquery-2.2.3.min.js') }}"></script>
 
 	
 	<!-- //js -->
-	<script src="js/bootstrap.js"></script>
-	<!--/ start-smoth-scrolling -->
-	<script src="js/move-top.js"></script>
-	<script src="js/easing.js"></script>
-	<script>
-		jQuery(document).ready(function ($) {
-			$(".scroll").click(function (event) {
-				event.preventDefault();
-				$('html,body').animate({
-					scrollTop: $(this.hash).offset().top
-				}, 900);
-			});
-		});
-	</script>
-	<script>
-		$(document).ready(function () {
-			/*
-									var defaults = {
-										  containerID: 'toTop', // fading element id
-										containerHoverID: 'toTopHover', // fading element hover id
-										scrollSpeed: 1200,
-										easingType: 'linear' 
-									 };
-									*/
+	<script src="{{ asset('js/bootstrap.js') }}"></script>
 
-			$().UItoTop({
-				easingType: 'easeOutQuart'
-			});
-
-		});
-	</script>
-	<!--// end-smoth-scrolling -->
 	<!-- jQuery-Photo-filter-lightbox-Gallery-plugin -->
-	<script src="js/jquery-1.7.2.js"></script>
-	<script src="js/jquery.quicksand.js"></script>
-	<script src="js/script.js"></script>
-	<script src="js/jquery.prettyPhoto.js"></script>
+{{-- 	<script src="{{ asset('js/jquery-1.7.2.js') }}"></script> --}}
+	{{-- <script src="{{ asset('js/jquery.quicksand.js') }}"></script> --}}
+	{{-- <script src="{{ asset('js/script.js') }}"></script> --}}
+	{{-- <script src="{{ asset('js/jquery.prettyPhoto.js') }}"></script> --}}
 	<!-- //jQuery-Photo-filter-lightbox-Gallery-plugin -->
 
 
@@ -325,25 +258,16 @@
 		$("html, body").animate({scrollTop: destino},1000);
 	});
 
+	$('#toTop').bind("click", function () {
+		var destino = $("#menu").offset().top -1;
+		$("html, body").animate({scrollTop: destino},1000);
+	});
+
+	
+
 	</script>
 	
-<!--slider-->
-	<script src="js/responsiveslides.min.js"></script>
-	<script>
-		$(function () {
 
-			// Slideshow 1
-			$("#slider1").responsiveSlides({
-				auto: false,
-				pager: true,
-				nav: false,
-				speed: 500,
-				namespace: "centered-btns"
-			});
-
-		});
-	</script>
-	<!--//slider-->
 @stack('scripts')
 
 </body>
