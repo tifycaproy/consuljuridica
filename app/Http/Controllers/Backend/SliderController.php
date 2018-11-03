@@ -3,12 +3,13 @@
 namespace App\Http\Controllers\Backend;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use App\Slider as Slider;
 
 class SliderController extends Controller
 {
-      public function insert(Request $request)
+      public function create(Request $request)
     {
       $titulo= $request["titulo"];
       $contenido= $request["contenido"];
@@ -29,5 +30,18 @@ class SliderController extends Controller
       return redirect()->route("versliders");
 
     }
+    public function list()
+    {
+         $sliders = DB::table('sliders')
+                        ->select(DB::raw('titulo,  IF (publico = "1", "Si", "No") as publico, posicion,  created_at'))
+                        ->get();
+
+         return view('Backend.slider',['sliders'=>$sliders]);
+    }
+    public function form()
+    {
+        return view('Backend.form.formslider');
+    }
+
 
 }
