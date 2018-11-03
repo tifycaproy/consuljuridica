@@ -6,7 +6,7 @@
               <div class="card">
                 <div class="card-header card-header-primary">
                   <h4 class="card-title ">Usuarios Registrados</h4>
-                  <a href="{{ route('ingresarmodulo', ['modulo' => 'register'])}}" class="card-category">
+                  <a href="{{ route('formusuario')}}" class="card-category">
                   <button  type="button" rel="tooltip" title="" class="btn btn-white btn-link btn-sm" data-original-title="Agregar">
                     <i class="material-icons">person_add</i>
                   </button>
@@ -38,13 +38,13 @@
                         @foreach($usuarios as $usuario)
                         <tr>
                           <td>
-                              {{ $usuario->usuario }}
+                              {{ $usuario->name }}
                           </td>
                           <td>
                             {{ $usuario->email }}
                           </td>
                           <td>
-                             {{ $usuario->rol }}
+                             {{ $usuario->description }}
                           </td>
                           <td>
                             {{ $usuario->created_at}}

@@ -6,7 +6,7 @@
               <div class="card">
                 <div class="card-header card-header-primary">
                   <h4 class="card-title ">Slider</h4>
-                  <a href="{{ route('ingresarmodulo', ['modulo' => 'nuevoslider'])}}" class="card-category">
+                  <a href="{{ route('formslider')}}" class="card-category">
                   <button  type="button" rel="tooltip" title="" class="btn btn-white btn-link btn-sm" data-original-title="Agregar">
                     <i class="material-icons">library_add</i>
                   </button>

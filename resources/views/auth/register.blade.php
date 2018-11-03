@@ -10,7 +10,7 @@
                   <p class="card-category">Complete todos los datos</p>
                 </div>
                 <div class="card-body">
-                  {!! Form::open(['route' => 'register', 'method' => 'post', 'novalidate']) !!}
+                  {!! Form::open(['route' => 'ingresarusuario', 'method' => 'post', 'novalidate']) !!}
                     <!-- {{ csrf_field() }} -->
                     <div class="row">
                       <div class="col-md-3">

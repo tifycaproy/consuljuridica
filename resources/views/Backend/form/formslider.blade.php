@@ -86,7 +86,7 @@
                               <span class="btn btn-rose btn-round btn-file">
                                 <span class="fileinput-new">Buscar</span>
                                 <span class="fileinput-exists">Cambiar</span>
-                                  {!! Form::file('url_imagen', null) !!}
+                                <input id="imagen" name="url_imagen" type="file" required>                                  
                                   @if ($errors->has('url_imagen'))
                                       <span class="help-block">
                                           <strong>{{ $errors->first('url_imagen') }}</strong>

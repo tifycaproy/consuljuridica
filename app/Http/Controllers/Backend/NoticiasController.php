@@ -3,12 +3,13 @@
 namespace App\Http\Controllers\Backend;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use App\Noticias as Noticias;
 
 class NoticiasController extends Controller
 {
-      public function insert(Request $request)
+      public function create(Request $request)
     {
       $titulo= $request["titulo"];
       $resumen= $request["resumen"];
@@ -34,6 +35,18 @@ class NoticiasController extends Controller
         $noticias->url_imagen=$name_fileoption1;
       }
       $noticias->save();
-      return redirect()->route("vernoticia");
+      return redirect()->route("vernoticias");
+    }
+    public function list()
+    {
+         $noticias = DB::table('noticias')
+                        ->select(DB::raw('titulo,  IF (publico = "1", "Si", "No") as publico, posicion,  created_at'))
+                        ->get();
+
+         return view('Backend.noticias',['noticias'=>$noticias]);
+    }
+    public function form()
+    {
+        return view('Backend.form.formnoticia');
     }
 }
