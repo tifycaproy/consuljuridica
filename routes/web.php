@@ -73,7 +73,7 @@ Route::get('/admin/eliminarnoticia/{id}', ['as' => 'eliminarnoticia', 'uses'=>'B
 
 
 
-Route::get('admin', 'homeController@index')->name('index');
+Route::get('admin', 'HomeController@index')->name('index');
 // Route::get('login', 'homeController@index')->name('index');
 // Route::get('admin', 'Backend\homeController@admin')->name('admin');
 
