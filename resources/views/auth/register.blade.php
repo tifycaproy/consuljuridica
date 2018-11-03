@@ -10,13 +10,14 @@
                   <p class="card-category">Complete todos los datos</p>
                 </div>
                 <div class="card-body">
-                  <form method="POST" action="{{ route('register') }}">
-                    {{ csrf_field() }}
+                  {!! Form::open(['route' => 'register', 'method' => 'post', 'novalidate']) !!}
+                    <!-- {{ csrf_field() }} -->
                     <div class="row">
                       <div class="col-md-3">
                         <div class="form-group bmd-form-group {{ $errors->has('name') ? ' has-error' : '' }}">
-                          <label class="bmd-label-floating ">Usuario</label>
-                          <input id="name" name="name" class="form-control" type="text" value="{{ old('name') }}" required autofocus>
+                          {!! Form::label('full_name', 'Usuario') !!}
+                          {!! Form::text('name', null, ['class' => 'form-control' , 'required' => 'required', 'autofocus'=> 'autofocus']) !!}
+
                           @if ($errors->has('name'))
                               <span class="help-block">
                                   <strong>{{ $errors->first('name') }}</strong>
@@ -26,8 +27,9 @@
                       </div>
                       <div class="col-md-4">
                         <div class="form-group bmd-form-group {{ $errors->has('email') ? ' has-error' : '' }}">
-                          <label class="bmd-label-floating">Correo Electrónico</label>
-                          <input id="email" name="email"  class="form-control" type="email" value="{{ old('email') }}" required>
+
+                          {!! Form::label('email', 'Correo Electrónico') !!}
+                          {!! Form::email('email',  null, ['class' => 'form-control',  'required' => 'required']) !!}
                           @if ($errors->has('email'))
                               <span class="help-block">
                                   <strong>{{ $errors->first('email') }}</strong>
@@ -39,8 +41,8 @@
                     <div class="row">
                       <div class="col-md-4">
                         <div class="form-group bmd-form-group {{ $errors->has('password') ? ' has-error' : '' }}">
-                          <label class="bmd-label-floating">Contraseña</label>
-                          <input id="password" name="password" class="form-control" type="password" required>
+                          {!! Form::label('password', 'Contraseña') !!}
+                          {!! Form::password('password',  ['class' => 'form-control',  'required' => 'required']) !!}
                           @if ($errors->has('password'))
                               <span class="help-block">
                                   <strong>{{ $errors->first('password') }}</strong>
@@ -50,14 +52,14 @@
                       </div>
                       <div class="col-md-4">
                         <div class="form-group bmd-form-group ">
-                          <label class="bmd-label-floating">Confirmar Contraseña</label>
-                          <input id="password-confirm" name="password_confirmation" class="form-control" type="password" required>
+                          {!! Form::label('confpassword', 'Confirmar Contraseña') !!}
+                          {!! Form::password('confpassword',  ['class' => 'form-control',  'required' => 'required']) !!}
                         </div>
                       </div>
                     </div>
                     <button class="btn btn-primary pull-right" type="submit">Crear Usuario</button>
                     <div class="clearfix"></div>
-                  </form>
+                 {!! Form::close() !!}
                 </div>
               </div>
             </div>

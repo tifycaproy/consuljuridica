@@ -10,24 +10,24 @@ class homeController extends Controller
 {
     public function admin(){
 
-    	return view('Backend.index');
+      return view('Backend.index'); 
     }
     public function modulos($name){
 
       switch ($name) {
         case 'slider':
-          $sliders = DB::select('SELECT  titulo,  IF (publico = \'1\', \'Si\', \'No\') as publico, posicion,  created_at  FROM bd_consuljuridica.sliders');
+          $sliders = DB::select('SELECT  titulo,  IF (publico = \'1\', \'Si\', \'No\') as publico, posicion,  created_at  FROM consuljuridica.sliders');
           return view('Backend.slider',['sliders' => $sliders]);
           break;
         case 'servicios':
           return view('Backend.servicios');
           break;
         case 'noticias':
-        $noticias = DB::select('SELECT  titulo,  IF (publico = \'1\', \'Si\', \'No\') as publico, posicion,  created_at  FROM bd_consuljuridica.noticias');
+        $noticias = DB::select('SELECT  titulo,  IF (publico = \'1\', \'Si\', \'No\') as publico, posicion,  created_at  FROM consuljuridica.noticias');
           return view('Backend.noticias',['noticias' => $noticias]);
           break;
         case 'usuarios':
-        $usuarios = DB::select('SELECT b.name as usuario,email, a.name as rol, b.created_at FROM bd_consuljuridica.role_user
+        $usuarios = DB::select('SELECT b.name as usuario,email, a.name as rol, b.created_at FROM consuljuridica.role_user
           JOIN bd_consuljuridica.roles a
           ON a.id=role_id
           JOIN bd_consuljuridica.users b
@@ -35,18 +35,23 @@ class homeController extends Controller
           return view('Backend.usuarios',['usuarios' => $usuarios]);
           break;
         case 'register':
-        // $usuarios = DB::select('SELECT b.name as usuario,email, a.name as rol, b.created_at FROM bd_consuljuridica.role_user
-        //   JOIN bd_consuljuridica.roles a
-        //   ON a.id=role_id
-        //   JOIN bd_consuljuridica.users b
-        //   ON b.id=user_id');
-          return view('auth.register');
+        return view('auth.register');
+          break;
+        case 'nuevanoticia':
+          return view('Backend.form.formnoticias');
+          break;
+        case 'nuevoslider':
+          return view('Backend.form.formslider');
           break;
 
         default:
           // code...
           break;
       }
+
+    }
+}
+
 
     }
 }
