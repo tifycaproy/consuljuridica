@@ -27,7 +27,12 @@ Route::get('contacto', 'Frontend\homeController@contacto')->name('contacto');
 
 Route::get('privacidad', 'Frontend\homeController@privacidad')->name('privacidad');
 
-Route::get('detalle', 'Frontend\homeController@detalle')->name('detalle');
+//Route::get('detalle', 'Frontend\homeController@detalle')->name('detalle');
+
+Route::get('detalle/{id}', [
+	'as' => 'detalle', 
+	'uses'=>'Frontend\homeController@detalle' 
+]);
 
 //AJAX
 
