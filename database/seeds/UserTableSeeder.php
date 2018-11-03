@@ -13,33 +13,48 @@ class UserTableSeeder extends Seeder
      */
     public function run()
     {
+        
         $role_user = Role::where('name', 'user')->first();
         $role_admin = Role::where('name', 'admin')->first();
 
         $user = new User();
-        $user->name = 'User';
-        $user->email = 'user@example.com';
-        $user->password = bcrypt('secret');
-        $user->save();
-        $user->roles()->attach($role_user);
-
-        $user = new User();
-        $user->name = 'Admin';
-        $user->email = 'admin@example.com';
-        $user->password = bcrypt('secret');
+        $user->name = 'Anthoni';
+        $user->email = 'yosec.cervino@gmail.com'; 
+        $user->password = bcrypt('123456');
         $user->save();
         $user->roles()->attach($role_admin);
 
         $user = new User();
-        $user->name = 'Admin';
-        $user->email = 'yosec.cervino@gmail.com';
+        $user->name = 'Ruben';
+        $user->email = 'rubentorres26@gmail.com';
         $user->password = bcrypt('123456');
         $user->save();
         $user->roles()->attach($role_admin);
 
         $user = new User();
         $user->name = 'Admin';
-        $user->email = 'rubentorres26@gmail.com';
+        $user->email = 'info@consuljuridica.com';
+        $user->password = bcrypt('123456');
+        $user->save();
+        $user->roles()->attach($role_admin);
+
+        $user = new User();
+        $user->name = 'Jose';
+        $user->email = 'jbello262@gmail.com';
+        $user->password = bcrypt('123456');
+        $user->save();
+        $user->roles()->attach($role_admin);
+
+        $user = new User();
+        $user->name = 'Yoelis';
+        $user->email = 'yoe318@gmail.com';
+        $user->password = bcrypt('123456');
+        $user->save();
+        $user->roles()->attach($role_admin);
+
+        $user = new User();
+        $user->name = 'Jose';
+        $user->email = 'carlosspf24@gmail.com';
         $user->password = bcrypt('123456');
         $user->save();
         $user->roles()->attach($role_admin);

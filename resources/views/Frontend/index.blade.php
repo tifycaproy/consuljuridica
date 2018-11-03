@@ -1,84 +1,55 @@
 @extends ('Frontend.layouts.layouts')
 
 @section('content')
-
-<link href="css/blog.css" rel='stylesheet' type='text/css' />
-
-<body>
-
+@php
+	use Carbon\Carbon;
+@endphp
 
 <!-- banner-text -->
 
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-			  <ol class="carousel-indicators">
+			 {{--  <ol class="carousel-indicators">
 			    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
 			    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
 			    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-			  </ol>
+			  </ol> --}}
+
 			  <div class="carousel-inner">
+
+			  	@php
+			  		$longitud = count($slider);
+			  	@endphp
+			  	@for ($i = 0; $i < $longitud ; $i++)
+			  		
+			  @if ($i == 0)
 			    <div class="carousel-item active">
-			      <img class="d-block w-100" src="{{ asset('images/banner2.jpg') }}" alt="First slide">
+			      <img class="d-block w-100" src="{{ asset('images/sliders') }}/{{ $slider[$i]->url_imagen }}" alt="{{$slider[$i]->titulo}}">
 			      <div class="carousel-caption d-none d-md-block">
 
 			      	<div class="banner-info" style="padding-top: 7em;" style="display: block; float: left; position: relative; opacity: 1; z-index: 2; transition: opacity 500ms ease-in-out 0s;">
-							<h3>Con nosotros lo difícil será fácil</h3>
-							<p> <b>Le aseguramos su gestión consular, documentación de viajes o el desarrollo de sus negocios.</b></p>
+							<h3>{{$slider[$i]->titulo}}</h3>
+							<p> <b>{{ $slider[$i]->contenido }}</b></p>
 						</div>
 				  </div>
 			    </div>
-			    <div class="carousel-item">
-			      <img class="d-block w-100" src="{{ asset('images/banner1.jpg') }}" alt="Second slide">
+			    @endif
+			    @if ($i > 0)
+			    	<div class="carousel-item">
+			      <img class="d-block w-100" src="{{ asset('images/sliders') }}/{{ $slider[$i]->url_imagen }}" alt="{{$slider[$i]->titulo}}">
 			      <div class="carousel-caption d-none d-md-block">
 
 			      	<div class="banner-info" style="padding-top: 7em;" style="display: block; float: left; position: relative; opacity: 1; z-index: 2; transition: opacity 500ms ease-in-out 0s;">
-							<h3>Con nosotros lo difícil será fácil</h3>
-							<p> <b>Le aseguramos su gestión consular, documentación de viajes o el desarrollo de sus negocios.</b></p>
+							<h3>{{$slider[$i]->titulo}}</h3>
+							<p> <b>{{ $slider[$i]->contenido }}</b></p>
 						</div>
 				  </div>
 			    </div>
-			    <div class="carousel-item">
-			      <img class="d-block w-100" src="{{ asset('images/libros.jpg') }}" alt="Third slide">
-			      <div class="carousel-caption d-none d-md-block">
-
-			      	<div class="banner-info" style="padding-top: 7em;" style="display: block; float: left; position: relative; opacity: 1; z-index: 2; transition: opacity 500ms ease-in-out 0s;">
-							<h3>Con nosotros lo difícil será fácil</h3>
-							<p> <b>Le aseguramos su gestión consular, documentación de viajes o el desarrollo de sus negocios.</b></p>
-						</div>
-				  </div>
-			    </div>
+			    @endif
+			 	@endfor
+			  
 			  </div>
 			</div>
-{{-- <div class="banner" id="home">	
 
-	<div class="slider-content" style="margin-top: 0px; padding-top: 5em">
-		<div class="tittle text-center">
-			
-
-			<div class="rslides_container">
-				<ul class="rslides" id="slider1">
-					<li id="centered-btns1_s0" class="centered-btns1_on">
-						<div class="banner-info" style="padding-top: 7em;" style="display: block; float: left; position: relative; opacity: 1; z-index: 2; transition: opacity 500ms ease-in-out 0s;">
-							<h3>Con nosotros lo difícil será fácil</h3>
-							<p>Le aseguramos su gestión consular, documentación de viajes o el desarrollo de sus negocios.</p>
-						</div>
-					</li>
-					<li id="centered-btns1_s1" style="float: none; position: absolute; opacity: 0; z-index: 1; display: list-item; transition: opacity 500ms ease-in-out 0s;">
-						<div class="banner-info">
-							<h3>Estamos muy cerca de Cuba</h3>
-							<p>Sus necesidades son nuestro compromiso, esa es la clave de nuestros servicios </p>
-						</div>
-					</li>
-				</ul>
-				</ul><ul class="centered-btns_tabs centered-btns1_tabs"><li class="centered-btns1_s1"><a href="#" class="centered-btns1_s1">1</a></li><li class="centered-btns1_s2 centered-btns_here"><a href="#" class="centered-btns1_s2">2</a></li></ul>
-			</div>
-
-			
-
-		</div>
-		<div class="clearfix"></div>
-	</div>
-</div> --}}
-	<!-- //banner -->
 
 	<span><span></span></span>
 
@@ -189,140 +160,40 @@
 				<!--left-->
 				<div class="col-lg-12 left-blog-info text-left">
 					<div class="row mb-4">
-						<div class="col-md-4 card">
-							<a href="single.html">
-								<img src="images/4.jpg" class="card-img-top img-fluid rounded" alt="">
-							</a>
+
+						@foreach ($noticias as $noticia)
+						
+						<div class="col-md-4 card"> 
+							
+								<img src="{{ asset('images/noticias') }}/{{ $noticia->url_imagen }}" class="card-img-top img-fluid rounded" alt="">
+
+							
 							<div class="card-body">
 								<ul class="blog-icons my-4">
 									<li>
 										<a href="#">
-											<i class="far fa-calendar-alt"></i> Feb 20 .2018</a>
+											<i class="far fa-calendar-alt"></i> {{ $noticia->created_at->format('d-m-Y') }}</a>
 									</li>
 									
 								</ul>
 								<h5 class="card-title ">
-									<a href="single.html">Blog Post Title</a>
+									<a href="{{route('detalle',$noticia->id)}}">{{ $noticia->titulo }}</a>
 								</h5>
-								<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt.. </p>
+								<p class="card-text">{{ $noticia->resumen }} </p>
 								<div class="read inner mt-4">
-									<a href="{{route('detalle')}}" class="btn btn-sm animated-button victoria-two">Leer más</a>
+									<a href="{{route('detalle',$noticia->id)}}" class="btn btn-sm animated-button victoria-two">Leer más</a>
 								</div>
 
 							</div>
 						</div>
-						<div class="col-md-4 card">
-							<a href="single.html">
-								<img src="images/5.jpg" class="card-img-top img-fluid rounded" alt="">
-							</a>
-							<div class="card-body">
-								<ul class="blog-icons my-4">
-									<li>
-										<a href="#">
-											<i class="far fa-calendar-alt"></i> Feb 22 .2018</a>
-									</li>
-									
-								</ul>
-								<h5 class="card-title ">
-									<a href="single.html">Blog Post Title</a>
-								</h5>
-								<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt.. </p>
-								<div class="read inner mt-4">
-									<a href="{{route('detalle')}}" class="btn btn-sm animated-button victoria-two">Leer más</a>
-								</div>
-							</div>
-						</div>
+						
+						@endforeach
 
-
-						<div class="col-md-4 card">
-							<a href="single.html">
-								<img src="images/6.jpg" class="card-img-top img-fluid rounded" alt="">
-							</a>
-							<div class="card-body">
-								<ul class="blog-icons my-4">
-									<li>
-										<a href="#">
-											<i class="far fa-calendar-alt"></i> Feb 23 .2018</a>
-									</li>
-									
-								</ul>
-								<h5 class="card-title ">
-									<a href="single.html">Blog Post Title</a>
-								</h5>
-								<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt.. </p>
-								<div class="read inner mt-4">
-									<a href="{{route('detalle')}}" class="btn btn-sm animated-button victoria-two">Leer más</a>
-								</div>
-							</div>
-						</div>
+						
 					</div>
 					
-					<div class="row mb-4">
-						<div class="col-md-4 card">
-							<a href="single.html">
-								<img src="images/7.jpg" class="card-img-top img-fluid rounded" alt="">
-							</a>
-							<div class="card-body">
-								<ul class="blog-icons my-4">
-									<li>
-										<a href="#">
-											<i class="far fa-calendar-alt"></i> Mar 20 .2018</a>
-									</li>
-									
-								</ul>
-								<h5 class="card-title ">
-									<a href="single.html">Blog Post Title</a>
-								</h5>
-								<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt.. </p>
-								<div class="read inner mt-4">
-									<a href="{{route('detalle')}}" class="btn btn-sm animated-button victoria-two">Leer más</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 card">
-							<a href="single.html">
-								<img src="images/5.jpg" class="card-img-top img-fluid rounded" alt="">
-							</a>
-							<div class="card-body">
-								<ul class="blog-icons my-4">
-									<li>
-										<a href="#">
-											<i class="far fa-calendar-alt"></i> Mar 25 .2018</a>
-									</li>
-									
-								</ul>
-								<h5 class="card-title ">
-									<a href="single.html">Blog Post Title</a>
-								</h5>
-								<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt.. </p>
-								<div class="read inner mt-4">
-									<a href="{{route('detalle')}}" class="btn btn-sm animated-button victoria-two">Leer más</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 card">
-							<a href="single.html">
-								<img src="images/4.jpg" class="card-img-top img-fluid rounded" alt="">
-							</a>
-							<div class="card-body">
-								<ul class="blog-icons my-4">
-									<li>
-										<a href="#">
-											<i class="far fa-calendar-alt"></i> Feb 30 .2018</a>
-									</li>
-									
-								</ul>
-								<h5 class="card-title ">
-									<a href="single.html">Blog Post Title</a>
-								</h5>
-								<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt.. </p>
-								<div class="read inner mt-4">
-									<a href="{{route('detalle')}}" class="btn btn-sm animated-button victoria-two">Leer más</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<nav aria-label="Page navigation example">
+				
+					{{-- <nav aria-label="Page navigation example">
 						<ul class="pagination justify-content-left mt-4">
 							<li class="page-item disabled">
 								<a class="page-link" href="#" tabindex="-1">Previous</a>
@@ -340,7 +211,9 @@
 								<a class="page-link" href="#">Next</a>
 							</li>
 						</ul>
-					</nav>
+					</nav> --}}
+
+					{{ $noticias->links() }}
 				</div>
 				<!--//left-->
 				

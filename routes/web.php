@@ -27,7 +27,12 @@ Route::get('contacto', 'Frontend\homeController@contacto')->name('contacto');
 
 Route::get('privacidad', 'Frontend\homeController@privacidad')->name('privacidad');
 
-Route::get('detalle', 'Frontend\homeController@detalle')->name('detalle');
+//Route::get('detalle', 'Frontend\homeController@detalle')->name('detalle');
+
+Route::get('detalle/{id}', [
+	'as' => 'detalle',
+	'uses'=>'Frontend\homeController@detalle'
+]);
 
 //AJAX
 
@@ -70,7 +75,6 @@ Route::get('/admin/nuevanoticia', ['as' => 'formnoticia', 'uses'=>'Backend\Notic
 //Eliminar registros de Noticias
 Route::get('/admin/eliminarnoticia/{id}', ['as' => 'eliminarnoticia', 'uses'=>'Backend\NoticiasController@delete']);
 
-
 //Llamar el Login de Usuario
 // Route::get('admin', ['as' => 'login', 'uses'=>'Auth\RegisterController@login']);
 //Llamar el olvido contraseña del Usuario
@@ -86,8 +90,10 @@ Route::get('/admin/nuevousuario', ['as' => 'formusuario', 'uses'=>'Auth\Register
 //Eliminar registros de Usuarios
 Route::get('/admin/eliminarusuario/{id}', ['as' => 'eliminarusuario', 'uses'=>'Backend\NoticiasController@delete']);
 
-// Route::get('admin', 'Backend\homeController@index')->name('index');
-Route::get('admin', 'Backend\homeController@index')->name('admin');
+
+Route::get('admin', 'HomeController@index')->name('index');
+// Route::get('login', 'homeController@index')->name('index');
+// Route::get('admin', 'Backend\homeController@admin')->name('admin');
 
 // Route::get('admin/{id}', 'Backend\homeController@slider');
 // Route::patch('admin/{id}',[
