@@ -39,7 +39,7 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest');
+        $this->middleware('guest')->except('list','form','create');
     }
 
     /**
@@ -91,7 +91,7 @@ class RegisterController extends Controller
             $usuarios = DB::table('users')
                             ->join('role_user', 'users.id', '=', 'role_user.user_id')
                             ->join('roles', 'roles.id', '=', 'role_user.role_id')
-                           ->select('users.name','users.email',DB::raw('roles.name as rol'),'users.created_at')
+                           ->select('users.name','users.email','roles.description','users.created_at')
                            ->get();
         return  view('Backend.usuarios',['usuarios'=>  $usuarios]);
     }

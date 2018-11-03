@@ -24,13 +24,15 @@
             </a>
           </li>
 
+          @if(Auth::user()->hasRole('admin'))
           <li id="usuarios" class="nav-item">
             <a class="nav-link" href="{{ route('verusuarios')}}">
               <i class="material-icons">people</i>
               <p>Usuarios</p>
             </a>
           </li>
-          
+          @endif
+
           <!-- your sidebar here -->
         </ul>
       </div>
