@@ -1,38 +1,28 @@
-<!--
-	Author: W3layouts
-	Author URL: http://w3layouts.com
-	License: Creative Commons Attribution 3.0 Unported
-	License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="es">
 
 <head>
-	<title>Inicio | Consultoría Jurídica Miramar</title>
+	<title>Consultoría Jurídica Miramar</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset="utf-8">
-	<meta name="keywords" content="Accrue a Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola 	web design" />
-	<script>
-		addEventListener("load", function () {
-			setTimeout(hideURLbar, 0);
-		}, false);
-
-		function hideURLbar() {
-			window.scrollTo(0, 1);
-		}
-	</script>
+	<meta charset="utf-8"> 
+	<meta name="keywords" content="" />
+	
 	<link rel="shortcut icon" href="{{asset('images/favicon.png')}} " type="image/x-icon">
-	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-	<link rel="stylesheet" href="css/owl.carousel.css" type="text/css" media="all">
-	<link rel="stylesheet" href="css/owl.theme.css" type="text/css" media="all">
-	<link href="css/prettyPhoto.css" rel="stylesheet" type="text/css">
-	<link href="css/style.css" rel='stylesheet' type='text/css' />
-	<link href="css/fontawesome-all.css" rel="stylesheet">
+	<link href="{{ asset('css/bootstrap.css') }}" rel='stylesheet' type='text/css' />
+{{-- 	<link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}" type="text/css" media="all">
+	<link rel="stylesheet" href="{{ asset('css/owl.theme.css') }}" type="text/css" media="all"> --}}
+	{{-- <link href="{{ asset('css/prettyPhoto.css') }}" rel="stylesheet" type="text/css"> --}}
+	<link href="{{ asset('css/style.css') }}" rel='stylesheet' type='text/css' />
+	<link href="{{ asset('css/blog.css') }}" rel='stylesheet' type='text/css' />
+	<link href="{{ asset('css/fontawesome-all.css') }}" rel="stylesheet">
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext"
 	    rel="stylesheet">
 	<link href="//fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+
+</head>
+
+
 </head>
 
 <body>
@@ -64,7 +54,7 @@
 
 <!-------------------- menu ------------------->
 
-	<nav class="navbar navbar-expand-lg navbar-light bg-light top-header">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light top-header" id="menu">
 		<h1 class="logo">
 			<a class="navbar-brand" href="{{route('/')}}">
 				<img  src="{{asset('images/logo_consultoria.png')}}" style="width: 6.5em">
@@ -85,7 +75,7 @@
 					</a>
 				</li>
 				<li class="nav-item ">
-					<a class="nav-link" href="{{route('blog')}}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+					<a class="nav-link" id="btn-noticias" role="button"
 					    aria-expanded="false">
 						Noticias
 					</a>
@@ -99,7 +89,7 @@
 					
 				</li>						
 				<li class="nav-item">
-					<a class="nav-link" href="{{route('contacto')}} ">Contacto</a>
+					<a class="nav-link" id="btn-contacto" href="#">Contacto</a>
 				</li>
 			</ul>
 		</div>
@@ -125,7 +115,7 @@
 						<a href={{route('privacidad')}}" title="Políticas de Privacidad" style=" color: #99d9f3">Políticas de Privacidad</a>
 						<div class="social-icon footer text-left mt-4">
 							<div class="icon-social">
-								<a href="#" class="button-footr">
+								<a href="https://www.facebook.com/consultoriajuridica.miramar/" class="button-footr">
 									<i class="fab fa-facebook-f"></i>
 								</a>
 								<a href="#" class="button-footr">
@@ -204,69 +194,17 @@
 
 	<!-- //Custom-JavaScript-File-Links -->
 	<!-- js -->
-	<script  src="js/jquery-2.2.3.min.js"></script>
-	
-	<!--pop-up-box-->
-	<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
-	<script src="js/jquery.magnific-popup.js"></script>
-	<!--//pop-up-box-->
-	<script>
-		$(document).ready(function () {
-			$('.popup-with-zoom-anim').magnificPopup({
-				type: 'inline',
-				fixedContentPos: false,
-				fixedBgPos: true,
-				overflowY: 'auto',
-				closeBtnInside: true,
-				preloader: false,
-				midClick: true,
-				removalDelay: 300,
-				mainClass: 'my-mfp-zoom-in'
-			});
-
-		});
-	</script>
-	<!--//search-bar-->
+	<script  src="{{ asset('js/jquery-2.2.3.min.js') }}"></script>
 
 	
 	<!-- //js -->
-	<script src="js/bootstrap.js"></script>
-	<!--/ start-smoth-scrolling -->
-	<script src="js/move-top.js"></script>
-	<script src="js/easing.js"></script>
-	<script>
-		jQuery(document).ready(function ($) {
-			$(".scroll").click(function (event) {
-				event.preventDefault();
-				$('html,body').animate({
-					scrollTop: $(this.hash).offset().top
-				}, 900);
-			});
-		});
-	</script>
-	<script>
-		$(document).ready(function () {
-			/*
-									var defaults = {
-										  containerID: 'toTop', // fading element id
-										containerHoverID: 'toTopHover', // fading element hover id
-										scrollSpeed: 1200,
-										easingType: 'linear' 
-									 };
-									*/
+	<script src="{{ asset('js/bootstrap.js') }}"></script>
 
-			$().UItoTop({
-				easingType: 'easeOutQuart'
-			});
-
-		});
-	</script>
-	<!--// end-smoth-scrolling -->
 	<!-- jQuery-Photo-filter-lightbox-Gallery-plugin -->
-	<script src="js/jquery-1.7.2.js"></script>
-	<script src="js/jquery.quicksand.js"></script>
-	<script src="js/script.js"></script>
-	<script src="js/jquery.prettyPhoto.js"></script>
+{{-- 	<script src="{{ asset('js/jquery-1.7.2.js') }}"></script> --}}
+	{{-- <script src="{{ asset('js/jquery.quicksand.js') }}"></script> --}}
+	{{-- <script src="{{ asset('js/script.js') }}"></script> --}}
+	{{-- <script src="{{ asset('js/jquery.prettyPhoto.js') }}"></script> --}}
 	<!-- //jQuery-Photo-filter-lightbox-Gallery-plugin -->
 
 
@@ -296,13 +234,39 @@
 
                      	var json = data.responseJSON.errors;
 			            var error = json['mail'][0];
+			            console.log(error)
+			            if (error = 'The mail field is required.') {
+			            	$('.respuesta').html('El email es requerido').css('color', 'red');
+			            }
+			            if (error = 'The mail has already been taken.') {
+			            	$('.respuesta').html('Este email ya se encuentra registrado').css('color', 'red');
+			            }
 
-			            $('.respuesta').html('Este email ya se encuentra registrado').css('color', 'red');
+			          
 			        }
 
                 });
             });
+
+	$('#btn-noticias').bind("click", function () {
+		var destino = $("#section-noticias").offset().top - 1;
+		$("html, body").animate({scrollTop: destino},1000);
+	});
+
+	$('#btn-contacto').bind("click", function () {
+		var destino = $("#section-contacto").offset().top -1;
+		$("html, body").animate({scrollTop: destino},1000);
+	});
+
+	$('#toTop').bind("click", function () {
+		var destino = $("#menu").offset().top -1;
+		$("html, body").animate({scrollTop: destino},1000);
+	});
+
+	
+
 	</script>
+	
 
 @stack('scripts')
 

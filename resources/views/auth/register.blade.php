@@ -1,77 +1,67 @@
-@extends('layouts.app')
+@extends ('Backend.layout.layout')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Register</div>
 
-                <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ route('register') }}">
-                        {{ csrf_field() }}
 
-                        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                            <label for="name" class="col-md-4 control-label">Name</label>
-
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
-
-                                @if ($errors->has('name'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('name') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
-
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Register
-                                </button>
-                            </div>
-                        </div>
-                    </form>
+<div class="col-md-8">
+              <div class="card">
+                <div class="card-header card-header-primary">
+                  <h4 class="card-title">Crear Usuario</h4>
+                  <p class="card-category">Complete todos los datos</p>
                 </div>
+                <div class="card-body">
+                  {!! Form::open(['route' => 'ingresarusuario', 'method' => 'post', 'novalidate']) !!}
+                    <!-- {{ csrf_field() }} -->
+                    <div class="row">
+                      <div class="col-md-3">
+                        <div class="form-group bmd-form-group {{ $errors->has('name') ? ' has-error' : '' }}">
+                          {!! Form::label('full_name', 'Usuario') !!}
+                          {!! Form::text('name', null, ['class' => 'form-control' , 'required' => 'required', 'autofocus'=> 'autofocus']) !!}
+
+                          @if ($errors->has('name'))
+                              <span class="help-block">
+                                  <strong>{{ $errors->first('name') }}</strong>
+                              </span>
+                          @endif
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group bmd-form-group {{ $errors->has('email') ? ' has-error' : '' }}">
+
+                          {!! Form::label('email', 'Correo Electrónico') !!}
+                          {!! Form::email('email',  null, ['class' => 'form-control',  'required' => 'required']) !!}
+                          @if ($errors->has('email'))
+                              <span class="help-block">
+                                  <strong>{{ $errors->first('email') }}</strong>
+                              </span>
+                          @endif
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="form-group bmd-form-group {{ $errors->has('password') ? ' has-error' : '' }}">
+                          {!! Form::label('password', 'Contraseña') !!}
+                          {!! Form::password('password',  ['class' => 'form-control',  'required' => 'required']) !!}
+                          @if ($errors->has('password'))
+                              <span class="help-block">
+                                  <strong>{{ $errors->first('password') }}</strong>
+                              </span>
+                          @endif
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group bmd-form-group ">
+                          {!! Form::label('confpassword', 'Confirmar Contraseña') !!}
+                          {!! Form::password('confpassword',  ['class' => 'form-control',  'required' => 'required']) !!}
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn btn-primary pull-right" type="submit">Crear Usuario</button>
+                    <div class="clearfix"></div>
+                 {!! Form::close() !!}
+                </div>
+              </div>
             </div>
-        </div>
-    </div>
-</div>
+
 @endsection

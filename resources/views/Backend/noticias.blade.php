@@ -6,10 +6,16 @@
               <div class="card">
                 <div class="card-header card-header-primary">
                   <h4 class="card-title ">Noticias</h4>
+                  <a href="{{ route('formnoticia')}}" class="card-category">
+                  <button  type="button" rel="tooltip" title="" class="btn btn-white btn-link btn-sm" data-original-title="Agregar">
+                    <i class="material-icons">playlist_add</i>
+                  </button>
+                   Agregar Noticia</a>
                   <!-- <p class="card-category"> Here is a subtitle for this table</p> -->
                 </div>
                 <div class="card-body">
                   <div class="table-responsive">
+                    <input id="mostra_vista" value="noticias" hidden disabled>
                     <table class="table">
                       <thead class=" text-primary">
                         <tr><th>
