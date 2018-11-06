@@ -6,7 +6,7 @@
               <div class="card">
                 <div class="card-header card-header-primary">
                   <h4 class="card-title ">Noticias</h4>
-                  <a href="{{ route('ingresarmodulo', ['modulo' => 'nuevanoticia']) }}" class="card-category">
+                  <a href="{{ route('formnoticia')}}" class="card-category">
                   <button  type="button" rel="tooltip" title="" class="btn btn-white btn-link btn-sm" data-original-title="Agregar">
                     <i class="material-icons">playlist_add</i>
                   </button>
@@ -51,12 +51,12 @@
                             {{ $noticia->created_at}}
                           </td>
                           <td class="td-actions">
-                            <button type="button" rel="tooltip" title="" class="btn btn-white btn-link btn-sm" data-original-title="Editar">
+                            <a type="button" rel="tooltip" title="" href="{{ route('buscarnoticia',['id'=>$noticia->id])}}" class="btn btn-white btn-link btn-sm" data-original-title="Editar">
                               <i class="material-icons">edit</i>
-                            </button>
-                            <button type="button" rel="tooltip" title="" class="btn btn-white btn-link btn-sm" data-original-title="Remover">
+                            </a>
+                            <a type="button" rel="tooltip" title="" href="{{ route('eliminarnoticia',['id'=>$noticia->id])}}" class="btn btn-white btn-link btn-sm" data-original-title="Remover">
                               <i class="material-icons">close</i>
-                            </button>
+                            </a>
                           </td>
                         </tr>
                         @endforeach

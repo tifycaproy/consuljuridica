@@ -4,9 +4,9 @@
 <head>
 	<title>Consultoría Jurídica Miramar</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset="utf-8"> 
+	<meta charset="utf-8">
 	<meta name="keywords" content="" />
-	
+
 	<link rel="shortcut icon" href="{{asset('images/favicon.png')}} " type="image/x-icon">
 	<link href="{{ asset('css/bootstrap.css') }}" rel='stylesheet' type='text/css' />
 {{-- 	<link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}" type="text/css" media="all">
@@ -26,29 +26,29 @@
 </head>
 
 <body>
-	
+
 <!-------------------- header ------------------->
 <header>
 <!-------------------- botones de RRSS ------------------->
 	<div id="btn-redes" class="col-1  position-fixed d-md-block d-none">
 		<div class="row d-flex justify-content-right align-items-center">
             <div class="col pt-1 ">
-                <a target="blank_" href="" title="Instagram">
+                <a target="blank_" href="https://www.instagram.com/consuljuridica/" title="Instagram">
                     <img src="https://www.phonealo.com/assets/ig_circle.svg" alt="" class="w-25">
                 </a>
             </div>
 
             <div class="w-100">
-            	
+
             </div>
-            
+
             <div class="col pt-1 ">
                 <a target="blank_" href="https://www.facebook.com/consultoriajuridica.miramar/" title="Facebook">
                      <img src="https://www.phonealo.com/assets/fb_circle.svg" alt="" class="w-25">
                  </a>
             </div>
 		 </div>
-	</div> 
+	</div>
 
 <!-------------------- //botones de RRSS ------------------->
 
@@ -60,7 +60,7 @@
 				<img  src="{{asset('images/logo_consultoria.png')}}" style="width: 6.5em">
 			</a>
 		</h1>
-			
+
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
 		    aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon">
@@ -75,11 +75,11 @@
 					</a>
 				</li>
 				<li class="nav-item ">
-					<a class="nav-link" id="btn-noticias" role="button"
+					<a class="nav-link btn-noticias"  role="button"
 					    aria-expanded="false">
 						Noticias
 					</a>
-					
+
 				</li>
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="{{route('servicios')}}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
@@ -87,9 +87,17 @@
 						Servicios
 					</a>
 					
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<a class="dropdown-item text-left" href="#">Solicitud de documentos a Cuba</a>
+								<a class="dropdown-item text-left" href="#">Tramites para empresas</a>
+								<a class="dropdown-item text-left" href="#">Servicios Consulares para ciudadanos cubanos</a>
+								<a class="dropdown-item text-left" href="#">Tramites legales y extranjeria</a>
+							</div>
+
 				</li>						
+
 				<li class="nav-item">
-					<a class="nav-link" id="btn-contacto" href="#">Contacto</a>
+					<a class="nav-link btn-contacto">Contacto</a>
 				</li>
 			</ul>
 		</div>
@@ -147,17 +155,17 @@
 						<h3>Enlaces útiles</h3>
 					</div>
 					<ul class="links">
-						<li>
-							<a href="{{route('/')}}">Home</a>
+						<li >
+							<a href="{{route('/')}}">Inicio</a>
+						</li >
+						<li >
+							<a class="btn-noticias" href="#" role="button" >Noticias</a>
 						</li>
 						<li>
-							<a href="{{route('blog')}}">Noticias</a>
+							<a href="">Servicios</a>
 						</li>
-						<li>
-							<a href="{{route('servicios')}}">Servicios</a>
-						</li>
-						<li>
-							<a href="{{route('contacto')}}">Contacto</a>
+						<li >
+							<a class="btn-contacto" href="#" role="button">Contacto</a>
 						</li>
 					</ul>
 				</div>
@@ -179,14 +187,14 @@
 						</form>
 					</div>
 				</div>
-			</div> 
+			</div>
 			<div class="copyright mt-4">
-				<p class="copy-right text-center ">&copy; 2018 Consultoría Jurídica. Todos los Derechos Reservados | Desarrollado por TIFYCA </a>
+				<p class="copy-right text-center ">&copy; 2018 Consultoría Jurídica Miramar. Todos los Derechos Reservados | Desarrollado por TIFYCA </a>
 				</p>
 			</div>
 		</div>
 	</footer>
-	<!-------------------- //footer ----------------------------->	
+	<!-------------------- //footer ----------------------------->
 
 	<a href="#home" class="scroll" id="toTop" style="display: block;">
 		<span id="toTopHover" style="opacity: 1;"> </span>
@@ -196,7 +204,7 @@
 	<!-- js -->
 	<script  src="{{ asset('js/jquery-2.2.3.min.js') }}"></script>
 
-	
+
 	<!-- //js -->
 	<script src="{{ asset('js/bootstrap.js') }}"></script>
 
@@ -209,7 +217,7 @@
 
 
 	<script type="text/javascript" charset="utf-8">
-		
+
             //ALMACENA LOS DATOS DE NEWLESTER
             $(".btn-newlester").click(function(){
 
@@ -226,8 +234,8 @@
                     dataType: "json",
                     data: { mail: mail ,_token: '{{csrf_token()}}' },
                     success: function (data){
-                            
-                        
+
+
                         $('.respuesta').html('Email registrado exitosamente').css('color', 'green');
                     },
                      error: function (data) {
@@ -242,18 +250,18 @@
 			            	$('.respuesta').html('Este email ya se encuentra registrado').css('color', 'red');
 			            }
 
-			          
+
 			        }
 
                 });
             });
 
-	$('#btn-noticias').bind("click", function () {
+	$('.btn-noticias').bind("click", function () {
 		var destino = $("#section-noticias").offset().top - 1;
 		$("html, body").animate({scrollTop: destino},1000);
 	});
 
-	$('#btn-contacto').bind("click", function () {
+	$('.btn-contacto').bind("click", function () {
 		var destino = $("#section-contacto").offset().top -1;
 		$("html, body").animate({scrollTop: destino},1000);
 	});
@@ -263,10 +271,10 @@
 		$("html, body").animate({scrollTop: destino},1000);
 	});
 
-	
+
 
 	</script>
-	
+
 
 @stack('scripts')
 

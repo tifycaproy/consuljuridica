@@ -35,7 +35,7 @@
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
         <div class="container-fluid">
           <div class="navbar-wrapper">
-            <a class="navbar-brand" href="javascript:void(0)">Bienvenido {{ Auth::user()->name }}</a>
+            <a class="navbar-brand" href="javascript:void(0)">Bienvenido </a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="sr-only">Toggle navigation</span>
@@ -112,6 +112,8 @@
   <!-- Material Dashboard DEMO methods, don't include it in your project! -->
   <script src="{{ asset('demo/demo.js') }}"></script>
   <script src="{{ asset('demo/main.js') }}"></script>
+  <script src="https://cdn.ckeditor.com/ckeditor5/11.1.1/classic/ckeditor.js"></script>
+  <script src="https://cdn.ckeditor.com/ckeditor5/11.1.1/classic/translations/es.js"></script>
 
   <script src="{{ asset('js/validaciones/panel.js') }}"></script>
 

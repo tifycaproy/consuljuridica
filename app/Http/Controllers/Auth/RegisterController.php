@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use App\Role;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
@@ -36,7 +39,7 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest');
+        $this->middleware('guest')->except('list','form','create','delete');
     }
 
     /**
@@ -60,16 +63,39 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\User
      */
-    protected function create(array $data)
+     public function list()
+     {
+          $usuarios = DB::table('users')
+                          ->join('role_user', 'users.id', '=', 'role_user.user_id')
+                          ->join('roles', 'roles.id', '=', 'role_user.role_id')
+                         ->select('users.id','users.name','users.email','roles.description','users.created_at')
+                         ->get();
+
+          // dd($usuarios);
+          return view('Backend.usuarios',['usuarios'=>$usuarios]);
+     }
+     public function form()
+     {
+         return view('auth.register');
+     }
+    protected function create(Request $request)
     {
+      // dd($data);
             $user = User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
+            'name' => $request['name'],
+            'email' => $request['email'],
+            'password' => bcrypt($request['password']),
         ]);
-        $user
-            ->roles()
+        $user->roles()
             ->attach(Role::where('name', 'user')->first());
-        return $user;
+
+            return redirect()->route("verusuarios");
+    }
+    public function delete($id)
+    {
+        $user = User::find($id);
+        $user->delete();
+
+        return redirect()->route("verusuarios");
     }
 }

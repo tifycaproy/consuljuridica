@@ -23,7 +23,12 @@ class CreateNoticiasTable extends Migration
             $table->bigInteger('posicion');
             $table->longText('url_multimedia')->nullable();;
             $table->longText('url_imagen')->nullable();;
+            $table->integer('role_user_id')->unsigned();
+
         });
+        Schema::table('noticias', function($table) {
+              $table->foreign('role_user_id')->references('id')->on('role_user');
+          });
     }
 
     /**

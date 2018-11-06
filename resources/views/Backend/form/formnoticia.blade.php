@@ -2,23 +2,24 @@
 
 @section('content')
 
-<input id="mostra_vista" value="slider" hidden disabled>
+<input id="mostra_vista" value="noticias" hidden disabled>
+
 <div class="row">
     <div class="col-md-12">
       <div class="card">
         <div class="card-header card-header-primary">
-          <h4 class="card-title">Crear Slider</h4>
+          <h4 class="card-title">Crear Noticia</h4>
           <p class="card-category">Complete todos los datos</p>
         </div>
         <div class="card-body">
-          <form action="{{ route('ingresarslider')}}" method="POST" enctype="multipart/form-data">
- {{ csrf_field() }}
-
+          {!! Form::open(['route' => 'ingresarnoticia','enctype'=>'multipart/form-data','method'=>'POST']) !!}
+           {{ csrf_field() }}
           <div class="row">
             <div class="col-md-3">
               <div class="form-group bmd-form-group {{ $errors->has('titulo') ? ' has-error' : '' }}">
                 {!! Form::label('titulo', 'Titulo') !!}
-                <input type="text" name="titulo" class="form-control" required autofocus>
+                {!! Form::text('titulo', null, ['class' => 'form-control' , 'required' => 'required', 'autofocus'=> 'autofocus']) !!}
+
                 @if ($errors->has('titulo'))
                     <span class="help-block">
                         <strong>{{ $errors->first('titulo') }}</strong>
@@ -47,35 +48,56 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-md-12">
-            <div class="form-group {{ $errors->has('contenido') ? ' has-error' : '' }}">
-              {!! Form::label('contenido','Contenido') !!}
+            <div class="col-md-6">
+            <div class="form-group {{ $errors->has('resumen') ? ' has-error' : '' }}">
+              {!! Form::label('resumen','Resumen (Opcional)') !!}
               <div class="form-group bmd-form-group">
-                  <textarea id="editor" name="contenido" class="form-control" rows="4" required>Ingrese Texto Aquí</textarea>
-                @if ($errors->has('contenido'))
-                    <span class="help-block">
-                        <strong>{{ $errors->first('contenido') }}</strong>
-                    </span>
-                @endif
-              </div>
-            </div>
-           </div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-4">
-              <div class="form-group bmd-form-group {{ $errors->has('email') ? ' has-error' : '' }}">
-
-                {!! Form::label('posicion', 'Posición') !!}
-                <input type="number" name="posicion" min="1" value="1" class="form-control" required >
-                @if ($errors->has('posicion'))
-                    <span class="help-block">
-                        <strong>{{ $errors->first('posicion') }}</strong>
-                    </span>
-                @endif
+                <textarea id="editor" name="resumen" class="form-control" rows="4" required></textarea>
               </div>
             </div>
           </div>
+          <div class="col-md-6">
+          <div class="form-group {{ $errors->has('descripcion') ? ' has-error' : '' }}">
+            {!! Form::label('descripcion','Descripción (Opcional)') !!}
+            <div class="form-group bmd-form-group">
+                <!-- {!! Form::label('resumen','Se representa en la vista previa de las noticias',['class' => 'bmd-label-floating-control']) !!} -->
+              <textarea id="editor2" name="descripcion" class="form-control" rows="4" required></textarea>
+              @if ($errors->has('descripcion'))
+                  <span class="help-block">
+                      <strong>{{ $errors->first('descripcion') }}</strong>
+                  </span>
+              @endif
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group bmd-form-group {{ $errors->has('email') ? ' has-error' : '' }}">
+
+              {!! Form::label('posicion', 'Posición') !!}
+              {!! Form::number('posicion',  1, ['class' => 'form-control',  'required' => 'required', 'number'=>'true', 'min' => '1']) !!}
+              @if ($errors->has('posicion'))
+                  <span class="help-block">
+                      <strong>{{ $errors->first('posicion') }}</strong>
+                  </span>
+              @endif
+            </div>
+          </div>
+
+        <div class="col-md-4">
+          <div class="form-group bmd-form-group {{ $errors->has('url_multimedia') ? ' has-error' : '' }}">
+
+            {!! Form::label('url_multimedia', 'Enlace Multimedia   O') !!}
+            <input type="url" id="enlace" name="url_multimedia" class="form-control" >
+            @if ($errors->has('url_multimedia'))
+                <span class="help-block">
+                    <strong>{{ $errors->first('url_multimedia') }}</strong>
+                </span>
+            @endif
+          </div>
+        </div>
+      </div>
           <div class="row">
             <div class="col-md-4 col-sm-4">
               <h4 class="title {{ $errors->has('url_imagen') ? ' has-error' : '' }}">Subir Imagen</h4>
@@ -100,12 +122,13 @@
             </div>
           </div>
 
-          <input class="btn btn-primary pull-right" type="submit" value="Crear Slider">
+            <input class="btn btn-primary pull-right" type="submit" value="Crear Nota">
           <div class="clearfix"></div>
-          </form>
+{!! Form::close() !!}
         </div>
       </div>
       <!-- end card -->
     </div>
   </div>
+
 @endsection
