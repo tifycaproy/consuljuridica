@@ -39,7 +39,7 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest')->except('list','form','create');
+        $this->middleware('guest')->except('list','form','create','delete');
     }
 
     /**
@@ -68,7 +68,7 @@ class RegisterController extends Controller
           $usuarios = DB::table('users')
                           ->join('role_user', 'users.id', '=', 'role_user.user_id')
                           ->join('roles', 'roles.id', '=', 'role_user.role_id')
-                         ->select('users.name','users.email','roles.description','users.created_at')
+                         ->select('users.id','users.name','users.email','roles.description','users.created_at')
                          ->get();
 
           // dd($usuarios);
@@ -88,11 +88,14 @@ class RegisterController extends Controller
         ]);
         $user->roles()
             ->attach(Role::where('name', 'user')->first());
-            $usuarios = DB::table('users')
-                            ->join('role_user', 'users.id', '=', 'role_user.user_id')
-                            ->join('roles', 'roles.id', '=', 'role_user.role_id')
-                           ->select('users.name','users.email','roles.description','users.created_at')
-                           ->get();
-        return  view('Backend.usuarios',['usuarios'=>  $usuarios]);
+
+            return redirect()->route("verusuarios");
+    }
+    public function delete($id)
+    {
+        $user = User::find($id);
+        $user->delete();
+
+        return redirect()->route("verusuarios");
     }
 }
