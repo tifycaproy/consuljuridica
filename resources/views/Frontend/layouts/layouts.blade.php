@@ -48,7 +48,7 @@
 	<div id="btn-redes" class="col-1  position-fixed d-md-block d-none">
 		<div class="row d-flex justify-content-right align-items-center">
             <div class="col pt-1 ">
-                <a target="blank_" href="" title="Instagram">
+                <a target="blank_" href="https://www.instagram.com/consuljuridica/" title="Instagram">
                     <img src="https://www.phonealo.com/assets/ig_circle.svg" alt="" class="w-25">
                 </a>
             </div>
@@ -102,6 +102,13 @@
 						Servicios
 					</a>
 					
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<a class="dropdown-item text-center" href="/">Solicitud de documentos a Cuba</a>
+								<a class="dropdown-item text-center" href="/">Tramites para empresas</a>
+								<a class="dropdown-item text-center" href="/">Servicios Consulares para ciudadanos cubanos</a>
+								<a class="dropdown-item text-center" href="/">Tramites legales y extranjeria</a>
+							</div>
+
 				</li>						
 				<li class="nav-item">
 					<a class="nav-link" id="btn-contacto" href="#">Contacto</a>

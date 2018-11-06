@@ -116,42 +116,47 @@
 		<div class="container">
 			<h3 class="tittle-wthree cen text-center">Servicios</h3>
 			<div class="row inner-sec-w3ls-agileinfo">
-				<div class="col-lg-4 service-in text-center">
-					<div class="card">
-						<div class="card-body">
-							<i class="fab fa-react"></i>
-							<h5 class="card-title">Servicios Consulares para ciudadanos cubanos</h5>
-							<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore.
-							</p>
 
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 service-in text-center">
+				<div class="col-lg-3 service-in text-center">
 					<div class="card">
 						<div class="card-body">
 							<i class="fab fa-strava"></i>
 							<h5 class="card-title">Solicitud de documentos a Cuba</h5>
 							<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore.
 							</p>
-
-
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-4 service-in text-center">
+				<div class="col-lg-3 service-in text-center">
+					<div class="card">
+						<div class="card-body">
+							<i class="fab fa-react"></i>
+							<h5 class="card-title">Tramites para empresas</h5>
+							<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 service-in text-center">
+					<div class="card">
+						<div class="card-body">
+							<i class="fab fa-react"></i>
+							<h5 class="card-title">Servicios Consulares para ciudadanos cubanos</h5>
+							<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 service-in text-center">
 					<div class="card">
 						<div class="card-body">
 							<i class="far fa-hand-spock"></i>
 							<h5 class="card-title">Tramites legales y extranjeria</h5>
 							<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore.
 							</p>
-
 						</div>
 					</div>
 				</div>
-				
-
 			</div>
 		</div>
 	</section>
@@ -366,18 +371,15 @@
 			     	<div class="item">
 						<div class="feedback-info text-left">
 							<div class="feedback-top rounded">
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore et dolore magna
-									Sed semper leo metus, a lacinia eros semper at.</p>
+								<p>La profesionalidad en su máxima expresión; llevamos de clientes hace 16 años y estamos muy contentos</p>
 							</div>
 							<div class="feedback-grids">
 								<div class="feedback-img">
-									<img src="images/t3.jpg" class="img-fluid rounded-circle" alt="">
+									<img src="{{ asset('images/coment_1.jpg') }}" class="img-fluid rounded-circle" alt="">
 								</div>
 								<div class="feedback-img-info">
-									<h5>Steven Wilson</h5>
-									<p>United States
-										<span>(Company)</span>
-									</p>
+									<h5>Esperanza Franco Ramirez</h5>
+									<p>Facebook</p>
 								</div>
 								<div class="clearfix"> </div>
 							</div>
@@ -391,17 +393,16 @@
 			     	<div class="item">
 						<div class="feedback-info text-left">
 							<div class="feedback-top rounded">
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore et dolore magna
-									Sed semper leo metus, a lacinia eros semper at.</p>
+								<p>Excelentes, confianza garantía y siempre están disponible con la mejor atención 18años de calidad</p>
 							</div>
 							<div class="feedback-grids">
 								<div class="feedback-img">
-									<img src="images/t2.jpg" class="img-fluid rounded-circle" alt="">
+									<img src="{{ asset('images/coment_2.jpg') }}" class="img-fluid rounded-circle" alt="">
 								</div>
 								<div class="feedback-img-info">
-									<h5>Steven Wilson</h5>
-									<p>United States
-										<span>(Company)</span>
+									<h5>Clínica Dental Valendentist</h5>
+									<p>Facebook
+										<span>(Compañía)</span>
 									</p>
 								</div>
 								<div class="clearfix"> </div>
@@ -417,18 +418,15 @@
 			     	<div class="item">
 						<div class="feedback-info text-left">
 							<div class="feedback-top rounded">
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore et dolore magna
-									Sed semper leo metus, a lacinia eros semper at.</p>
+								<p>Es una empresa muy buena como sus compañeros llevó 5 años con ellos</p>
 							</div>
 							<div class="feedback-grids">
 								<div class="feedback-img">
-									<img src="images/t1.jpg" class="img-fluid rounded-circle" alt="">
+									<img src="{{ asset('images/coment_3.jpg') }}" class="img-fluid rounded-circle" alt="">
 								</div>
 								<div class="feedback-img-info">
-									<h5>Steven Wilson</h5>
-									<p>United States
-										<span>(Company)</span>
-									</p>
+									<h5>Elda Planche Martinez </h5>
+									<p>Facebook</p>
 								</div>
 								<div class="clearfix"> </div>
 							</div>
@@ -636,33 +634,33 @@
 	</section>
 <!------------//contacto--------------->
 
-
+<!------------logos--------------->
 <section class="bottom-banner-w3layouts contact " style="padding-top: 1em; padding-bottom:0em;">
-	
+	<div class="container"	
 		<div class="col-12">
 			<div class=" d-flex justify-content-center">
 				 <div class="row d-flex align-items-center">
-				 	<div class="col-sm-4" style="padding: 0px 120px 20px 120px">
+				 	<div class="col-sm-4" style="padding: 0px 120px 20px 0px">
 				 		<a href="http://valencuba.com/">
 				 			<img class="col-sm-12 gris opacidad"  src="{{asset('images/logo_valencuba.png')}}">
 				 		</a>
 				 	</div>
-				 	<div class="col-sm-4" style="padding: 0px 120px 20px 120px">
+				 	<div class="col-sm-4" style="padding: 0px 0px 20px 120px">
 				 		<a href="http://cubairestravel.com/">
 							<img class="col-sm-12 gris opacidad"  src="{{asset('images/logo_cubaires.png')}}">
 						</a>
 					</div>
-					<div class="col-sm-4" style="padding: 0px 120px 20px 120px">
-						<a href="http://cubairestravel.com/">
+					<div class="col-sm-4" style="padding: 0px 80px 20px 80px">
+						<a href="http://valencuba.com/">
 							<img class="col-sm-12 gris opacidad"  src="{{asset('images/logo_luxury.png')}}" > 
 						</a>
 					</div>
-				 </div>
-					
-				
+				</div>				
 			</div>
 		</div>		
-	</section>
+	</div>	
+</section>
+<!------------//logos--------------->
 	
 @endsection
 
