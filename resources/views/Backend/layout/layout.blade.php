@@ -112,6 +112,8 @@
   <!-- Material Dashboard DEMO methods, don't include it in your project! -->
   <script src="{{ asset('demo/demo.js') }}"></script>
   <script src="{{ asset('demo/main.js') }}"></script>
+  <script src="https://cdn.ckeditor.com/ckeditor5/11.1.1/classic/ckeditor.js"></script>
+  <script src="https://cdn.ckeditor.com/ckeditor5/11.1.1/classic/translations/es.js"></script>
 
   <script src="{{ asset('js/validaciones/panel.js') }}"></script>
 

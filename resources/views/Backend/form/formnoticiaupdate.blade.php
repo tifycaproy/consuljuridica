@@ -2,24 +2,25 @@
 
 @section('content')
 
-<input id="mostra_vista" value="noticias" hidden disabled>
-
+<input id="mostra_vista" value="slider" hidden disabled>
 <div class="row">
     <div class="col-md-12">
       <div class="card">
         <div class="card-header card-header-primary">
-          <h4 class="card-title">Crear Noticia</h4>
+          <h4 class="card-title">Crear Slider</h4>
           <p class="card-category">Complete todos los datos</p>
         </div>
         <div class="card-body">
-          {!! Form::open(['route' => 'ingresarnoticia','enctype'=>'multipart/form-data','method'=>'POST']) !!}
-           {{ csrf_field() }}
+          <!-- dd($noticia); -->
+
+          <form action="{{ route('actualizarnoticia',['id'=>$noticia->id])}}" method="POST" enctype="multipart/form-data">
+          {{ csrf_field() }}
+
           <div class="row">
             <div class="col-md-3">
               <div class="form-group bmd-form-group {{ $errors->has('titulo') ? ' has-error' : '' }}">
                 {!! Form::label('titulo', 'Titulo') !!}
-                {!! Form::text('titulo', null, ['class' => 'form-control' , 'required' => 'required', 'autofocus'=> 'autofocus']) !!}
-
+                <input type="text" name="titulo" class="form-control" value="{{$noticia->titulo}}" required autofocus>
                 @if ($errors->has('titulo'))
                     <span class="help-block">
                         <strong>{{ $errors->first('titulo') }}</strong>
@@ -31,13 +32,13 @@
               <div class="form-group bmd-form-group {{ $errors->has('publico') ? ' has-error' : '' }}">
                 <div class="form-check form-check-inline">
                 <label id="publico" class="form-check-label">
-                  <input class="form-check-input" type="checkbox">
+                  <input {{$noticia->publico}} class="form-check-input" type="checkbox">
                   Público
                   <span class="form-check-sign">
                     <span class="check"></span>
                   </span>
                 </label>
-                <input id="publicoval" name="publico" type="text" value="0" hidden>
+                <input id="publicoval" name="publico" type="text" {{$noticia->publico}} hidden>
               </div>
                 @if ($errors->has('publico'))
                     <span class="help-block">
@@ -52,7 +53,7 @@
             <div class="form-group {{ $errors->has('resumen') ? ' has-error' : '' }}">
               {!! Form::label('resumen','Resumen (Opcional)') !!}
               <div class="form-group bmd-form-group">
-                <textarea id="editor" name="resumen" class="form-control" rows="4" required></textarea>
+                <textarea id="editor" name="resumen" class="form-control" rows="4" required>{{$noticia->resumen}}</textarea>
               </div>
             </div>
           </div>
@@ -61,7 +62,7 @@
             {!! Form::label('descripcion','Descripción (Opcional)') !!}
             <div class="form-group bmd-form-group">
                 <!-- {!! Form::label('resumen','Se representa en la vista previa de las noticias',['class' => 'bmd-label-floating-control']) !!} -->
-              <textarea id="editor2" name="descripcion" class="form-control" rows="4" required></textarea>
+              <textarea id="editor2" name="descripcion" class="form-control" rows="4" required>{{$noticia->descripcion}}</textarea>
               @if ($errors->has('descripcion'))
                   <span class="help-block">
                       <strong>{{ $errors->first('descripcion') }}</strong>
@@ -76,7 +77,7 @@
             <div class="form-group bmd-form-group {{ $errors->has('email') ? ' has-error' : '' }}">
 
               {!! Form::label('posicion', 'Posición') !!}
-              {!! Form::number('posicion',  1, ['class' => 'form-control',  'required' => 'required', 'number'=>'true', 'min' => '1']) !!}
+              <input type="number" name="posicion" min="1" value="{{$noticia->posicion}}" class="form-control" required >
               @if ($errors->has('posicion'))
                   <span class="help-block">
                       <strong>{{ $errors->first('posicion') }}</strong>
@@ -89,7 +90,7 @@
           <div class="form-group bmd-form-group {{ $errors->has('url_multimedia') ? ' has-error' : '' }}">
 
             {!! Form::label('url_multimedia', 'Enlace Multimedia   O') !!}
-            <input type="url" id="enlace" name="url_multimedia" class="form-control" required>
+            <input value="{{$noticia->url_multimedia}}" type="url" id="enlace" name="url_multimedia" class="form-control" required>
             @if ($errors->has('url_multimedia'))
                 <span class="help-block">
                     <strong>{{ $errors->first('url_multimedia') }}</strong>
@@ -103,13 +104,14 @@
               <h4 class="title {{ $errors->has('url_imagen') ? ' has-error' : '' }}">Subir Imagen</h4>
               <div class="fileinput fileinput-new text-center" data-provides="fileinput">
                 <div class="fileinput-new thumbnail">
-                  <img src="{{URL::to('/material-dashboard-dark-edition-v2.1.0/assets')}}/img/image_placeholder.jpg" alt="...">
+                  <img src="{{URL::to('/images')}}/noticias/{{$noticia->url_imagen}}" alt="...">
                 </div>
                 <div class="fileinput-preview fileinput-exists thumbnail" style=""></div>
                 <div>
                   <span class="btn btn-rose btn-round btn-file">
                     <span class="fileinput-new">Buscar</span>
-                    <span class="fileinput-exists">Cambiar</span><input id="imagen" name="url_imagen" type="file" name="..." required>
+                    <span class="fileinput-exists">Cambiar</span>
+                    <input id="imagen" name="url_imagen" type="file" href="{{$noticia->url_imagen}}" required>
                     @if ($errors->has('url_imagen'))
                         <span class="help-block">
                             <strong>{{ $errors->first('url_imagen') }}</strong>
@@ -122,13 +124,12 @@
             </div>
           </div>
 
-            <input class="btn btn-primary pull-right" type="submit" value="Crear Nota">
+          <input class="btn btn-primary pull-right" type="submit" value="Modificar Slider">
           <div class="clearfix"></div>
-{!! Form::close() !!}
+        </form>
         </div>
       </div>
       <!-- end card -->
     </div>
   </div>
-
 @endsection
