@@ -449,29 +449,25 @@
 <!------------//contacto--------------->
 
 <!------------logos--------------->
-<section class="bottom-banner-w3layouts contact " style="padding-top: 1em; padding-bottom:0em;">
-	<div class="container"	
-		<div class="col-12">
-			<div class=" d-flex justify-content-center">
-				 <div class="row d-flex align-items-center">
-				 	<div class="col-sm-4" style="padding: 0px 120px 20px 0px">
-				 		<a href="http://valencuba.com/">
-				 			<img class="col-sm-12 gris opacidad"  src="{{asset('images/logo_valencuba.png')}}">
-				 		</a>
-				 	</div>
-				 	<div class="col-sm-4" style="padding: 0px 0px 20px 120px">
-				 		<a href="http://cubairestravel.com/">
-							<img class="col-sm-12 gris opacidad"  src="{{asset('images/logo_cubaires.png')}}">
-						</a>
-					</div>
-					<div class="col-sm-4" style="padding: 0px 80px 20px 80px">
-						<a href="http://valencuba.com/">
-							<img class="col-sm-12 gris opacidad"  src="{{asset('images/logo_luxury.png')}}" > 
-						</a>
-					</div>
-				</div>				
+<section class="bottom-banner-w3layouts contact " style="padding:3em;">
+	<div class="container">
+		<div class="row d-flex align-items-center">
+			<div class="col-4 text-center">
+				<a href="http://valencuba.com/">
+				 	<img class="col-8 gris opacidad"  src="{{asset('images/logo_valencuba.png')}}">
+				</a>
 			</div>
-		</div>		
+			<div class="col-4 text-center">
+				<a href="http://cubairestravel.com/">
+					<img class="col-8 gris opacidad"  src="{{asset('images/logo_cubaires.png')}}">
+				</a>
+			</div>
+			<div class="col-4 text-center">
+				<a href="http://valencuba.com/">
+					<img class="col-8 gris opacidad"  src="{{asset('images/logo_luxury.png')}}" > 
+				</a>
+			</div>
+		</div>
 	</div>	
 </section>
 <!------------//logos--------------->
