@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class TblSliders extends Migration
+class CreateSlidersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -21,8 +21,11 @@ class TblSliders extends Migration
             $table->boolean('publico');
             $table->bigInteger('posicion');
             $table->longText('url_imagen');
-
+            $table->integer('role_user_id')->unsigned();                     
         });
+        Schema::table('sliders', function($table) {
+              $table->foreign('role_user_id')->references('id')->on('role_user');
+          });
     }
 
     /**

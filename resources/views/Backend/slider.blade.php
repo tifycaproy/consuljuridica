@@ -6,7 +6,7 @@
               <div class="card">
                 <div class="card-header card-header-primary">
                   <h4 class="card-title ">Slider</h4>
-                  <a href="<?php echo route('ingresarmodulo', ['modulo' => 'nuevoslider'])?>" class="card-category">
+                  <a href="{{ route('formslider')}}" class="card-category">
                   <button  type="button" rel="tooltip" title="" class="btn btn-white btn-link btn-sm" data-original-title="Agregar">
                     <i class="material-icons">library_add</i>
                   </button>
@@ -15,6 +15,7 @@
                 </div>
                 <div class="card-body">
                   <div class="table-responsive">
+                    <input id="mostra_vista" value="slider" hidden disabled>
                     <table class="table">
                       <thead class=" text-primary">
                         <tr><th>
@@ -50,12 +51,12 @@
                             {{ $slider->created_at}}
                           </td>
                           <td class="td-actions">
-                            <button type="button" rel="tooltip" title="" class="btn btn-white btn-link btn-sm" data-original-title="Editar">
+                            <a type="button" rel="tooltip" title="" href="{{ route('buscarslider',['id'=>$slider->id])}}" class="btn btn-white btn-link btn-sm" data-original-title="Editar">
                               <i class="material-icons">edit</i>
-                            </button>
-                            <button type="button" rel="tooltip" title="" class="btn btn-white btn-link btn-sm" data-original-title="Remover">
+                            </a>
+                            <a type="button" rel="tooltip" title="" href="{{ route('eliminarslider',['id'=>$slider->id])}}" class="btn btn-white btn-link btn-sm" data-original-title="Remover">
                               <i class="material-icons">close</i>
-                            </button>
+                            </a>
                           </td>
                         </tr>
                         @endforeach

@@ -11,7 +11,7 @@
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- Material Kit CSS -->
-  <link href="{{ asset('css/material-dashboard.css?v=2.1.0') }}" rel="stylesheet" />
+  <link href="{{ asset('css/material-dashboard.min.css?v=2.1.0') }}" rel="stylesheet" />
 </head>
 
 <body class="dark-edition">
@@ -35,7 +35,7 @@
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
         <div class="container-fluid">
           <div class="navbar-wrapper">
-            <a class="navbar-brand" href="javascript:void(0)">Bienvenido {{ Auth::user()->name }}</a>
+            <a class="navbar-brand" href="javascript:void(0)">Bienvenido </a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="sr-only">Toggle navigation</span>
@@ -103,6 +103,8 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
   <!-- Chartist JS -->
   <script src="{{ asset('js/plugins/chartist.min.js') }}"></script>
+  <!-- Chartist JS -->
+  <script src="{{ asset('js/plugins/jasny-bootstrap.min.js') }}"></script>
   <!--  Notifications Plugin    -->
   <script src="{{ asset('js/plugins/bootstrap-notify.js') }}"></script>
   <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
@@ -110,6 +112,8 @@
   <!-- Material Dashboard DEMO methods, don't include it in your project! -->
   <script src="{{ asset('demo/demo.js') }}"></script>
   <script src="{{ asset('demo/main.js') }}"></script>
+  <script src="https://cdn.ckeditor.com/ckeditor5/11.1.1/classic/ckeditor.js"></script>
+  <script src="https://cdn.ckeditor.com/ckeditor5/11.1.1/classic/translations/es.js"></script>
 
   <script src="{{ asset('js/validaciones/panel.js') }}"></script>
 

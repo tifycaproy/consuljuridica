@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class TblNoticias extends Migration
+class CreateNoticiasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -17,12 +17,18 @@ class TblNoticias extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->longText('titulo');
-            $table->longText('resumen');
-            $table->longText('descripcion');
+            $table->longText('resumen')->nullable();
+            $table->longText('descripcion')->nullable();
             $table->boolean('publico');
             $table->bigInteger('posicion');
-            $table->longText('url_imagen');
+            $table->longText('url_multimedia')->nullable();;
+            $table->longText('url_imagen')->nullable();;
+            $table->integer('role_user_id')->unsigned();
+
         });
+        Schema::table('noticias', function($table) {
+              $table->foreign('role_user_id')->references('id')->on('role_user');
+          });
     }
 
     /**
