@@ -75,7 +75,7 @@
 					</a>
 				</li>
 				<li class="nav-item ">
-					<a class="nav-link" id="btn-noticias" role="button"
+					<a class="nav-link btn-noticias"  role="button"
 					    aria-expanded="false">
 						Noticias
 					</a>
@@ -88,16 +88,16 @@
 					</a>
 					
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<a class="dropdown-item text-center" href="/">Solicitud de documentos a Cuba</a>
-								<a class="dropdown-item text-center" href="/">Tramites para empresas</a>
-								<a class="dropdown-item text-center" href="/">Servicios Consulares para ciudadanos cubanos</a>
-								<a class="dropdown-item text-center" href="/">Tramites legales y extranjeria</a>
+								<a class="dropdown-item text-left" href="#">Solicitud de documentos a Cuba</a>
+								<a class="dropdown-item text-left" href="#">Tramites para empresas</a>
+								<a class="dropdown-item text-left" href="#">Servicios Consulares para ciudadanos cubanos</a>
+								<a class="dropdown-item text-left" href="#">Tramites legales y extranjeria</a>
 							</div>
 
 				</li>						
 
 				<li class="nav-item">
-					<a class="nav-link" id="btn-contacto" href="#">Contacto</a>
+					<a class="nav-link btn-contacto">Contacto</a>
 				</li>
 			</ul>
 		</div>
@@ -155,17 +155,17 @@
 						<h3>Enlaces útiles</h3>
 					</div>
 					<ul class="links">
-						<li>
-							<a href="{{route('/')}}">Home</a>
+						<li >
+							<a href="{{route('/')}}">Inicio</a>
+						</li >
+						<li >
+							<a class="btn-noticias" href="#" role="button" >Noticias</a>
 						</li>
 						<li>
-							<a href="{{route('blog')}}">Noticias</a>
+							<a href="">Servicios</a>
 						</li>
-						<li>
-							<a href="{{route('servicios')}}">Servicios</a>
-						</li>
-						<li>
-							<a href="{{route('contacto')}}">Contacto</a>
+						<li >
+							<a class="btn-contacto" href="#" role="button">Contacto</a>
 						</li>
 					</ul>
 				</div>
@@ -189,7 +189,7 @@
 				</div>
 			</div>
 			<div class="copyright mt-4">
-				<p class="copy-right text-center ">&copy; 2018 Consultoría Jurídica. Todos los Derechos Reservados | Desarrollado por TIFYCA </a>
+				<p class="copy-right text-center ">&copy; 2018 Consultoría Jurídica Miramar. Todos los Derechos Reservados | Desarrollado por TIFYCA </a>
 				</p>
 			</div>
 		</div>
@@ -256,12 +256,12 @@
                 });
             });
 
-	$('#btn-noticias').bind("click", function () {
+	$('.btn-noticias').bind("click", function () {
 		var destino = $("#section-noticias").offset().top - 1;
 		$("html, body").animate({scrollTop: destino},1000);
 	});
 
-	$('#btn-contacto').bind("click", function () {
+	$('.btn-contacto').bind("click", function () {
 		var destino = $("#section-contacto").offset().top -1;
 		$("html, body").animate({scrollTop: destino},1000);
 	});
