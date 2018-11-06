@@ -21,7 +21,11 @@ class CreateSlidersTable extends Migration
             $table->boolean('publico');
             $table->bigInteger('posicion');
             $table->longText('url_imagen');
+            $table->integer('role_user_id')->unsigned();                     
         });
+        Schema::table('sliders', function($table) {
+              $table->foreign('role_user_id')->references('id')->on('role_user');
+          });
     }
 
     /**

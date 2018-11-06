@@ -33,5 +33,23 @@ else {
   // alert($("#publicoval").val());
 }
 });
-
+// Remove a few plugins from the default setup.
+// ClassicEditor
+//     .create( document.querySelector( '#editor' ), {
+//       language: 'es',
+//         removePlugins: [ 'Heading', 'Link' ],
+//         toolbar: [ 'bold', 'italic', 'bulletedList', 'numberedList', 'blockQuote','|', 'undo', 'redo' ]
+//     } )
+//     .catch( error => {
+//         console.log( error );
+//     } );
+// ClassicEditor
+//     .create( document.querySelector( '#editor2' ), {
+//       language: 'es',
+//         removePlugins: [ 'Heading', 'Link' ],
+//         toolbar: [ 'bold', 'italic', 'bulletedList', 'numberedList', 'blockQuote','|', 'undo', 'redo' ]
+//     } )
+//     .catch( error => {
+//         console.log( error );
+//     } );
 });
