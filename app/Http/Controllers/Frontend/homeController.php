@@ -37,6 +37,11 @@ class homeController extends Controller
         return view('Frontend.privacidad');
     }
 
+    public function tramite(){
+
+        return view('Frontend.tramite');
+    }
+
     public function detalle(Request $request){
 
         $id= $request['id'];

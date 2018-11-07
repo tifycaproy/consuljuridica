@@ -27,6 +27,8 @@ Route::get('contacto', 'Frontend\homeController@contacto')->name('contacto');
 
 Route::get('privacidad', 'Frontend\homeController@privacidad')->name('privacidad');
 
+Route::get('tramite', 'Frontend\homeController@tramite')->name('tramite');
+
 //Route::get('detalle', 'Frontend\homeController@detalle')->name('detalle');
 
 Route::get('detalle/{id}', [

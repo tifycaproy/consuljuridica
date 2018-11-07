@@ -704,6 +704,10 @@ ul.social-icons li a i {
 	color: #999;
 }
 
+#tramite-title{
+	color: black;
+}
+
 .about-info .card-title,
 .img-slide-con .card-title {
 	color: #494a4a;
@@ -877,6 +881,10 @@ p.card-text {
 }
 
 /*--//choose--*/
+
+#form-tramite{
+	width: 100%;
+}
 
 /*-- /progress --*/
 
