@@ -39,7 +39,7 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest')->except('list','form','create','delete');
+        $this->middleware('guest')->except('list','form','create','delete','update','form','onesearch');
     }
 
     /**
@@ -91,11 +91,46 @@ class RegisterController extends Controller
 
             return redirect()->route("verusuarios");
     }
+    public function onesearch($id)
+    {
+        $user = DB::table('users')
+                  ->where('id', $id)
+                  ->first();
+
+        if (!$user){
+          return view('Backend.index');
+        }
+        else{
+          return view('auth.formuser',['usuario'=>$user]);
+        }
+
+    }
+    public function update(Request $request, $id)
+    {
+      $user = DB::table('users')
+                ->where('id', $id)
+                ->first();
+
+      if (!$user){
+        return view('Backend.index');
+      }
+      else{
+
+            $user = User::find($id)
+                        ->fill($request->input());
+            $user->save();
+          return redirect()->route("verusuarios");
+       }
+    }
     public function delete($id)
     {
         $user = User::find($id);
         $user->delete();
 
         return redirect()->route("verusuarios");
+    }
+    public function formu()
+    {
+        return view('auth.formuser');
     }
 }

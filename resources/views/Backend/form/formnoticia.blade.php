@@ -89,7 +89,11 @@
           <div class="form-group bmd-form-group {{ $errors->has('url_multimedia') ? ' has-error' : '' }}">
 
             {!! Form::label('url_multimedia', 'Enlace Multimedia   O') !!}
+<<<<<<< HEAD
+            <input type="text" id="enlace" name="url_multimedia" class="form-control" required>
+=======
             <input type="url" id="enlace" name="url_multimedia" class="form-control" >
+>>>>>>> 194387436d1e118cee1843a486cdbfe35603ebbc
             @if ($errors->has('url_multimedia'))
                 <span class="help-block">
                     <strong>{{ $errors->first('url_multimedia') }}</strong>

@@ -60,6 +60,7 @@ class SliderController extends Controller
     }
     public function update(Request $request, $id)
     {
+      // dd($request);
       $slider = DB::table('sliders')
                 ->where('id', $id)
                 ->first();
@@ -69,19 +70,18 @@ class SliderController extends Controller
       }
       else{
 
-            $slider = Slider::find($id);
-            $slider->titulo = $request["titulo"];
-            $slider->contenido = $request["contenido"];
-            $slider->publico = $request["publico"];
-            $slider->posicion = $request["posicion"];
-            $nombreArchivo = "img_slider";
-            $archivo_img = $nombreArchivo."_".time().'.'.$request["url_imagen"]->getClientOriginalExtension();
-                    $path = public_path().'/images/sliders/';
-                    $request["url_imagen"]->move($path, $archivo_img);
-            $slider->url_imagen = $archivo_img;
+            $slider = Slider::find($id)
+                      ->fill($request->input());
+            if($request->hasFile('url_imagen')){
+              $nombreArchivo = "img_slider";
+              $archivo_img = $nombreArchivo."_".time().'.'.$request["url_imagen"]->getClientOriginalExtension();
+                      $path = public_path().'/images/sliders/';
+                      $request["url_imagen"]->move($path, $archivo_img);
+              $slider->url_imagen = $archivo_img;
+            }
             $slider->role_user_id = Auth::id();
-            $slider->save();
-
+            $slider->save()
+            ;
           return redirect()->route("versliders");
        }
     }

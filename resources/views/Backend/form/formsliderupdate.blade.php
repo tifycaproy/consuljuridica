@@ -7,7 +7,7 @@
     <div class="col-md-12">
       <div class="card">
         <div class="card-header card-header-primary">
-          <h4 class="card-title">Crear Slider</h4>
+          <h4 class="card-title">Modificar Slider</h4>
           <p class="card-category">Complete todos los datos</p>
         </div>
         <div class="card-body">
@@ -31,14 +31,14 @@
             <div class="col-md-2">
               <div class="form-group bmd-form-group {{ $errors->has('publico') ? ' has-error' : '' }}">
                 <div class="form-check form-check-inline">
-                <label id="publico" class="form-check-label">
-                  <input {{$slider->publico}} class="form-check-input" type="checkbox">
+                <label id="publicoup" class="form-check-label">
+                  <input id="checkpublicoup" {{$slider->publico}} class="form-check-input" type="checkbox">
                   Público
                   <span class="form-check-sign">
                     <span class="check"></span>
                   </span>
                 </label>
-                <input id="publicoval" name="publico" type="text" {{$slider->publico}} hidden>
+                <input id="publicovalup" name="publico" type="text" {{$slider->publico}} hidden>
               </div>
                 @if ($errors->has('publico'))
                     <span class="help-block">
@@ -83,21 +83,21 @@
               <h4 class="title {{ $errors->has('url_imagen') ? ' has-error' : '' }}">Subir Imagen</h4>
               <div class="fileinput fileinput-new text-center" data-provides="fileinput">
                 <div class="fileinput-new thumbnail">
-                  <img src="{{URL::to('/images')}}/sliders/{{$slider->url_imagen}}" alt="...">
+                  <img id="preview-file" src="{{URL::to('/images')}}/sliders/{{$slider->url_imagen}}" alt="...">
                 </div>
                 <div class="fileinput-preview fileinput-exists thumbnail" style=""></div>
                 <div>
                   <span class="btn btn-rose btn-round btn-file">
-                    <span class="fileinput-new">Buscar</span>
-                    <span class="fileinput-exists">Cambiar</span>
-                    <input id="imagen" name="url_imagen" type="file" href="{{$slider->url_imagen}}" required>
+                    <span class="fileinput-new no-existente">Buscar</span>
+                    <span class="fileinput-exists existente">Cambiar</span>
+                    <input id="imagenup" name="url_imagen" type="file" value="{{$slider->url_imagen}}" href="{{$slider->url_imagen}}" accept="image/png, .jpeg, .jpg, image/gif" required>
                     @if ($errors->has('url_imagen'))
                         <span class="help-block">
                             <strong>{{ $errors->first('url_imagen') }}</strong>
                         </span>
                     @endif
                   </span>
-                  <a href="#" class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput"><i class="fa fa-times"></i>Quitar</a>
+                  <a href="#" class="btn btn-danger btn-round fileinput-exists quitarexistente" data-dismiss="fileinput"><i class="fa fa-times"></i>Quitar</a>
                 </div>
               </div>
             </div>
