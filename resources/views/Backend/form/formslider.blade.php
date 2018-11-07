@@ -29,8 +29,8 @@
             <div class="col-md-2">
               <div class="form-group bmd-form-group {{ $errors->has('publico') ? ' has-error' : '' }}">
                 <div class="form-check form-check-inline">
-                <label id="publico" class="form-check-label">
-                  <input class="form-check-input" type="checkbox">
+                <label class="form-check-label">
+                  <input id="publico" class="form-check-input" type="checkbox">
                   Público
                   <span class="form-check-sign">
                     <span class="check"></span>
@@ -51,7 +51,7 @@
             <div class="form-group {{ $errors->has('contenido') ? ' has-error' : '' }}">
               {!! Form::label('contenido','Contenido') !!}
               <div class="form-group bmd-form-group">
-                  <textarea id="editor" name="contenido" class="form-control" rows="4" required>Ingrese Texto Aquí</textarea>
+                  <textarea id="editor" name="contenido" class="form-control" rows="4" required></textarea>
                 @if ($errors->has('contenido'))
                     <span class="help-block">
                         <strong>{{ $errors->first('contenido') }}</strong>

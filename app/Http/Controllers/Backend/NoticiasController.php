@@ -76,23 +76,21 @@ class NoticiasController extends Controller
       }
       else{
 
-            $noticia = Noticias::find($id);
-            $noticia->titulo=$request["titulo"];
-            $noticia->resumen=$request["resumen"];
-            $noticia->descripcion=$request["descripcion"];
-            $noticia->publico=$request["publico"];
-            $noticia->posicion=$request["posicion"];
-            $noticia->role_user_id = Auth::id();
-            if($request["url_multimedia"]){
-              $noticia->url_multimedia=$request["url_multimedia"];
-            }
-            else {
+            $noticia = Noticias::find($id)
+                        ->fill($request->input());
+            if($request->hasFile('url_imagen')){
               $nombreArchivo = "img_noticia";
               $name_fileoption1 = $nombreArchivo."_".time().'.'.$request["url_imagen"]->getClientOriginalExtension();
         							$path = public_path().'/images/noticias/';
         							$request["url_imagen"]->move($path, $name_fileoption1);
               $noticia->url_imagen=$name_fileoption1;
             }
+            else{
+              if($request->filled("url_multimedia")){
+                  $noticia->url_multimedia=$request["url_multimedia"];
+              }
+            }
+            $noticia->role_user_id = Auth::id();
             $noticia->save();
           return redirect()->route("vernoticias");
        }
