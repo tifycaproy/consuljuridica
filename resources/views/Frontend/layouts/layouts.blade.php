@@ -88,16 +88,16 @@
 					</a>
 					
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<a class="dropdown-item text-left" href="#">Solicitud de documentos a Cuba</a>
-								<a class="dropdown-item text-left" href="#">Tramites para empresas</a>
-								<a class="dropdown-item text-left" href="#">Servicios Consulares para ciudadanos cubanos</a>
-								<a class="dropdown-item text-left" href="#">Tramites legales y extranjeria</a>
-							</div>
+						<a class="dropdown-item text-left" href="{{route('servicios')}}">Solicitud de documentos a Cuba</a>
+						<a class="dropdown-item text-left" href="{{route('servicios')}}">Tramites para empresas</a>
+						<a class="dropdown-item text-left" href="{{route('servicios')}}">Servicios Consulares para ciudadanos cubanos</a>
+						<a class="dropdown-item text-left" href="{{route('servicios')}}">Tramites legales y extranjeria</a>
+					</div>
 
 				</li>						
 
 				<li class="nav-item">
-					<a class="nav-link btn-contacto">Contacto</a>
+					<a class="nav-link btn-contacto" >Contacto</a>
 				</li>
 			</ul>
 		</div>
@@ -126,7 +126,7 @@
 								<a href="https://www.facebook.com/consultoriajuridica.miramar/" class="button-footr">
 									<i class="fab fa-facebook-f"></i>
 								</a>
-								<a href="#" class="button-footr">
+								<a href="https://www.instagram.com/consuljuridica/" class="button-footr">
 									<i class="fab fa-instagram"></i>
 								</a>
 							</div>

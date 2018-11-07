@@ -2,88 +2,171 @@
 
 @section('content')
 
-<section class="bottom-banner-w3layouts" id="process">
+<section class="bottom-banner-w3layouts">
 		<div class="container">
-			<h3 class="tittle-wthree text-center">
-				Nuestros Servicios</h3>
-			<br>
-			<h6 class="tittle-wthree text-center">Nuestro equipo de trabajo está especializado en tratar y gestionar todos los trámites que los cuidadanos cubanos tengas que llevar a cabo en Cuba.Para cada uno de los casos siempre dispondrá de una atención personalizada y estará informado en todo momento del estado de su trámite o solicitud.</h6>
+			<!---728x90--->
+
+			<h3 class="tittle-wthree text-center">Servicios</h3>
+			<!---728x90--->
+
 			<div class="row inner-sec-w3ls-agileinfo">
-				<div class="col-lg-4 terms-main text-left">
-					<div class="terms-in text-left rounded">
-						<div class="card">
+				<!--left-->
+				<div class="col-lg-12 left-blog-info text-left">
+					<div class="row mb-4">
+						<div class="col-md-4 card">
+							<a>
+								<img src="images/4.jpg" class="card-img-top img-fluid rounded" alt="">
+							</a>
 							<div class="card-body">
-								<i class="fab fa-react"></i>
-								<h5 class="card-title">Investing</h5>
-								<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore.
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 terms-main text-left">
-					<div class="terms-in one text-left rounded">
-						<div class="card">
-							<div class="card-body">
-								<i class="fab fa-strava"></i>
-								<h5 class="card-title">Trading</h5>
-								<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore.
-								</p>
+								<h5 class="card-title " id="tramite-title">
+									<a>Titulo del Servicio</a>
+								</h5>
+								<ul class="blog-icons my-4">
+									<li>
+										<a>
+											<i class="far fa-credit-card"></i> $1000</a>
+									</li>									
+								</ul>
+								
+								<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt.. </p>
+								<div class="read inner mt-4">
+									<a href="{{route('tramite')}}" class="btn btn-sm animated-button victoria-two">Solicitar</a>
+								</div>
 
 							</div>
 						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 terms-main text-left">
-					<div class="terms-in two text-left rounded">
-						<div class="card">
+						<div class="col-md-4 card">
+							<a>
+								<img src="images/5.jpg" class="card-img-top img-fluid rounded" alt="">
+							</a>
 							<div class="card-body">
-								<i class="far fa-money-bill-alt"></i>
-								<h5 class="card-title">Wealth Management</h5>
-								<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore.
-								</p>
+								<h5 class="card-title " id="tramite-title">
+									<a>Titulo del Servicio</a>
+								</h5>
+								<ul class="blog-icons my-4">
+									<li>
+										<a>
+											<i class="far fa-credit-card"></i> $1000</a>
+									</li>																		
+								</ul>								
+								<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt.. </p>
+								<div class="read inner mt-4">
+									<a href="{{route('tramite')}}" class="btn btn-sm animated-button victoria-two">Solicitar</a>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="col-md-4 card">
+							<a>
+								<img src="images/6.jpg" class="card-img-top img-fluid rounded" alt="">
+							</a>
+							<div class="card-body">
+								<h5 class="card-title " id="tramite-title">
+									<a>Titulo del Servicio</a>
+								</h5>
+								<ul class="blog-icons my-4">
+									<li>
+										<a>
+											<i class="far fa-credit-card"></i> $1000</a>
+									</li>									
+								</ul>
+								
+								<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt.. </p>
+								<div class="read inner mt-4">
+									<a href="{{route('tramite')}}" class="btn btn-sm animated-button victoria-two">Solicitar</a>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-lg-4 terms-main text-left mt-4">
-					<div class="terms-in thd text-left rounded">
-						<div class="card">
+					
+					<div class="row mb-4">
+						<div class="col-md-4 card">
+							<a>
+								<img src="images/7.jpg" class="card-img-top img-fluid rounded" alt="">
+							</a>
 							<div class="card-body">
-								<i class="fas fa-exclamation"></i>
-								<h5 class="card-title">Risk Analysis</h5>
-								<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore.
-								</p>
+								<h5 class="card-title " id="tramite-title">
+									<a>Titulo del Servicio</a>
+								</h5>
+								<ul class="blog-icons my-4">
+									<li>
+										<a>
+											<i class="far fa-credit-card"></i> $1000</a>
+									</li>																		
+								</ul>								
+								<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt.. </p>
+								<div class="read inner mt-4">
+									<a href="{{route('tramite')}}" class="btn btn-sm animated-button victoria-two">Solicitar</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 card">
+							<a>
+								<img src="images/5.jpg" class="card-img-top img-fluid rounded" alt="">
+							</a>
+							<div class="card-body">
+								<h5 class="card-title " id="tramite-title">
+									<a>Titulo del Servicio</a>
+								</h5>
+								<ul class="blog-icons my-4">
+									<li>
+										<a href="#">
+											<i class="far fa-credit-card"></i> $1000</a>
+									</li>									
+								</ul>								
+								<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt.. </p>
+								<div class="read inner mt-4">
+									<a href="{{route('tramite')}}" class="btn btn-sm animated-button victoria-two">Solicitar</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 card">
+							<a>
+								<img src="images/4.jpg" class="card-img-top img-fluid rounded" alt="">
+							</a>
+							<div class="card-body">
+								<h5 class="card-title " id="tramite-title">
+									<a>Titulo del Servicio</a>
+								</h5>
+								<ul class="blog-icons my-4">
+									<li>
+										<a>
+										<i class="far fa-credit-card"></i> $1000</a>
+									</li>
+								</ul>								
+								<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt.. </p>
+								<div class="read inner mt-4">
+									<a href="{{route('tramite')}}" class="btn btn-sm animated-button victoria-two">Solicitar</a>
+								</div>
 							</div>
 						</div>
 					</div>
+					<nav aria-label="Page navigation example">
+						<ul class="pagination justify-content-left mt-4">
+							<li class="page-item disabled">
+								<a class="page-link" href="#" tabindex="-1">Previous</a>
+							</li>
+							<li class="page-item">
+								<a class="page-link" href="#">1</a>
+							</li>
+							<li class="page-item">
+								<a class="page-link" href="#">2</a>
+							</li>
+							<li class="page-item">
+								<a class="page-link" href="#">3</a>
+							</li>
+							<li class="page-item">
+								<a class="page-link" href="#">Next</a>
+							</li>
+						</ul>
+					</nav>
 				</div>
-				<div class="col-lg-4 terms-main text-left mt-4">
-					<div class="terms-in fourth text-left rounded">
-						<div class="card">
-							<div class="card-body">
-								<i class="fas fa-street-view"></i>
-								<h5 class="card-title">Stock Market</h5>
-								<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore.
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 terms-main text-left mt-4">
-					<div class="terms-in fifth text-left rounded">
-						<div class="card">
-							<div class="card-body">
-								<i class="fas fa-umbrella"></i>
-								<h5 class="card-title">Venture Capitals</h5>
-								<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore.
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
+				<!--//left-->
+				
 			</div>
 		</div>
+
 	</section>
 
 @endsection
