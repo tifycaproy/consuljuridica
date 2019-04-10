@@ -2,7 +2,7 @@
 
 @section('content')
 
-
+<input id="mostra_vista" value="usuarios" hidden disabled>
 <div class="col-md-8">
               <div class="card">
                 <div class="card-header card-header-primary">
@@ -33,6 +33,19 @@
                           @if ($errors->has('email'))
                               <span class="help-block">
                                   <strong>{{ $errors->first('email') }}</strong>
+                              </span>
+                          @endif
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-group bmd-form-group {{ $errors->has('role_id') ? ' has-error' : '' }}">
+
+                          {!! Form::label('role_id', 'Perfil') !!}
+                          {!! Form::select('role_id', $perfiles, null, ['class' => 'form-control','required'=>'required']) !!}
+
+                          @if ($errors->has('role_id'))
+                              <span class="help-block">
+                                  <strong>{{ $errors->first('role_id') }}</strong>
                               </span>
                           @endif
                         </div>

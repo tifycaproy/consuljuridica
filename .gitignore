@@ -3,6 +3,9 @@
 /public/storage
 public/images/noticias/**
 public/images/sliders/**
+public/images/servicios/**
+public/images/comentarios/**
+composer.lock
 /storage/*.key
 /vendor
 /.idea
@@ -12,3 +15,4 @@ Homestead.yaml
 npm-debug.log
 yarn-error.log
 .env
+.vscode

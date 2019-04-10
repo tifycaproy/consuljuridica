@@ -28,7 +28,7 @@
                           Rol
                         </th>
                         <th>
-                          Fecha
+                          Fecha Creacion/Modificación
                         </th>
 												<th>
 													Acciones
@@ -50,12 +50,12 @@
                             {{ $usuario->created_at}}
                           </td>
                           <td class="td-actions">
-                            <a type="button" rel="tooltip" title="" href="{{ route('buscarusuario',['id'=>$usuario->id])}}" class="btn btn-white btn-link btn-sm" data-original-title="Editar">
+                            <button type="button" rel="tooltip" title="" onclick="location.href='{{ route('buscarusuario',['id'=>$usuario->id])}}'" class="btn btn-white btn-link btn-sm" data-original-title="Editar">
                               <i class="material-icons">edit</i>
-                            </a>
-                            <a type="button" rel="tooltip" title="" href="{{ route('eliminarusuario',['id'=>$usuario->id])}}" class="btn btn-white btn-link btn-sm" data-original-title="Remover">
+                            </button>
+                            <button type="button" rel="tooltip" title="" onclick="location.href='{{ route('eliminarusuario',['id'=>$usuario->id])}}'" class="btn btn-white btn-link btn-sm" data-original-title="Remover">
                               <i class="material-icons">close</i>
-                            </a>
+                            </button>
                           </td>
                         </tr>
                         @endforeach

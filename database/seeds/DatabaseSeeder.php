@@ -19,5 +19,10 @@ class DatabaseSeeder extends Seeder
     //$this->call(SliderSeeder::class);
     //Control de las Noticias
      //$this->call(NoticiaSeeder::class);
+     //Llenar las categorias correspondientes
+      $this->call(CategoriasServiciosSeeder::class);
+      //Llenar los tipos de campos correspondientes
+       $this->call(TiposCamposSeeder::class);       
+       $this->call(ConfiguracionesSeeder::class);       
     }
 }

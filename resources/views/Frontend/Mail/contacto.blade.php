@@ -12,7 +12,7 @@
 		<div style="padding: 30px; border-radius: 15px">
 			<div style="text-align: center;">
 				@php
-					$img= public_path('assets/logo.png');
+					$img= public_path('images/logo_consultoria.png');
 				@endphp
 				<img  width="200px" src="<?php echo $message->embed($img); ?>">
 

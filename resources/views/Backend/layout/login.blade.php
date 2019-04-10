@@ -5,6 +5,7 @@
   <title>Consultoria Jurídica</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
+  <link rel="shortcut icon" href="{{asset('images/favicon.png')}} " type="image/x-icon">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <!--     Fonts and icons     -->
@@ -24,7 +25,7 @@
   </div>
   <footer class="footer" >
     <div class="container">
-        <nav class="float-left">
+        {{-- <nav class="float-left">
           <ul>
               <li>
                   <a href="https://www.creative-tim.com">
@@ -47,13 +48,13 @@
                   </a>
               </li>
           </ul>
-        </nav>
+        </nav> --}}
         <div class="copyright float-right">
             &copy;
             <script>
-                document.write(new Date().getFullYear())
-            </script>, made with <i class="material-icons">favorite</i> by
-            <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.
+              document.write(new Date().getFullYear())
+            </script>, hecho con <i class="material-icons">favorite</i> por
+            <a href="#" target="_blank">TIFYCA</a>.
         </div>
     </div>
 </footer>

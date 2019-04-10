@@ -3,6 +3,7 @@
 @section('content')
 
 <input id="mostra_vista" value="slider" hidden disabled>
+
 <div class="row">
     <div class="col-md-12">
       <div class="card">
@@ -30,13 +31,12 @@
               <div class="form-group bmd-form-group {{ $errors->has('publico') ? ' has-error' : '' }}">
                 <div class="form-check form-check-inline">
                 <label id="publico" class="form-check-label">
-                  <input class="form-check-input" type="checkbox">
+                  <input id="publicoval" name="publico"  class="form-check-input" type="checkbox">
                   Público
                   <span class="form-check-sign">
                     <span class="check"></span>
                   </span>
                 </label>
-                <input id="publicoval" name="publico" type="text" value="0" hidden>
               </div>
                 @if ($errors->has('publico'))
                     <span class="help-block">
@@ -45,13 +45,47 @@
                 @endif
               </div>
             </div>
+            <div class="col-md-3">
+              <div class="form-group bmd-form-group {{ $errors->has('categoria_id') ? ' has-error' : '' }}">
+
+                {!! Form::label('categoria_id', 'Categorias (Opcional)') !!}
+                <select class="form-control" name="categoria_id" id="categoria_select">
+                  <option value="">Seleccione</option>
+                  @foreach($categorias as $categoria)
+                  <option value="{{$categoria->id}}">{{$categoria->nombre_categoria}}</option>
+                  @endforeach
+                </select>
+                @if ($errors->has('categoria_id'))
+                    <span class="help-block">
+                        <strong>{{ $errors->first('categoria_id') }}</strong>
+                    </span>
+                @endif
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group bmd-form-group {{ $errors->has('servicio_id') ? ' has-error' : '' }}">
+
+                {!! Form::label('servicio_id', 'Servicios (Opcional)') !!}
+                <select class="form-control" name="servicio_id" id="servicios_select">
+                  <option value="">Seleccione</option>
+                  {{-- @foreach($servicios as $key=> $servicio)
+                  <option value="{{$servicio->id}}">{{$servicio->titulo_servicio}}</option>
+                  @endforeach --}}
+                </select>
+                @if ($errors->has('servicio_id'))
+                    <span class="help-block">
+                        <strong>{{ $errors->first('servicio_id') }}</strong>
+                    </span>
+                @endif
+              </div>
+            </div>
           </div>
           <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-6">
             <div class="form-group {{ $errors->has('contenido') ? ' has-error' : '' }}">
               {!! Form::label('contenido','Contenido') !!}
               <div class="form-group bmd-form-group">
-                  <textarea id="editor" name="contenido" class="form-control" rows="4" required>Ingrese Texto Aquí</textarea>
+                  <textarea id="editor" name="contenido" class="form-control" rows="4" required>&nbsp;</textarea>
                 @if ($errors->has('contenido'))
                     <span class="help-block">
                         <strong>{{ $errors->first('contenido') }}</strong>
@@ -60,14 +94,35 @@
               </div>
             </div>
            </div>
+           <div class="col-md-6">
+           <div class="form-group {{ $errors->has('contenido2') ? ' has-error' : '' }}">
+             {!! Form::label('contenido2','Otro Contenido (Opcional)') !!}
+             <div class="form-group bmd-form-group">
+                 <textarea id="editor2" name="contenido2" class="form-control" rows="4">&nbsp;</textarea>
+               @if ($errors->has('contenido2'))
+                   <span class="help-block">
+                       <strong>{{ $errors->first('contenido2') }}</strong>
+                   </span>
+               @endif
+             </div>
+           </div>
+          </div>
           </div>
 
           <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-2">
               <div class="form-group bmd-form-group {{ $errors->has('email') ? ' has-error' : '' }}">
 
                 {!! Form::label('posicion', 'Posición') !!}
-                <input type="number" name="posicion" min="1" value="1" class="form-control" required >
+                <select class="form-control" name="posicion" required>
+                  @foreach($posiciones_disponibles as $key=> $posicion_disponible)
+                  @if($key==0)
+                  <option value="{{$posicion_disponible}}" selected="selected">{{$posicion_disponible}}</option>
+                  @else
+                  <option value="{{$posicion_disponible}}">{{$posicion_disponible}}</option>
+                  @endif
+                  @endforeach
+                </select>
                 @if ($errors->has('posicion'))
                     <span class="help-block">
                         <strong>{{ $errors->first('posicion') }}</strong>
@@ -109,3 +164,58 @@
     </div>
   </div>
 @endsection
+@push('scripts')
+
+<script  type="text/javascript" charset="utf-8" >
+    $('#categoria_select').change(function(){
+      var id_categoria = $(this).val();
+      $('#servicios_select').html('');
+      $.ajax({
+        type: "GET",
+        url: '{{ url("verserviciosuno") }}',
+        dataType: "json",
+        data: {id_categoria:id_categoria},
+        success: function (data){
+          //console.log(data)
+
+           $.each( data, function(row, items){
+              var option = option + $('#servicios_select').append('<option value="'+items.id+'">'+items.titulo_servicio+'</option>');
+           });
+        }
+      });
+    });
+
+</script>
+
+
+<script>
+$(document).ready(function(){
+CKEDITOR.replace( 'editor',{
+uiColor:"#DCDCDC",
+toolbarGroups : [
+  { name: 'basicstyles', groups: [ 'basicstyles'] },
+  { name: 'paragraph',   groups: [ 'list', 'indent', 'align', 'bidi' ] },
+  { name: 'document',    groups: [ 'doctools' ] },
+  { name: 'editing',     groups: ['spellchecker' ] },
+  { name: 'styles' },
+  { name: 'colors' },
+  { name: 'tools' }
+]
+// removeButtons: 'Cut,Copy,Paste,Undo,Redo,Anchor,Underline,Strike,Subscript,Superscript'
+});
+CKEDITOR.replace( 'editor2',{
+uiColor:"#DCDCDC",
+toolbarGroups : [
+  { name: 'basicstyles', groups: [ 'basicstyles'] },
+  { name: 'paragraph',   groups: [ 'list', 'indent', 'align', 'bidi' ] },
+  { name: 'document',    groups: [ 'doctools' ] },
+  { name: 'editing',     groups: ['spellchecker' ] },
+  { name: 'styles' },
+  { name: 'colors' },
+  { name: 'tools' }
+]
+// removeButtons: 'Cut,Copy,Paste,Undo,Redo,Anchor,Underline,Strike,Subscript,Superscript'
+});
+});
+</script>
+@endpush

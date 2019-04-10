@@ -1,8 +1,4 @@
 $(document).ready(function(){
-
-
-$("#"+$("#mostra_vista").val()).addClass("active");
-
 if($("#publico").attr("checked",true)){
   $("#publicoval").val("1");
 }
@@ -34,22 +30,30 @@ else {
 }
 });
 // Remove a few plugins from the default setup.
-// ClassicEditor
-//     .create( document.querySelector( '#editor' ), {
-//       language: 'es',
-//         removePlugins: [ 'Heading', 'Link' ],
-//         toolbar: [ 'bold', 'italic', 'bulletedList', 'numberedList', 'blockQuote','|', 'undo', 'redo' ]
-//     } )
-//     .catch( error => {
-//         console.log( error );
-//     } );
-// ClassicEditor
-//     .create( document.querySelector( '#editor2' ), {
-//       language: 'es',
-//         removePlugins: [ 'Heading', 'Link' ],
-//         toolbar: [ 'bold', 'italic', 'bulletedList', 'numberedList', 'blockQuote','|', 'undo', 'redo' ]
-//     } )
-//     .catch( error => {
-//         console.log( error );
-//     } );
+DecoupledEditor
+    .create( document.querySelector( '#editor' ),{
+      language: 'es'
+    })
+    .then( editor => {
+
+        const toolbarContainer = document.querySelector( '#toolbar-container' );
+        toolbarContainer.appendChild( editor.ui.view.toolbar.element );
+
+    } )
+    .catch( error => {
+        console.error( error );
+    } );
+
+DecoupledEditor
+    .create( document.querySelector( '#editor2' ),{
+      language: 'es'
+    } )
+    .then( editor => {
+        const toolbarContainer = document.querySelector( '#toolbar-container2' );
+
+        toolbarContainer.appendChild( editor.ui.view.toolbar.element );
+    } )
+    .catch( error => {
+        console.error( error );
+    } );
 });

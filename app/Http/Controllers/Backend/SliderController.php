@@ -7,6 +7,9 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use App\Slider as Slider;
+use App\Servicios as Servicios;
+use App\Categorias as Categorias;
+
 
 class SliderController extends Controller
 {
@@ -14,20 +17,35 @@ class SliderController extends Controller
     {
       $titulo= $request["titulo"];
       $contenido= $request["contenido"];
-      $publico= $request["publico"];
-      $posicion= $request["posicion"];
-      $url_imagen= $request["url_imagen"];
+      if($request["publico"]){
+          $publico= "1";
+      }
+      else {
+        $publico = "0";
+      }
+      $posiciones_registradas = Slider::select('id','posicion')
+                                        ->where('posicion',$request["posicion"])
+                                      ->first();
+      if ($posiciones_registradas) {
+        $posiciones_registradas = Slider::select('id','posicion')
+                                        ->get();
+        foreach ($posiciones_registradas as $valor) {
+            if($valor->posicion > $request["posicion"]-1){
+              Slider::where('id',$valor->id)
+                    ->update(['posicion'=>$valor->posicion+1]);
+            }
+        }
+
+      }
       $sliders = new Slider;
-      $sliders->titulo=$titulo;
-      $sliders->contenido=$contenido;
+      $sliders->fill($request->input());
       $sliders->publico=$publico;
-      $sliders->posicion=$posicion;
       $sliders->role_user_id = Auth::id();
       $nombreArchivo = "img_slider";
-      $name_fileoption1 = $nombreArchivo."_".time().'.'.$url_imagen->getClientOriginalExtension();
-							$path = public_path().'/images/sliders/';
-							$url_imagen->move($path, $name_fileoption1);
-      $sliders->url_imagen=$name_fileoption1;
+      $archivo_img = $nombreArchivo."_".time().'.'.$request["url_imagen"]->getClientOriginalExtension();
+              $path = public_path().'/images/sliders/';
+              $request["url_imagen"]->move($path, $archivo_img);
+      $sliders->url_imagen=$archivo_img;
       $sliders->save();
       return redirect()->route("versliders");
 
@@ -36,6 +54,7 @@ class SliderController extends Controller
     {
          $sliders = DB::table('sliders')
                         ->select(DB::raw('id,titulo,  IF (publico = "1", "Si", "No") as publico, posicion,  created_at'))
+                        ->orderBy('posicion')
                         ->get();
 
          return view('Backend.slider',['sliders'=>$sliders]);
@@ -50,16 +69,25 @@ class SliderController extends Controller
           return view('Backend.index');
         }
         else{
+          $posiciones_registradas = Slider::select('posicion')
+                                          ->orderBy('posicion')
+                                          ->get();
+          foreach ($posiciones_registradas as $key => $value) {
+            $posiciones_disponibles[$key]=$value->posicion;
+          }
           $slider = DB::table('sliders')
-                         ->select(DB::raw('id, titulo, IF (publico = "1", "checked", "") as publico, contenido, posicion, url_imagen,  created_at'))
+                         ->select(DB::raw('id, titulo, IF (publico = "1", "checked", "") as publico, servicio_id, contenido, contenido2, posicion, url_imagen,  created_at'))
                          ->where('id', $id)
                          ->first();
-          return view('Backend.form.formsliderupdate',['slider'=>$slider]);
+                         $categorias = Categorias::get();
+                         $servicios = Servicios::get();
+          return view('Backend.form.formsliderupdate',['slider'=>$slider,'posiciones_disponibles'=>$posiciones_disponibles,'categorias'=>$categorias,'servicios'=>$servicios]);
         }
 
     }
     public function update(Request $request, $id)
     {
+      // dd($request);
       $slider = DB::table('sliders')
                 ->where('id', $id)
                 ->first();
@@ -68,20 +96,47 @@ class SliderController extends Controller
         return view('Backend.index');
       }
       else{
+        $id_posicion = Slider::select('id','posicion')
+                                          ->where('id',$id)
+                                        ->first();
+        if ($id_posicion->posicion!=$request["posicion"]) {
+          $posiciones_registradas = Slider::select('id','posicion')
+                                          ->get();
+          foreach ($posiciones_registradas as $valor) {
+              if($valor->posicion != $id_posicion->posicion){
+                if ($valor->posicion <= $request["posicion"] && $valor->posicion > $id_posicion->posicion) {
+                  Slider::where('id',$valor->id)
+                        ->update(['posicion'=>$valor->posicion-1]);
+                }
+                else {
+                  if($valor->posicion >= $request["posicion"] && $valor->posicion < $id_posicion->posicion){
+                    Slider::where('id',$valor->id)
+                          ->update(['posicion'=>$valor->posicion+1]);
+                  }
+                }
 
-            $slider = Slider::find($id);
-            $slider->titulo = $request["titulo"];
-            $slider->contenido = $request["contenido"];
-            $slider->publico = $request["publico"];
-            $slider->posicion = $request["posicion"];
-            $nombreArchivo = "img_slider";
-            $archivo_img = $nombreArchivo."_".time().'.'.$request["url_imagen"]->getClientOriginalExtension();
-                    $path = public_path().'/images/sliders/';
-                    $request["url_imagen"]->move($path, $archivo_img);
-            $slider->url_imagen = $archivo_img;
+              }
+          }
+
+        }
+            $slider = Slider::find($id)
+                      ->fill($request->input());
+            if($request->hasFile('url_imagen')){
+              $nombreArchivo = "img_slider";
+              $archivo_img = $nombreArchivo."_".time().'.'.$request["url_imagen"]->getClientOriginalExtension();
+                      $path = public_path().'/images/sliders/';
+                      $request["url_imagen"]->move($path, $archivo_img);
+              $slider->url_imagen = $archivo_img;
+            }
+            if($request["publico"]){
+                $slider->publico= "1";
+            }
+            else {
+              $slider->publico = "0";
+            }
             $slider->role_user_id = Auth::id();
-            $slider->save();
-
+            $slider->save()
+            ;
           return redirect()->route("versliders");
        }
     }
@@ -93,7 +148,17 @@ class SliderController extends Controller
     }
     public function form()
     {
-        return view('Backend.form.formslider');
+      $posiciones_registradas = Slider::select('posicion')
+                                      ->orderBy('posicion')
+                                      ->get();
+      foreach ($posiciones_registradas as $key => $value) {
+        $posiciones_disponibles[$key]=$value->posicion;
+      }
+      $posiciones_disponibles[count($posiciones_registradas)]=count($posiciones_registradas)+1;
+
+      $categorias = Categorias::get();
+      $servicios = Servicios::get();
+        return view('Backend.form.formslider',['posiciones_disponibles'=>$posiciones_disponibles,'servicios'=>$servicios,'categorias'=>$categorias]);
     }
 
 

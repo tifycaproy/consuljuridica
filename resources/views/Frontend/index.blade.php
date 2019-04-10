@@ -6,47 +6,77 @@
 @endphp
 
 <!-- banner-text -->
-
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+<div class="alert alert-success alert-dismissible fade show" id="alert"  role="alert" style="position: fixed; z-index: 999999; top: 10px; left: 35%; display: none">
+  <strong>Mensaje enviado exitosamente</strong> 
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" >
 			 {{--  <ol class="carousel-indicators">
 			    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
 			    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
 			    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
 			  </ol> --}}
 
-			  <div class="carousel-inner">
+			  <div class="carousel-inner"  >
 
 			  	@php
 			  		$longitud = count($slider);
 			  	@endphp
 			  	@for ($i = 0; $i < $longitud ; $i++)
-			  		
+
 			  @if ($i == 0)
-			    <div class="carousel-item active">
+			    <div class="carousel-item active h-slider"style="" >
 			      <img class="d-block w-100" src="{{ asset('images/sliders') }}/{{ $slider[$i]->url_imagen }}" alt="{{$slider[$i]->titulo}}">
 			      <div class="carousel-caption d-none d-md-block">
 
 			      	<div class="banner-info" style="padding-top: 7em;" style="display: block; float: left; position: relative; opacity: 1; z-index: 2; transition: opacity 500ms ease-in-out 0s;">
-							<h3>{{$slider[$i]->titulo}}</h3>
-							<p> <b>{{ $slider[$i]->contenido }}</b></p>
+			      			@if ($slider[$i]->servicio_id != NULL)
+			      				<a href="{{route('tramite',$slider[$i]->servicio_id)}}" title=""><h3>{{$slider[$i]->titulo}}</h3></a>
+			      			@else
+								<h3>{{$slider[$i]->titulo}}</h3>
+			      			@endif
+
+							@php
+								echo '<b>'.html_entity_decode($slider[$i]->contenido).'<b>';
+							@endphp
+
+							@if ($slider[$i]->contenido2 != NULL)
+								@php
+									echo '<b>'.html_entity_decode($slider[$i]->contenido2).'<b>';
+								@endphp
+							@endif
+
 						</div>
 				  </div>
 			    </div>
 			    @endif
 			    @if ($i > 0)
-			    	<div class="carousel-item">
+			    	<div class="carousel-item h-slider" >
 			      <img class="d-block w-100" src="{{ asset('images/sliders') }}/{{ $slider[$i]->url_imagen }}" alt="{{$slider[$i]->titulo}}">
 			      <div class="carousel-caption d-none d-md-block">
 
 			      	<div class="banner-info" style="padding-top: 7em;" style="display: block; float: left; position: relative; opacity: 1; z-index: 2; transition: opacity 500ms ease-in-out 0s;">
-							<h3>{{$slider[$i]->titulo}}</h3>
-							<p> <b>{{ $slider[$i]->contenido }}</b></p>
+							@if ($slider[$i]->servicio_id != NULL)
+			      				<a href="{{route('tramite',$slider[$i]->servicio_id)}}" title=""><h3>{{$slider[$i]->titulo}}</h3></a>
+			      			@else
+								<h3>{{$slider[$i]->titulo}}</h3>
+			      			@endif
+							@php
+								echo '<b>'.html_entity_decode($slider[$i]->contenido).'<b>';
+							@endphp
+							@if ($slider[$i]->contenido2 != NULL)
+								@php
+									echo '<b>'.html_entity_decode($slider[$i]->contenido2).'<b>';
+								@endphp
+							@endif
 						</div>
 				  </div>
 			    </div>
 			    @endif
 			 	@endfor
-			  
+
 			  </div>
 			</div>
 
@@ -77,7 +107,7 @@
 				</div>
 			</div>
 
-			
+
 			</div>
 		</div>
 	</section>
@@ -91,8 +121,11 @@
 				<div class="col-lg-3 service-in text-center">
 					<div class="card">
 						<div class="card-body">
-							<i class="fas fa-file-alt"></i>
-							<h5 class="card-title">Solicitud de documentos a Cuba</h5>
+							<a href="{{route('servicios',1)}}" title="">
+								<i class="fas fa-file-alt" style="font-size: 3rem"></i>
+								<h5 class="card-title">Solicitud de documentos a Cuba</h5>
+							</a>
+							
 							{{-- <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore.
 							</p> --}}
 						</div>
@@ -101,8 +134,11 @@
 				<div class="col-lg-3 service-in text-center">
 					<div class="card">
 						<div class="card-body">
-							<i class="fas fa-building"></i>
+							<a href="{{route('servicios',2)}}" title="">
+								<i class="fas fa-building" style="font-size: 3rem"></i>
 							<h5 class="card-title">Tramites para empresas</h5>
+							</a>
+							
 							{{-- <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore.
 							</p> --}}
 						</div>
@@ -111,8 +147,11 @@
 				<div class="col-lg-3 service-in text-center">
 					<div class="card">
 						<div class="card-body">
-							<i class="fas fa-users"></i>
-							<h5 class="card-title">Servicios Consulares para ciudadanos Cubanos</h5>
+							<a href="{{route('servicios',3)}}" title="">
+								<i class="fas fa-users" style="font-size: 3rem"></i>
+								<h5 class="card-title">Servicios Consulares para ciudadanos Cubanos</h5>	
+							</a>
+							
 							{{-- <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore.
 							</p> --}}
 						</div>
@@ -121,8 +160,11 @@
 				<div class="col-lg-3 service-in text-center">
 					<div class="card">
 						<div class="card-body">
-							<i class="fas fa-gavel"></i>
-							<h5 class="card-title">Tramites legales y extranjeria</h5>
+							<a href="{{route('servicios',4)}}" title="">
+								<i class="fas fa-gavel" style="font-size: 3rem"></i>
+								<h5 class="card-title">Tramites legales y extranjeria</h5>
+							</a>
+							
 							{{-- <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore.
 							</p> --}}
 						</div>
@@ -134,17 +176,23 @@
 <!---------------//servicios--------------->
 
 <!---------------video--------------->
-<section class="testimonials bottom-banner-w3layouts">
+<section class="testimonials bottom-banner-w3layouts" style="">
 <div class="row-green" id="quees">
     <div class="container">
         <div class="row d-flex align-items-center justify-content-center py-2 py-sm-5">
           <div class="col-12 col-sm-6 col-md-6 col-lg-6  pl-2-xs" style="color: white">
-              <h2>What is Lorem Ipsum?</h2>
-              <h6>Er it and wants to have it, simply because it is pain..."
-				Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h6>
+              @isset ($text_video)
+             <h2>{{ $text_video }}</h2>
+				 @endisset
+              
           </div>
-          <div class="col-12 col-md-6  text-center mt-3 mt-sm-0 ">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/idrNWh4aCC0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="col-12 col-md-6  text-center mt-3 mt-sm-0 " id="video">
+          	@isset ($video)
+				@php
+					echo html_entity_decode($video);
+				@endphp
+			@endisset
+            {{-- <iframe class="video-youtube" width="560" height="315" src="https://www.youtube.com/embed/idrNWh4aCC0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> --}}
           </div>
         </div>
     </div>
@@ -153,7 +201,7 @@
 <!---------------//video--------------->
 
 <!---------------Blog--------------->
-	
+
 	<section class="bottom-banner-w3layouts" id="section-noticias">
 		<div class="container">
 			<!---728x90--->
@@ -163,45 +211,11 @@
 
 			<div class="row inner-sec-w3ls-agileinfo">
 				<!--left-->
-				<div class="col-lg-12 left-blog-info text-left">
-					<div class="row mb-4">
-
-						@foreach ($noticias as $noticia)
-						
-						<div class="col-md-4 card"> 
-							
-								<img src="{{ asset('images/noticias') }}/{{ $noticia->url_imagen }}" class="card-img-top img-fluid rounded" alt="">
-
-							
-							<div class="card-body">
-								<ul class="blog-icons my-4">
-									<li>
-										<a href="#">
-											<i class="far fa-calendar-alt"></i> {{ $noticia->created_at->format('d-m-Y') }}</a>
-									</li>
-									
-								</ul>
-								<h5 class="card-title ">
-									<a href="{{route('detalle',$noticia->id)}}">{{ $noticia->titulo }}</a>
-								</h5>
-								<p class="card-text">{{ $noticia->resumen }} </p>
-								<div class="read inner mt-4">
-									<a href="{{route('detalle',$noticia->id)}}" class="btn btn-sm animated-button victoria-two">Leer más</a>
-								</div>
-
-							</div>
-						</div>
-						
-						@endforeach
-
-						
-					</div>
-					
-				
-				{{ $noticias->links() }}
+				<div class="col-lg-12 left-blog-info text-left articles p-0" >
+					@include('Frontend.noticias')
 				</div>
 				<!--//left-->
-				
+
 			</div>
 		</div>
 
@@ -211,7 +225,7 @@
 <section class="testimonials bottom-banner-w3layouts">
 		<div class="container">
 			<h3 class="tittle-wthree cen text-center mb-5">Lo que nuestros clientes dicen</h3>
-			
+
 			<div id="carouselExampleIndicators" class="carousel slide mt-5" data-ride="carousel">
 			  {{-- <ol class="carousel-indicators">
 			    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -219,101 +233,66 @@
 			    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
 			  </ol> --}}
 			  <div class="carousel-inner">
+			  	@php
+			  		$longitud = count($comentarios);
+			  	@endphp
+			  	@for ($i = 0; $i < $longitud ; $i++)
+
+			  @if ($i == 0)
 			    <div class="carousel-item active">
-			     <div class="owl-item" style="width: 1110px; margin-right: 20px;">
-			     	<div class="item">
-						<div class="feedback-info text-left">
-							<div class="feedback-top rounded">
-								<p>La profesionalidad en su máxima expresión; llevamos de clientes hace 16 años y estamos muy contentos</p>
-							</div>
-							<div class="feedback-grids">
-								<div class="feedback-img">
-									<img src="{{ asset('images/coment_1.jpg') }}" class="img-fluid rounded-circle" alt="">
+				     <div class="owl-item" style="width: 1110px; margin-right: 20px;">
+				     	<div class="item">
+							<div class="feedback-info text-left">
+								<div class="feedback-top rounded">
+									@php
+										echo html_entity_decode($comentarios[$i]->contenido);
+									@endphp
 								</div>
-								<div class="feedback-img-info">
-									<h5>Esperanza Franco Ramirez</h5>
-									<p>Facebook</p>
+								<div class="feedback-grids">
+									<div class="feedback-img">
+										<img src="{{ asset('images/comentarios') }}/{{$comentarios[$i]->url_imagen}}" class="img-fluid rounded-circle" alt="">
+									</div>
+									<div class="feedback-img-info">
+										<h5>{{$comentarios[$i]->nombre}}</h5>
+										<p>{{$comentarios[$i]->procedencia}}</p>
+									</div>
+									<div class="clearfix"> </div>
 								</div>
-								<div class="clearfix"> </div>
-							</div>
-						</div>
-					</div>
-				</div>
-			    </div>
-			    <div class="carousel-item">
-			      
-					<div class="owl-item" style="width: 1110px; margin-right: 20px;">
-			     	<div class="item">
-						<div class="feedback-info text-left">
-							<div class="feedback-top rounded">
-								<p>Excelentes, confianza garantía y siempre están disponible con la mejor atención 18años de calidad</p>
-							</div>
-							<div class="feedback-grids">
-								<div class="feedback-img">
-									<img src="{{ asset('images/coment_2.jpg') }}" class="img-fluid rounded-circle" alt="">
-								</div>
-								<div class="feedback-img-info">
-									<h5>Clínica Dental Valendentist</h5>
-									<p>Facebook
-										<span>(Compañía)</span>
-									</p>
-								</div>
-								<div class="clearfix"> </div>
 							</div>
 						</div>
 					</div>
-				</div>
-
 			    </div>
-			    <div class="carousel-item">
-			      
-					<div class="owl-item" style="width: 1110px; margin-right: 20px;">
-			     	<div class="item">
-						<div class="feedback-info text-left">
-							<div class="feedback-top rounded">
-								<p>Es una empresa muy buena como sus compañeros llevó 5 años con ellos</p>
-							</div>
-							<div class="feedback-grids">
-								<div class="feedback-img">
-									<img src="{{ asset('images/coment_3.jpg') }}" class="img-fluid rounded-circle" alt="">
+			    @endif
+			     @if ($i > 0)
+				<div class="carousel-item">
+				     <div class="owl-item" style="width: 1110px; margin-right: 20px;">
+				     	<div class="item">
+							<div class="feedback-info text-left">
+								<div class="feedback-top rounded"  style="color: white !important">
+									<small style="color: white !important">
+									@php
+										echo html_entity_decode($comentarios[$i]->contenido);
+									@endphp
+									</small>
 								</div>
-								<div class="feedback-img-info">
-									<h5>Elda Planche Martinez </h5>
-									<p>Facebook</p>
+								<div class="feedback-grids">
+									<div class="feedback-img">
+										<img src="{{ asset('images/comentarios') }}/{{$comentarios[$i]->url_imagen}}" class="img-fluid rounded-circle" alt="">
+									</div>
+									<div class="feedback-img-info">
+										<h5>{{$comentarios[$i]->nombre}}</h5>
+										<p>{{$comentarios[$i]->procedencia}}</p>
+									</div>
+									<div class="clearfix"> </div>
 								</div>
-								<div class="clearfix"> </div>
 							</div>
 						</div>
 					</div>
-				</div>
-
 			    </div>
-			    <div class="carousel-item">
-			      
-					<div class="owl-item" style="width: 1110px; margin-right: 20px;">
-			     	<div class="item">
-						<div class="feedback-info text-left">
-							<div class="feedback-top rounded">
-								<p>Realmente son un colectivo de excelentes trabajadores y de excelentes personas, eso marca la diferencia que no es más que el factor humano</p>
-							</div>
-							<div class="feedback-grids">
-								<div class="feedback-img">
-									<img src="{{ asset('images/coment_4.jpg') }}" class="img-fluid rounded-circle" alt="">
-								</div>
-								<div class="feedback-img-info">
-									<h5>Rogelio Sing Luque </h5>
-									<p>Facebook</p>
-								</div>
-								<div class="clearfix"> </div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-			    </div>
+			    @endif
+			    @endfor
 			  </div>
 			</div>
-		
 		</div>
 	</section>
 
@@ -323,7 +302,7 @@
 <div class="text-center d-flex justify-content-center py-5" >
 	<div class="col-lg-6 text-center d-flex justify-content-center ">
 		<div class="comment-top">
-			<h2>¡Suscríbete!</h2><br> 
+			<h2>¡Suscríbete!</h2><br>
 			<p>Para estar informado de todas nuestras novedades, noticias y ofertas dese de alta en nuestra Newsletter.</p><br>
 			<div class="comment-bottom mail-newlester">
 				<form  onsubmit="return false" action="#" method="post">
@@ -344,29 +323,22 @@
 
       <h1 class="c-black text-center py-5 title-h1">Preguntas Frecuentes</h1>
         <div class="row pb-5">
-            
-          <div class=" col-12 col-sm-2 col-md-4">
-            <div class="col-12">
-              <h2>Lorem</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-            </div>
-            
-          </div>
-          <div class=" col-12 col-sm-2 col-md-4">
-            <h2>Lorem</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia unde omnis, laudantium? Maxime, nesciunt aspernatur! Illo necessitatibus kdjdj </p>
-          </div>
-          <div class=" col-12 col-md-4">
-            <h2>Lorem</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia unde omnis, laudantium? Maxime, nesciunt aspernatur! Illo necessitatibus</p>
-          </div>
-        
-          
+
+        	@foreach ($preguntas as $pregunta)
+        		 <div class=" col-12 col-sm-2 col-md-4">
+		            <div class="col-12">
+		              <h2>{{ $pregunta->pregunta }}</h2>
+		              @php
+						echo html_entity_decode($pregunta->respuesta);
+					@endphp
+		            </div>
+		          </div>
+        	@endforeach
+
           <div class="col-12 col-sm-9"></div>
-          <div class="col-12 col-sm-3 text-right"><a href="#" title="">Ver más</a></div>
+          <div class="col-12 col-sm-3 text-right"><a href="{{ route('preguntasF') }}" title="">Ver más</a></div>
         </div>
-       
+
     </div>
 
 </div>
@@ -378,25 +350,32 @@
 		<h3 class="tittle-wthree text-center"> Contacto </h3>
 		<div class="inner-sec-w3ls-agileinfo">
 			<div class="map">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3079.9355109270514!2d-0.3804463846326256!3d39.47078557948625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd604f4c731d5149%3A0x8e41269162b4f923!2sConsultor%C3%ADa+Jur%C3%ADdica+Miramar!5e0!3m2!1ses!2sve!4v1541173324480" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+				@isset ($ubicacion)
+					@php
+						echo html_entity_decode($ubicacion);
+					@endphp
+				 @endisset
+				{{-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3079.9355109270514!2d-0.3804463846326256!3d39.47078557948625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd604f4c731d5149%3A0x8e41269162b4f923!2sConsultor%C3%ADa+Jur%C3%ADdica+Miramar!5e0!3m2!1ses!2sve!4v1541173324480" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> --}}
 				<div class="main_grid_contact">
 					<div class="form">
 						<h4 class="mb-4 text-center">contacta con nosotros</h4>
-						<form action="" method="post" id="form-contacto" onsubmit="return false">
+						<span class="respuesta-contacto"></span>
+						<form action="" method="get" id="form-contacto" onsubmit="return false">
 							<div class="form-group">
 								<label class="my-2">Nombre</label>
-								<input class="form-control" type="text" id="name-contacto" name="name-contacto" placeholder="" required="">
+								<input class="form-control" type="text" id="name-contacto" name="name-contacto" placeholder="" required="" filter="texto" data-invalid="Ingrese solo letras">
 							</div>
 							<div class="form-group">
 								<label>Correo Electrónico</label>
-								<input class="form-control" type="email" id="mail-contacto" name="mail-contacto" placeholder="" required="">
+								<input class="form-control" type="email" id="mail-contacto" name="mail-contacto" placeholder="" required="" filter="email" data-invalid="example@mail.com">
 							</div>
 							<div class="form-group">
 								<label>Mensaje</label>
-								<textarea placeholder="" id="mensaje-contacto" name="mensaje-contacto"></textarea>
+								<textarea placeholder="" id="mensaje-contacto" name="mensaje-contacto" filter="texto" data-invalid="Ingrese solo letras y numeros"></textarea>
 							</div>
-							<div class="input-group1">
-								<input class="form-control" type="submit" value="Enviar" id="btn-contacto">
+							<div class="input-group1 text-center">	
+								<img src="{{ asset('images/loading.gif') }}" alt="" class="col-2 d-none loading" >
+								<input class="form-control" type="submit" value="Enviar " id="btn-contacto">
 							</div>
 						</form>
 					</div>
@@ -411,8 +390,7 @@
 							</div>
 							<div class="col-md-9 address-right text-left">
 								<h6 class="ad-info text-uppercase mb-2">Dirección</h6>
- 								<p> Calle Garrigues , no. 2 bajo
-									46001 Valencia</p>
+ 								<p>@isset ($direccion) {{ $direccion }} @endisset</p>
 							</div>
 						</div>
 					</div>
@@ -424,7 +402,7 @@
 							<div class="col-md-9 address-right text-left">
 								<h6 class="ad-info text-uppercase mb-2">Correo</h6> <br>
 								<p>
-									<a href="info@consuljuridica.com"> info@consuljuridica.com</a>
+									<a href="@isset ($email) {{ $email }} @endisset"> @isset ($email) {{ $email }} @endisset</a>
 								</p>
 							</div>
 
@@ -437,7 +415,7 @@
 							</div>
 							<div class="col-md-9 address-right text-left">
 								<h6 class="ad-info text-uppercase mb-2">Teléfono</h6><br>
-								<p>+34 963 12 26 16</p>
+								<p>@isset ($telefono) {{ $telefono }} @endisset</p>
 
 							</div>
 						</div>
@@ -464,14 +442,14 @@
 			</div>
 			<div class="col-4 text-center">
 				<a href="http://valencuba.com/">
-					<img class="col-8 gris opacidad"  src="{{asset('images/logo_luxury.png')}}" > 
+					<img class="col-8 gris opacidad"  src="{{asset('images/logo_luxury.png')}}" >
 				</a>
 			</div>
 		</div>
-	</div>	
+	</div>
 </section>
 <!------------//logos--------------->
-	
+
 @endsection
 
 
@@ -479,10 +457,38 @@
 @push('scripts')
 
 
-	<script>
-	
+<script>
+	jQuery(document).ready(function(){
+       $('#form-contacto').valida();
+    });
+    
+	var load = '{{ asset('images/loading.gif') }}';
+	$(function() {
+	    $('body').on('click', '.pagination a', function(e) {
+	        e.preventDefault();
+
+	        var url = $(this).attr('href');  
+	        getArticles(url);
+	        window.history.pushState("", "", url);
+	    });
+
+	    function getArticles(url) {
+	        $.ajax({
+	            url : url  
+	        }).done(function (data) {
+	            $('.articles').html(data);  
+	        }).fail(function () {
+	            alert('Articles could not be loaded.');
+	        });
+	    }
+	});
+
+
 		$('#form-contacto').submit(function() {
-			
+
+			$('.loading').removeClass('d-none');
+			$("#btn-contacto").addClass('d-none');
+
 			var name 	= $('input#name-contacto').val();
 			var mail 	= $('input#mail-contacto').val();
 			var mensaje = $('textarea#mensaje-contacto').val();
@@ -498,33 +504,27 @@
                     dataType: "json",
                     data: { name: name,mail: mail ,mensaje: mensaje,_token: '{{csrf_token()}}' },
                     success: function (data){
-                            
-                        console.log(data);
-                        //$('.respuesta').html('Email registrado exitosamente').css('color', 'green');
-                    },
-                     error: function (data) {
 
-                     	console.log('error', data);
+                        if (data == 1) {
+                        	
+							$(".loading").addClass('d-none');
+							$("#btn-contacto").removeClass('d-none');
 
-                     	var json = data.responseJSON.errors;
-			            //var error = json['mail'][0];
+                        	$("#alert").css("display","block");
+                  			$("#alert").fadeIn( 300 ).delay( 1500 ).fadeOut( 1500 );
 
-			            //$('.respuesta').html('Este email ya se encuentra registrado').css('color', 'red');
-			        }
+                        }else{
+                        	//$('.respuesta-contacto').html('El mensaje no pudo ser enviado, intente nuevamente').css('color', 'red');
+                        }
+                        
+                    }
 
                 });
 
-			
+
 		});
 	</script>
 	<!-- //carousel -->
 
 
 @endpush
-
-
-
- 
-   
-
-

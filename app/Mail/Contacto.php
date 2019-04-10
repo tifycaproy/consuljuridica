@@ -43,6 +43,5 @@ class Contacto extends Mailable
                       ])
                     ->subject('Mensaje Web');
 
-        //return $this->view('view.name');
     }
 }

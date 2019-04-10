@@ -15,17 +15,8 @@ class homeController extends Controller
     public function modulos($name){
 
       switch ($name) {
-        case 'servicios':
-          return view('Backend.servicios');
-          break;
         case 'register':
         return view('auth.register');
-          break;
-        case 'nuevanoticia':
-          return view('Backend.form.formnoticias');
-          break;
-        case 'nuevoslider':
-          return view('Backend.form.formslider');
           break;
 
         default:

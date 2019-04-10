@@ -39,7 +39,7 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest')->except('list','form','create','delete');
+        $this->middleware('guest')->except('list','form','create','delete','update','form','onesearch');
     }
 
     /**
@@ -69,6 +69,7 @@ class RegisterController extends Controller
                           ->join('role_user', 'users.id', '=', 'role_user.user_id')
                           ->join('roles', 'roles.id', '=', 'role_user.role_id')
                          ->select('users.id','users.name','users.email','roles.description','users.created_at')
+                         ->orderBy('users.updated_at','desc')
                          ->get();
 
           // dd($usuarios);
@@ -76,7 +77,8 @@ class RegisterController extends Controller
      }
      public function form()
      {
-         return view('auth.register');
+         $perfiles = Role::pluck('description','id');
+         return view('auth.register',['perfiles'=>$perfiles]);
      }
     protected function create(Request $request)
     {
@@ -87,9 +89,44 @@ class RegisterController extends Controller
             'password' => bcrypt($request['password']),
         ]);
         $user->roles()
-            ->attach(Role::where('name', 'user')->first());
+            ->attach(Role::where('id', $request['role_id'])->first());
 
             return redirect()->route("verusuarios");
+    }
+    public function onesearch($id)
+    {
+        $user = DB::table('users')
+                  ->join('role_user', 'role_user.user_id', '=', 'users.id')
+                  ->select('users.id','users.name','users.email','role_user.role_id')
+                  ->where('users.id', $id)
+                  ->first();
+                    $perfiles = Role::pluck('description','id');
+        if (!$user){
+          return view('Backend.index');
+        }
+        else{
+          return view('auth.formuser',['usuario'=>$user,'perfiles'=>$perfiles]);
+        }
+
+    }
+    public function update(Request $request, $id)
+    {
+      $user = DB::table('users')
+                ->where('id', $id)
+                ->first();
+
+      if (!$user){
+        return view('Backend.index');
+      }
+      else{
+            $user = User::find($id)
+                        ->fill($request->input());
+            $user->save();
+            $user = DB::table('role_user')
+                      ->where('user_id', $user->id)
+                      ->update(['role_id'=>$request["role_id"]]);
+          return redirect()->route("verusuarios");
+       }
     }
     public function delete($id)
     {
@@ -97,5 +134,10 @@ class RegisterController extends Controller
         $user->delete();
 
         return redirect()->route("verusuarios");
+    }
+    public function formu()
+    {
+
+        return view('auth.formuser');
     }
 }

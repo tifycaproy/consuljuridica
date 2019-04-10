@@ -28,7 +28,7 @@
                           Posición
                         </th>
                         <th>
-                          Fecha
+                          Fecha Publicación
                         </th>
 												<th>
 													Acciones
@@ -51,12 +51,12 @@
                             {{ $slider->created_at}}
                           </td>
                           <td class="td-actions">
-                            <a type="button" rel="tooltip" title="" href="{{ route('buscarslider',['id'=>$slider->id])}}" class="btn btn-white btn-link btn-sm" data-original-title="Editar">
+                            <button type="button" rel="tooltip" title="" onclick="location.href='{{ route('buscarslider',['id'=>$slider->id])}}'" class="btn btn-white btn-link btn-sm" data-original-title="Editar">
                               <i class="material-icons">edit</i>
-                            </a>
-                            <a type="button" rel="tooltip" title="" href="{{ route('eliminarslider',['id'=>$slider->id])}}" class="btn btn-white btn-link btn-sm" data-original-title="Remover">
+                            </button>
+                            <button type="button" rel="tooltip" title="" onclick="location.href='{{ route('eliminarslider',['id'=>$slider->id])}}'" class="btn btn-white btn-link btn-sm" data-original-title="Remover">
                               <i class="material-icons">close</i>
-                            </a>
+                            </button>
                           </td>
                         </tr>
                         @endforeach

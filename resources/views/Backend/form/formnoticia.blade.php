@@ -3,7 +3,37 @@
 @section('content')
 
 <input id="mostra_vista" value="noticias" hidden disabled>
-
+<script src="{{ asset('js/core/jquery.min.js') }}"></script>
+<script>
+$(document).ready(function(){
+  CKEDITOR.replace( 'editor2',{
+  uiColor:"#DCDCDC",
+  toolbarGroups : [
+    { name: 'basicstyles', groups: [ 'basicstyles'] },
+    { name: 'paragraph',   groups: [ 'list', 'indent', 'align', 'bidi' ] },
+    { name: 'document',	   groups: [ 'doctools' ] },
+    { name: 'editing',     groups: ['spellchecker' ] },
+    { name: 'styles' },
+    { name: 'colors' },
+    { name: 'tools' }
+  ]
+  // removeButtons: 'Cut,Copy,Paste,Undo,Redo,Anchor,Underline,Strike,Subscript,Superscript'
+  });
+CKEDITOR.replace( 'editor',{
+uiColor:"#DCDCDC",
+toolbarGroups : [
+  { name: 'basicstyles', groups: [ 'basicstyles'] },
+  { name: 'paragraph',   groups: [ 'list', 'indent', 'align', 'bidi' ] },
+  { name: 'document',	   groups: [ 'doctools' ] },
+  { name: 'editing',     groups: ['spellchecker' ] },
+  { name: 'styles' },
+  { name: 'colors' },
+  { name: 'tools' }
+]
+// removeButtons: 'Cut,Copy,Paste,Undo,Redo,Anchor,Underline,Strike,Subscript,Superscript'
+});
+});
+</script>
 <div class="row">
     <div class="col-md-12">
       <div class="card">
@@ -31,17 +61,28 @@
               <div class="form-group bmd-form-group {{ $errors->has('publico') ? ' has-error' : '' }}">
                 <div class="form-check form-check-inline">
                 <label id="publico" class="form-check-label">
-                  <input class="form-check-input" type="checkbox">
+                  <input name="publico" class="form-check-input" type="checkbox">
                   Público
                   <span class="form-check-sign">
                     <span class="check"></span>
                   </span>
                 </label>
-                <input id="publicoval" name="publico" type="text" value="0" hidden>
               </div>
                 @if ($errors->has('publico'))
                     <span class="help-block">
                         <strong>{{ $errors->first('publico') }}</strong>
+                    </span>
+                @endif
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group bmd-form-group {{ $errors->has('fuente') ? ' has-error' : '' }}">
+                {!! Form::label('fuente', 'Fuente') !!}
+                {!! Form::text('fuente', null, ['class' => 'form-control']) !!}
+
+                @if ($errors->has('fuente'))
+                    <span class="help-block">
+                        <strong>{{ $errors->first('fuente') }}</strong>
                     </span>
                 @endif
               </div>
@@ -52,7 +93,7 @@
             <div class="form-group {{ $errors->has('resumen') ? ' has-error' : '' }}">
               {!! Form::label('resumen','Resumen (Opcional)') !!}
               <div class="form-group bmd-form-group">
-                <textarea id="editor" name="resumen" class="form-control" rows="4" required></textarea>
+                <textarea id="editor" name="resumen" class="form-control" rows="4" required>&nbsp;</textarea>
               </div>
             </div>
           </div>
@@ -61,7 +102,7 @@
             {!! Form::label('descripcion','Descripción (Opcional)') !!}
             <div class="form-group bmd-form-group">
                 <!-- {!! Form::label('resumen','Se representa en la vista previa de las noticias',['class' => 'bmd-label-floating-control']) !!} -->
-              <textarea id="editor2" name="descripcion" class="form-control" rows="4" required></textarea>
+              <textarea id="editor2" name="descripcion" class="form-control" rows="4" required>&nbsp;</textarea>
               @if ($errors->has('descripcion'))
                   <span class="help-block">
                       <strong>{{ $errors->first('descripcion') }}</strong>
@@ -73,10 +114,18 @@
         </div>
         <div class="row">
           <div class="col-md-4">
-            <div class="form-group bmd-form-group {{ $errors->has('email') ? ' has-error' : '' }}">
+            <div class="form-group bmd-form-group {{ $errors->has('posicion') ? ' has-error' : '' }}">
 
               {!! Form::label('posicion', 'Posición') !!}
-              {!! Form::number('posicion',  1, ['class' => 'form-control',  'required' => 'required', 'number'=>'true', 'min' => '1']) !!}
+              <select class="form-control" name="posicion" required>
+                @foreach($posiciones_disponibles as $key=> $posicion_disponible)
+                @if($key==0)
+                <option value="{{$posicion_disponible}}" selected="selected">{{$posicion_disponible}}</option>
+                @else
+                <option value="{{$posicion_disponible}}">{{$posicion_disponible}}</option>
+                @endif
+                @endforeach
+              </select>
               @if ($errors->has('posicion'))
                   <span class="help-block">
                       <strong>{{ $errors->first('posicion') }}</strong>
@@ -89,7 +138,9 @@
           <div class="form-group bmd-form-group {{ $errors->has('url_multimedia') ? ' has-error' : '' }}">
 
             {!! Form::label('url_multimedia', 'Enlace Multimedia   O') !!}
-            <input type="url" id="enlace" name="url_multimedia" class="form-control" >
+
+            <input type="text" id="enlace" name="url_multimedia" class="form-control" >
+
             @if ($errors->has('url_multimedia'))
                 <span class="help-block">
                     <strong>{{ $errors->first('url_multimedia') }}</strong>
@@ -109,7 +160,7 @@
                 <div>
                   <span class="btn btn-rose btn-round btn-file">
                     <span class="fileinput-new">Buscar</span>
-                    <span class="fileinput-exists">Cambiar</span><input id="imagen" name="url_imagen" type="file" name="..." required>
+                    <span class="fileinput-exists">Cambiar</span><input id="imagen" name="url_imagen" type="file" name="..." >
                     @if ($errors->has('url_imagen'))
                         <span class="help-block">
                             <strong>{{ $errors->first('url_imagen') }}</strong>
