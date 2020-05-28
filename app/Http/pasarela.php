@@ -11,14 +11,24 @@
 		$miObj = new RedsysAPI;
 
 		// Valores de entrada que no hemos cmbiado para ningun ejemplo
-		$fuc="175213198"; //codigo del comercio
+		/*$fuc="175213198"; //codigo del comercio
 		$terminal="1"; //terminal ?
 		$moneda="978"; // moneda euro
 		$trans="0"; //tipo de transaccion ?
 		$url=""; //tienda
 		$urlOK="https://www.consuljuridica.com/pasarelaOk/".$encrypted."/1"; //exito
-		$urlKO="https://www.consuljuridica.com/pasarelaOk/".$encrypted."/2"; //exito
+		$urlKO="https://www.consuljuridica.com/pasarelaOk/".$encrypted."/2"; //exito*/
 		
+        //ajustando consultoria pasarela por tipago phonealo
+        $fuc="175114818"; //codigo del comercio
+		$terminal="1"; //terminal ?
+		$moneda="978"; // moneda euro
+		$trans="0"; //tipo de transaccion ?
+		$url="http://app.phonealo.net/payment/init"; //tienda 
+		$urlOK= env('URL_SITE')."/success/".$id_solicitud; //exito
+		$urlKO= env('URL_SITE')."/errors/".$id_solicitud; 
+
+
 		//estos dos valores los vamos cambiando en cada ejemplo
 		$id=$id_solicitud;//el valor que le damos en cada ejemplo 
 
