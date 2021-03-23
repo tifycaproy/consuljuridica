@@ -150,8 +150,8 @@ class homeController extends Controller
     public function pasarelaOK(Request $request){
 
         if ($request->res == 1) {
-            $id   = Crypt::decrypt($request->id);
-            $id   = $request->id
+            // $id   = Crypt::decrypt($request->id);
+            $id   = $request->id;
 
             $procesar = Solicitud::where('id_solicitud', $id)->update(['status'=> 4]);
             
