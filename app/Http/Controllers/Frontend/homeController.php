@@ -151,6 +151,8 @@ class homeController extends Controller
 
         if ($request->res == 1) {
             $id   = Crypt::decrypt($request->id);
+            $id   = $request->id
+
             $procesar = Solicitud::where('id_solicitud', $id)->update(['status'=> 4]);
             
             Mail::to('info@consuljuridica.com')->send(new EnvioRegistro());
@@ -168,7 +170,7 @@ class homeController extends Controller
     public function pasarelaKO(Request $request){
         
         if ($request->res == 2) {
-             $id   = Crypt::decrypt($request->id);
+             $id   = $request->id;
             $consulta = Solicitud::where('id_solicitud', $id)->first();
             if (count($consulta) > 0) {
                 $elimnarSolicitante = Solicitantes::where('id_solicitante', $consulta->id_solicitante)->delete();
@@ -251,7 +253,7 @@ class homeController extends Controller
         return $pdf->stream();
     }
 
-     public function pdfBack($id_servicio, $id_solicitud, $id_solicitante){
+    public function pdfBack($id_servicio, $id_solicitud, $id_solicitante){
         //$id   = Crypt::decrypt($request->solicitud);        
         $id_solicitante = $id_solicitante;
         $id_solicitud = $id_solicitud;
